@@ -1,0 +1,137 @@
+{
+  "entities": [
+    {
+      "entity_name": "王XX",
+      "entity_type": "患者信息",
+      "description": "男，11岁"
+    },
+    {
+      "entity_name": "高热",
+      "entity_type": "症状",
+      "description": "持续一月余，最高体温达42℃"
+    },
+    {
+      "entity_name": "午后发热",
+      "entity_type": "症状",
+      "description": "每日午后两度热势上升，至次早则稍降"
+    },
+    {
+      "entity_name": "脉弦涩",
+      "entity_type": "症状",
+      "description": "脉象弦涩"
+    },
+    {
+      "entity_name": "舌色暗",
+      "entity_type": "症状",
+      "description": "舌质黯"
+    },
+    {
+      "entity_name": "右胁下痛不移",
+      "entity_type": "症状",
+      "description": "右胁下痛不移"
+    },
+    {
+      "entity_name": "血瘀发热",
+      "entity_type": "证候",
+      "description": "脉弦涩，胁痛不移而舌质黯，是血瘀发热"
+    },
+    {
+      "entity_name": "内伤发热（高热）",
+      "entity_type": "疾病",
+      "description": "高热持续一月余，最高体温达42℃"
+    },
+    {
+      "entity_name": "血府逐瘀汤加减",
+      "entity_type": "处方",
+      "description": "当归尾、赤芍、川穹、西红花、炒枳壳、柴胡、制没药各4．5克净桃仁、川牛膝、干地龙各6克干生地9克桔梗、甘草各3克，治法：活血化瘀"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.95,
+      "participants": [
+        {
+          "entity_name": "王XX",
+          "role": "患者",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "午后发热",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "脉弦涩",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "舌色暗",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "右胁下痛不移",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "血瘀发热",
+          "role": "证候",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "根据症状辨证为血瘀发热"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "血瘀发热",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "血府逐瘀汤加减",
+          "role": "处方",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "针对血瘀发热证候，采用活血化瘀治法，处方为血府逐瘀汤加减"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "血府逐瘀汤加减",
+          "role": "处方",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "生鳖甲",
+          "role": "药物",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "生牡蛎",
+          "role": "药物",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "延胡索",
+          "role": "药物",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "血竭",
+          "role": "药物",
+          "membership_degree": 0.7
+        }
+      ],
+      "description": "在血府逐瘀汤加减基础上，根据病情变化加生鳖甲、生牡蛎、延胡索、血竭等药物"
+    }
+  ]
+}

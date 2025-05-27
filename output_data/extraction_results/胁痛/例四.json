@@ -1,0 +1,157 @@
+{
+  "entities": [
+    {
+      "entity_name": "肖××",
+      "entity_type": "患者信息",
+      "description": "男，46岁，门诊号：1163，初诊日期：1977年1月29日"
+    },
+    {
+      "entity_name": "胁痛",
+      "entity_type": "疾病",
+      "description": "一侧或双侧胁肋疼痛为主的证候，主要与肝胆疾病有关"
+    },
+    {
+      "entity_name": "肝痛",
+      "entity_type": "症状",
+      "description": "患者肝区疼痛"
+    },
+    {
+      "entity_name": "腹胀",
+      "entity_type": "症状",
+      "description": "患者腹部胀满"
+    },
+    {
+      "entity_name": "恶心厌油",
+      "entity_type": "症状",
+      "description": "患者恶心且厌油腻食物"
+    },
+    {
+      "entity_name": "胃胀",
+      "entity_type": "症状",
+      "description": "患者胃部胀满"
+    },
+    {
+      "entity_name": "尿黄",
+      "entity_type": "症状",
+      "description": "患者尿液颜色发黄"
+    },
+    {
+      "entity_name": "大便干稀不调",
+      "entity_type": "症状",
+      "description": "患者大便时而干燥时而稀溏"
+    },
+    {
+      "entity_name": "肝掌",
+      "entity_type": "症状",
+      "description": "患者手掌出现肝掌"
+    },
+    {
+      "entity_name": "鼻衄",
+      "entity_type": "症状",
+      "description": "患者鼻出血"
+    },
+    {
+      "entity_name": "腰疼",
+      "entity_type": "症状",
+      "description": "患者腰部疼痛"
+    },
+    {
+      "entity_name": "舌质稍红，苔白中心有裂",
+      "entity_type": "症状",
+      "description": "患者舌象表现为舌质稍红，苔白中心有裂纹"
+    },
+    {
+      "entity_name": "脉象沉滑",
+      "entity_type": "症状",
+      "description": "患者脉象沉滑"
+    },
+    {
+      "entity_name": "脾虚湿困，胃失和降，热蕴血分",
+      "entity_type": "证候",
+      "description": "患者证候为脾虚湿困，胃失和降，热蕴血分"
+    },
+    {
+      "entity_name": "肝吸虫病",
+      "entity_type": "疾病",
+      "description": "西医诊断：肝吸虫病"
+    },
+    {
+      "entity_name": "慢性肝炎(稳定型）",
+      "entity_type": "疾病",
+      "description": "西医诊断：慢性肝炎(稳定型）"
+    },
+    {
+      "entity_name": "胁痛_脾虚湿困，胃失和降，热蕴血分_治疗方",
+      "entity_type": "处方",
+      "description": "党参15克，沙苍白术、木香、旋复花(包）、生储石各9克，木瓜、冬瓜皮、茵陈各12克，赤白芍、生地炭、小蓟、泽兰各15克，草寇6克；另：乌鸡白凤丸，每午服一丸；明矾30克、鸦胆子15克(去皮），研粉，装一号胶囊，每次饭后服一粒(每粒约含鸦胆子183毫克，明矾365毫克），日服三次。治法：健脾和胃，凉血利湿"
+    },
+    {
+      "entity_name": "胁痛_脾虚湿困，胃失和降，热蕴血分_治疗方_加味",
+      "entity_type": "处方",
+      "description": "前方加百部9克，大枣10枚；丸剂、胶囊粉剂同前"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.95,
+      "participants": [
+        {
+          "entity_name": "肖××",
+          "role": "患者",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "肝痛",
+          "role": "症状",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "腹胀",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "脾虚湿困，胃失和降，热蕴血分",
+          "role": "证候",
+          "membership_degree": 1.0
+        }
+      ],
+      "description": "患者肖××因肝痛、腹胀等症状，辨证为脾虚湿困，胃失和降，热蕴血分"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "脾虚湿困，胃失和降，热蕴血分",
+          "role": "证候",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "胁痛_脾虚湿困，胃失和降，热蕴血分_治疗方",
+          "role": "处方",
+          "membership_degree": 1.0
+        }
+      ],
+      "description": "针对脾虚湿困，胃失和降，热蕴血分的证候，采用健脾和胃，凉血利湿的治法，处方为胁痛_脾虚湿困，胃失和降，热蕴血分_治疗方"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "胁痛_脾虚湿困，胃失和降，热蕴血分_治疗方",
+          "role": "原处方",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "胁痛_脾虚湿困，胃失和降，热蕴血分_治疗方_加味",
+          "role": "加减处方",
+          "membership_degree": 1.0
+        }
+      ],
+      "description": "在原处方基础上加百部9克，大枣10枚，形成加减处方"
+    }
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "entities": [
+    {
+      "entity_name": "邢X",
+      "entity_type": "患者信息",
+      "description": "男，33岁，初诊日期：1975年4月"
+    },
+    {
+      "entity_name": "环脐腹痛",
+      "entity_type": "症状",
+      "description": "腹痛已半年有余，喜按喜温，常屈身以缓之"
+    },
+    {
+      "entity_name": "下重如痢",
+      "entity_type": "症状",
+      "description": "痛则即有便意，但又不能爽下，多夹粘液"
+    },
+    {
+      "entity_name": "日便多则七、八次，少亦二、三次",
+      "entity_type": "症状",
+      "description": "大便次数异常"
+    },
+    {
+      "entity_name": "脉沉细而弦",
+      "entity_type": "症状",
+      "description": "脉象描述"
+    },
+    {
+      "entity_name": "舌质淡红，苔薄腻",
+      "entity_type": "症状",
+      "description": "舌象描述"
+    },
+    {
+      "entity_name": "全身似觉冷气四彻，啬啬恶寒",
+      "entity_type": "症状",
+      "description": "午睡后全身恶寒，待汗出后其症乃止"
+    },
+    {
+      "entity_name": "阳为阴郁，不能宣达",
+      "entity_type": "证候",
+      "description": "辨证结果"
+    },
+    {
+      "entity_name": "结肠炎",
+      "entity_type": "疾病",
+      "description": "诊为结肠炎"
+    },
+    {
+      "entity_name": "结肠过敏",
+      "entity_type": "疾病",
+      "description": "诊为结肠过敏"
+    },
+    {
+      "entity_name": "泄泻_阳为阴郁不能宣达_治疗方",
+      "entity_type": "处方",
+      "description": "柴胡15克白芍24克枳实9克甘草6克薤白18克附片(先煎)6克海螵蛸粉4.5克，治法：疏达表里，周旋内外"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.95,
+      "participants": [
+        {
+          "entity_name": "邢X",
+          "role": "患者",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "环脐腹痛",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "下重如痢",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "阳为阴郁，不能宣达",
+          "role": "证候",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "患者邢X因阳为阴郁不能宣达而致腹痛下利"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "阳为阴郁，不能宣达",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "泄泻_阳为阴郁不能宣达_治疗方",
+          "role": "处方",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "针对阳为阴郁不能宣达的证候，采用疏达表里，周旋内外的治法"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "泄泻_阳为阴郁不能宣达_治疗方",
+          "role": "处方",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "环脐腹痛",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "下重如痢",
+          "role": "症状",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "处方中加薤白以泄气滞，附子温阳补虚，海螵蛸能治环脐腹痛"
+    }
+  ]
+}

@@ -1,0 +1,216 @@
+{
+  "entities": [
+    {
+      "entity_name": "朱ｘｘ",
+      "entity_type": "患者信息",
+      "description": "男性，初诊日期：1973年10月27日"
+    },
+    {
+      "entity_name": "善饥能吃",
+      "entity_type": "症状",
+      "description": "近几年来，善饥能吃"
+    },
+    {
+      "entity_name": "糖尿病",
+      "entity_type": "疾病",
+      "description": "1972年发现糖尿病"
+    },
+    {
+      "entity_name": "体重下降",
+      "entity_type": "症状",
+      "description": "一年来体重下降"
+    },
+    {
+      "entity_name": "疲乏无力",
+      "entity_type": "症状",
+      "description": "疲乏无力"
+    },
+    {
+      "entity_name": "口渴思饮",
+      "entity_type": "症状",
+      "description": "口渴思饮，一天约喝10磅水左右"
+    },
+    {
+      "entity_name": "多尿",
+      "entity_type": "症状",
+      "description": "多尿"
+    },
+    {
+      "entity_name": "后背搔痒",
+      "entity_type": "症状",
+      "description": "后背搔痒"
+    },
+    {
+      "entity_name": "易生疖疮",
+      "entity_type": "症状",
+      "description": "易生疖疮"
+    },
+    {
+      "entity_name": "舌质偏红",
+      "entity_type": "症状",
+      "description": "舌质偏红"
+    },
+    {
+      "entity_name": "脉缓",
+      "entity_type": "症状",
+      "description": "脉缓"
+    },
+    {
+      "entity_name": "气阴两伤，肺胃火炽",
+      "entity_type": "证候",
+      "description": "证属气阴两伤，肺胃火炽"
+    },
+    {
+      "entity_name": "消渴_气阴两伤，肺胃火炽_治疗方",
+      "entity_type": "处方",
+      "description": "生黄芪、山药、苍术、元参、石斛各15克太子参、花粉各30克生地、熟地各15克芡实米、知母、黄柏、乌梅各9克天冬、麦冬各9克枸杞子12克10剂。治法：益气养阴，清热为治"
+    },
+    {
+      "entity_name": "消渴_气阴两伤，肺胃火炽_治疗方_二诊",
+      "entity_type": "处方",
+      "description": "前方去石斛、乌梅、枸杞子、知母、黄柏，加五味子9克，功劳叶12克10剂"
+    },
+    {
+      "entity_name": "消渴_气阴两伤，肺胃火炽_治疗方_四诊",
+      "entity_type": "处方",
+      "description": "生黄芪、苍术、元参、太子参各15克山药12克五味子9克金樱子6克天冬、麦冬各9克生地、熟地各15克肉桂3克10剂"
+    },
+    {
+      "entity_name": "消渴_气阴两伤，肺胃火炽_治疗方_丸药",
+      "entity_type": "处方",
+      "description": "上方加四倍量，研末，山药打糊为丸，如梧桐子大，饭后服6克"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.95,
+      "participants": [
+        {
+          "entity_name": "朱ｘｘ",
+          "role": "患者",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "气阴两伤，肺胃火炽",
+          "role": "证候",
+          "membership_degree": 0.95
+        },
+        {
+          "entity_name": "善饥能吃",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "体重下降",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "疲乏无力",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "口渴思饮",
+          "role": "症状",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "多尿",
+          "role": "症状",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "后背搔痒",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "易生疖疮",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "舌质偏红",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "脉缓",
+          "role": "症状",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "患者朱ｘｘ的症状和体征辨证为气阴两伤，肺胃火炽"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "气阴两伤，肺胃火炽",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "消渴_气阴两伤，肺胃火炽_治疗方",
+          "role": "处方",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "针对气阴两伤，肺胃火炽的证候，采用益气养阴，清热为治的处方"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "消渴_气阴两伤，肺胃火炽_治疗方",
+          "role": "原处方",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "消渴_气阴两伤，肺胃火炽_治疗方_二诊",
+          "role": "调整处方",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "二诊时根据症状变化调整处方，去石斛、乌梅、枸杞子、知母、黄柏，加五味子9克，功劳叶12克"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "消渴_气阴两伤，肺胃火炽_治疗方",
+          "role": "原处方",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "消渴_气阴两伤，肺胃火炽_治疗方_四诊",
+          "role": "调整处方",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "四诊时根据症状变化调整处方，生黄芪、苍术、元参、太子参各15克山药12克五味子9克金樱子6克天冬、麦冬各9克生地、熟地各15克肉桂3克10剂"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.8,
+      "participants": [
+        {
+          "entity_name": "消渴_气阴两伤，肺胃火炽_治疗方_四诊",
+          "role": "原处方",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "消渴_气阴两伤，肺胃火炽_治疗方_丸药",
+          "role": "调整处方",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "五诊时根据症状变化调整处方，上方加四倍量，研末，山药打糊为丸，如梧桐子大，饭后服6克"
+    }
+  ]
+}

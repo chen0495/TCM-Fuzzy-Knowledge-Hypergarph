@@ -1,0 +1,117 @@
+{
+  "entities": [
+    {
+      "entity_name": "徐X",
+      "entity_type": "患者信息",
+      "description": "女性，大病之后，孕经数月"
+    },
+    {
+      "entity_name": "不寐",
+      "entity_type": "疾病",
+      "description": "失眠"
+    },
+    {
+      "entity_name": "头晕",
+      "entity_type": "症状",
+      "description": "头晕"
+    },
+    {
+      "entity_name": "心下悸",
+      "entity_type": "症状",
+      "description": "心下悸"
+    },
+    {
+      "entity_name": "失眠",
+      "entity_type": "症状",
+      "description": "失眠"
+    },
+    {
+      "entity_name": "阴虚肝旺",
+      "entity_type": "证候",
+      "description": "阴虚肝旺"
+    },
+    {
+      "entity_name": "不寐_阴虚肝旺_治疗方",
+      "entity_type": "处方",
+      "description": "生牡蛎(包先煎)12克，旋覆花(包煎)9克，淡苁蓉9克，桑上寄生15克，生赭石9克，大麻仁9克，生鳖甲(先煎)9克，清半夏4.5克，炒枳壳实各2.4克，芡实米(盐水炒)9克，盐知柏各9克，莲心(朱拌)6克，首乌藤18克，乌药6克，藕30克"
+    },
+    {
+      "entity_name": "不寐_阴虚肝旺_膏方",
+      "entity_type": "处方",
+      "description": "按原方量，加两倍，增入焦枣仁6克，炒远志18克、血琥珀15克，浓煎炼蜜收膏，每早晚各服一匙，约9克许，白开水化服"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "徐X",
+          "role": "患者",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "不寐",
+          "role": "疾病",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "阴虚肝旺",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "头晕",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "心下悸",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "失眠",
+          "role": "症状",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "患者徐X因阴虚肝旺导致不寐，伴有头晕、心下悸、失眠等症状"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "阴虚肝旺",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "不寐_阴虚肝旺_治疗方",
+          "role": "处方",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "针对阴虚肝旺证候，采用滋柔和化的治疗方法，处方为不寐_阴虚肝旺_治疗方"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.8,
+      "participants": [
+        {
+          "entity_name": "不寐_阴虚肝旺_治疗方",
+          "role": "原处方",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "不寐_阴虚肝旺_膏方",
+          "role": "调整后处方",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "在原方基础上加两倍量，并增入焦枣仁、炒远志、血琥珀，制成膏方调理"
+    }
+  ]
+}

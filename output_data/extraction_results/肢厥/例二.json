@@ -1,0 +1,167 @@
+{
+  "entities": [
+    {
+      "entity_name": "李XX",
+      "entity_type": "患者信息",
+      "description": "男，43岁，初诊日期：1980年1月11日"
+    },
+    {
+      "entity_name": "双下肢发凉",
+      "entity_type": "症状",
+      "description": "自觉双下肢发凉"
+    },
+    {
+      "entity_name": "下肢麻",
+      "entity_type": "症状",
+      "description": "下肢麻，痒如虫行"
+    },
+    {
+      "entity_name": "小便余沥",
+      "entity_type": "症状",
+      "description": "小便余沥"
+    },
+    {
+      "entity_name": "阳萎",
+      "entity_type": "症状",
+      "description": "阳萎"
+    },
+    {
+      "entity_name": "睡眠不佳",
+      "entity_type": "症状",
+      "description": "睡眠不佳，且多乱梦"
+    },
+    {
+      "entity_name": "心时烦",
+      "entity_type": "症状",
+      "description": "心时烦，容易汗出"
+    },
+    {
+      "entity_name": "大便不爽",
+      "entity_type": "症状",
+      "description": "大便不爽"
+    },
+    {
+      "entity_name": "小便短少而发黄",
+      "entity_type": "症状",
+      "description": "小便短少而发黄"
+    },
+    {
+      "entity_name": "肾阳虚证",
+      "entity_type": "证候",
+      "description": "厂医诊为肾阳虚证"
+    },
+    {
+      "entity_name": "阴虚于下而心火独旺于上",
+      "entity_type": "证候",
+      "description": "证属阴虚于下而心火独旺于上"
+    },
+    {
+      "entity_name": "肢厥",
+      "entity_type": "疾病",
+      "description": "四肢厥冷或手足逆冷，或称“四逆”"
+    },
+    {
+      "entity_name": "黄连阿胶汤",
+      "entity_type": "处方",
+      "description": "黄连9克黄芩3克白芍6克阿胶9克(烊化)鸡子黄2枚(自加)，用水三碗，先煮三物，取一碗；去滓，纳胶烊尽，小冷，纳鸡子黄，搅合相得，分两次服下"
+    },
+    {
+      "entity_name": "肢厥_阴虚于下而心火独旺于上_治疗方",
+      "entity_type": "处方",
+      "description": "黄连9克阿胶10克(烊化)黄芩3克白芍9克鸡子黄2枚(自加)丹皮6克，煎服法同前"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "李XX",
+          "role": "患者",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "双下肢发凉",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "下肢麻",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "小便余沥",
+          "role": "症状",
+          "membership_degree": 0.6
+        },
+        {
+          "entity_name": "阳萎",
+          "role": "症状",
+          "membership_degree": 0.6
+        },
+        {
+          "entity_name": "睡眠不佳",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "心时烦",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "大便不爽",
+          "role": "症状",
+          "membership_degree": 0.5
+        },
+        {
+          "entity_name": "小便短少而发黄",
+          "role": "症状",
+          "membership_degree": 0.5
+        },
+        {
+          "entity_name": "阴虚于下而心火独旺于上",
+          "role": "证候",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "患者李XX的症状和证候辨证为阴虚于下而心火独旺于上"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "阴虚于下而心火独旺于上",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "黄连阿胶汤",
+          "role": "处方",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "针对阴虚于下而心火独旺于上证候，使用黄连阿胶汤进行治疗"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.8,
+      "participants": [
+        {
+          "entity_name": "黄连阿胶汤",
+          "role": "处方",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "肢厥_阴虚于下而心火独旺于上_治疗方",
+          "role": "处方",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "在黄连阿胶汤基础上，随证加减，加入丹皮6克，调整药物剂量"
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "entities": [
+    {
+      "entity_name": "陈X",
+      "entity_type": "患者信息",
+      "description": "女，泰国人，曾患甲状腺机能亢进，手术后出现甲状腺机能减退症状"
+    },
+    {
+      "entity_name": "心跳",
+      "entity_type": "症状",
+      "description": "患者出现心跳症状"
+    },
+    {
+      "entity_name": "眼球突出",
+      "entity_type": "症状",
+      "description": "患者出现眼球突出症状"
+    },
+    {
+      "entity_name": "易倦",
+      "entity_type": "症状",
+      "description": "患者出现容易疲倦的症状"
+    },
+    {
+      "entity_name": "食欲不振",
+      "entity_type": "症状",
+      "description": "患者出现食欲不振的症状"
+    },
+    {
+      "entity_name": "眼眶浮肿",
+      "entity_type": "症状",
+      "description": "患者出现眼眶浮肿的症状"
+    },
+    {
+      "entity_name": "皮肤干燥",
+      "entity_type": "症状",
+      "description": "患者出现皮肤干燥的症状"
+    },
+    {
+      "entity_name": "月事减少、色黑",
+      "entity_type": "症状",
+      "description": "患者出现月经减少且颜色发黑的症状"
+    },
+    {
+      "entity_name": "甲状腺机能亢进",
+      "entity_type": "疾病",
+      "description": "患者曾患甲状腺机能亢进"
+    },
+    {
+      "entity_name": "甲状腺机能减退",
+      "entity_type": "疾病",
+      "description": "患者手术后出现甲状腺机能减退"
+    },
+    {
+      "entity_name": "阴血虚亏，营热血燥",
+      "entity_type": "证候",
+      "description": "患者证属阴血虚亏，营热血燥"
+    },
+    {
+      "entity_name": "虚损_阴血虚亏，营热血燥_治疗方",
+      "entity_type": "处方",
+      "description": "初拟方：人参养荣丸合五子衍宗丸加昆布、海藻、桑螵蛸等；继拟方：当归、白芍、川芎各9克，茯神12克，枣仁9克，元胡索、丹皮、茅根、泽兰叶各9克，生谷芽12克；末后拟方：人参归脾丸500丸，每服3～6克，日二次"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.95,
+      "participants": [
+        {
+          "entity_name": "陈X",
+          "role": "患者",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "阴血虚亏，营热血燥",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "甲状腺机能减退",
+          "role": "疾病",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "患者证属阴血虚亏，营热血燥"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "阴血虚亏，营热血燥",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "虚损_阴血虚亏，营热血燥_治疗方",
+          "role": "处方",
+          "membership_degree": 1.0
+        }
+      ],
+      "description": "治以润液育阴、凉营沃燥之剂"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "虚损_阴血虚亏，营热血燥_治疗方",
+          "role": "处方",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "阴血虚亏，营热血燥",
+          "role": "证候",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "根据病机出入加减于其间"
+    }
+  ]
+}

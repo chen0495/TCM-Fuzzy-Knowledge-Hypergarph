@@ -1,0 +1,159 @@
+{
+  "entities": [
+    {
+      "entity_name": "刘XX",
+      "entity_type": "患者信息",
+      "description": "女，28岁，1960年患感冒"
+    },
+    {
+      "entity_name": "惊悸",
+      "entity_type": "疾病",
+      "description": "自觉心动不安，心搏数疾的病证"
+    },
+    {
+      "entity_name": "怔忡",
+      "entity_type": "症状",
+      "description": "触事怔忡不宁，常欲闭户独处，或时悲伤欲哭"
+    },
+    {
+      "entity_name": "头痛晕",
+      "entity_type": "症状",
+      "description": "头晕难举，两目昏蒙"
+    },
+    {
+      "entity_name": "健忘",
+      "entity_type": "症状",
+      "description": "健忘"
+    },
+    {
+      "entity_name": "失眠",
+      "entity_type": "症状",
+      "description": "梦寐不安"
+    },
+    {
+      "entity_name": "口苦",
+      "entity_type": "症状",
+      "description": "口苦"
+    },
+    {
+      "entity_name": "腕闷",
+      "entity_type": "症状",
+      "description": "腕闷"
+    },
+    {
+      "entity_name": "欲呕恶",
+      "entity_type": "症状",
+      "description": "时欲呕恶"
+    },
+    {
+      "entity_name": "神经官能症",
+      "entity_type": "疾病",
+      "description": "西医诊断"
+    },
+    {
+      "entity_name": "浊痰入扰，痰浊不去，清阳不升",
+      "entity_type": "证候",
+      "description": "辨证结果"
+    },
+    {
+      "entity_name": "温胆汤加味",
+      "entity_type": "处方",
+      "description": "京半夏9克茯苓9克枳实、郁金、竹茹各6克胆南星、陈皮各4．5克甘草3克建菖2．4克，治法：舒郁降痰"
+    },
+    {
+      "entity_name": "温胆汤加味_二次调整",
+      "entity_type": "处方",
+      "description": "京半夏9克茯苓9克枳实、郁金、竹茹各6克胆南星、陈皮各4．5克甘草3克建菖2．4克加丹皮4，5克，白芍9克，炒枣仁12克，治法：舒郁降痰"
+    },
+    {
+      "entity_name": "温胆汤加味_三次调整",
+      "entity_type": "处方",
+      "description": "京半夏9克茯苓9克枳实、郁金、竹茹各6克胆南星、陈皮各4．5克甘草3克建菖2．4克加丹参12克，远志4．5克、龙眼肉5枚、炒枣仁12克，治法：舒郁降痰"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.95,
+      "participants": [
+        {
+          "entity_name": "刘XX",
+          "role": "患者",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "怔忡",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "浊痰入扰，痰浊不去，清阳不升",
+          "role": "证候",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "患者因过汗伤及心阴，出现神怯怔忡不宁，辨证为浊痰入扰，痰浊不去，清阳不升"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "浊痰入扰，痰浊不去，清阳不升",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "温胆汤加味",
+          "role": "处方",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "针对浊痰入扰，痰浊不去，清阳不升的证候，采用温胆汤加味进行舒郁降痰治疗"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "温胆汤加味",
+          "role": "原处方",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "温胆汤加味_二次调整",
+          "role": "调整后处方",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "怔忡",
+          "role": "症状",
+          "membership_degree": 0.7
+        }
+      ],
+      "description": "因患者仍觉嘈杂怔忡不宁，烦热不寐，原方加丹皮、白芍、炒枣仁"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "温胆汤加味_二次调整",
+          "role": "原处方",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "温胆汤加味_三次调整",
+          "role": "调整后处方",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "早起眩晕",
+          "role": "症状",
+          "membership_degree": 0.7
+        }
+      ],
+      "description": "因患者早起眩晕，触事易惊，原方加丹参、远志、龙眼肉、炒枣仁"
+    }
+  ]
+}

@@ -1,0 +1,202 @@
+{
+  "entities": [
+    {
+      "entity_name": "游xx",
+      "entity_type": "患者信息",
+      "description": "男，24岁，病历号：124832"
+    },
+    {
+      "entity_name": "心悸气短",
+      "entity_type": "症状",
+      "description": "三年来心悸气短，近七个月来症状尤甚"
+    },
+    {
+      "entity_name": "纳差",
+      "entity_type": "症状",
+      "description": "1964年以来渐觉纳差"
+    },
+    {
+      "entity_name": "院腹胀满",
+      "entity_type": "症状",
+      "description": "院腹胀满"
+    },
+    {
+      "entity_name": "下肢浮肿",
+      "entity_type": "症状",
+      "description": "同时出现下肢浮肿"
+    },
+    {
+      "entity_name": "唇紫",
+      "entity_type": "症状",
+      "description": "唇紫"
+    },
+    {
+      "entity_name": "巩膜黄染",
+      "entity_type": "症状",
+      "description": "巩膜黄染"
+    },
+    {
+      "entity_name": "结合膜充血",
+      "entity_type": "症状",
+      "description": "结合膜充血"
+    },
+    {
+      "entity_name": "舌质暗红",
+      "entity_type": "症状",
+      "description": "舌质暗红"
+    },
+    {
+      "entity_name": "面色黛黑少华",
+      "entity_type": "症状",
+      "description": "面色黛黑少华"
+    },
+    {
+      "entity_name": "脉结代",
+      "entity_type": "症状",
+      "description": "脉结代"
+    },
+    {
+      "entity_name": "心肾阳衰，兼见血瘀",
+      "entity_type": "证候",
+      "description": "辨证：心肾阳衰，兼见血瘀"
+    },
+    {
+      "entity_name": "风湿性心脏病",
+      "entity_type": "疾病",
+      "description": "于1960年查体时发现风湿性心脏病"
+    },
+    {
+      "entity_name": "二尖瓣狭窄关闭不全",
+      "entity_type": "疾病",
+      "description": "二尖瓣狭窄关闭不全"
+    },
+    {
+      "entity_name": "心房颤动",
+      "entity_type": "疾病",
+      "description": "心房颤动"
+    },
+    {
+      "entity_name": "心原性肝硬化",
+      "entity_type": "疾病",
+      "description": "心原性肝硬化"
+    },
+    {
+      "entity_name": "心力衰竭Ⅱ度",
+      "entity_type": "疾病",
+      "description": "心力衰竭Ⅱ度"
+    },
+    {
+      "entity_name": "痰饮",
+      "entity_type": "疾病",
+      "description": "病名: 痰饮"
+    },
+    {
+      "entity_name": "风湿性心脏病_心肾阳衰，兼见血瘀_治疗方",
+      "entity_type": "处方",
+      "description": "附子9克杭芍30克云苓18克白术15克生姜9克肉桂6克（后下）沉香6克（后下）当归12克红花12克自茅根30克藕节10枚，治法：温肾助阳，佐以化瘀"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.95,
+      "participants": [
+        {
+          "entity_name": "游xx",
+          "role": "患者",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "心悸气短",
+          "role": "症状",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "纳差",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "院腹胀满",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "下肢浮肿",
+          "role": "症状",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "唇紫",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "巩膜黄染",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "结合膜充血",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "舌质暗红",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "面色黛黑少华",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "脉结代",
+          "role": "症状",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "心肾阳衰，兼见血瘀",
+          "role": "证候",
+          "membership_degree": 1.0
+        }
+      ],
+      "description": "患者游xx的症状和体征辨证为心肾阳衰，兼见血瘀"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.95,
+      "participants": [
+        {
+          "entity_name": "心肾阳衰，兼见血瘀",
+          "role": "证候",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "风湿性心脏病_心肾阳衰，兼见血瘀_治疗方",
+          "role": "处方",
+          "membership_degree": 1.0
+        }
+      ],
+      "description": "针对心肾阳衰，兼见血瘀的证候，采用温肾助阳，佐以化瘀的治法，处方为附子9克杭芍30克云苓18克白术15克生姜9克肉桂6克（后下）沉香6克（后下）当归12克红花12克自茅根30克藕节10枚"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "风湿性心脏病_心肾阳衰，兼见血瘀_治疗方",
+          "role": "处方",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "心肾阳衰，兼见血瘀",
+          "role": "证候",
+          "membership_degree": 1.0
+        }
+      ],
+      "description": "处方根据心肾阳衰，兼见血瘀的证候进行加减，以温肾助阳，佐以化瘀"
+    }
+  ]
+}

@@ -1,0 +1,191 @@
+{
+  "entities": [
+    {
+      "entity_name": "龚丶X",
+      "entity_type": "患者信息",
+      "description": "男，58岁，低烧两年余"
+    },
+    {
+      "entity_name": "低烧",
+      "entity_type": "症状",
+      "description": "低烧两年余，手足心热，午后热甚，体温偏高"
+    },
+    {
+      "entity_name": "手足心热",
+      "entity_type": "症状",
+      "description": "手足心热"
+    },
+    {
+      "entity_name": "午后热甚",
+      "entity_type": "症状",
+      "description": "午后热甚"
+    },
+    {
+      "entity_name": "自汗",
+      "entity_type": "症状",
+      "description": "常自汗出"
+    },
+    {
+      "entity_name": "头晕",
+      "entity_type": "症状",
+      "description": "头晕"
+    },
+    {
+      "entity_name": "周身酸困",
+      "entity_type": "症状",
+      "description": "周身酸困"
+    },
+    {
+      "entity_name": "咳嗽",
+      "entity_type": "症状",
+      "description": "咳嗽"
+    },
+    {
+      "entity_name": "气液不足",
+      "entity_type": "证候",
+      "description": "气液不足"
+    },
+    {
+      "entity_name": "脾气虚弱",
+      "entity_type": "证候",
+      "description": "脾气虚弱"
+    },
+    {
+      "entity_name": "内伤发热（低热）",
+      "entity_type": "疾病",
+      "description": "低烧两年余"
+    },
+    {
+      "entity_name": "内伤发热（低热）_气液不足_治疗方",
+      "entity_type": "处方",
+      "description": "浮小麦12克，炙甘草6克，大枣（切）5枚，黄芪12克，北五味（打）3克，天门冬9克，地骨皮6克，枸杞子6克；治法：益气养阴"
+    },
+    {
+      "entity_name": "内伤发热（低热）_脾气虚弱_治疗方",
+      "entity_type": "处方",
+      "description": "党参6克，炒白术4克，云苓3克，炙甘草1.5克，陈皮2.4克，木瓜3克，炒小麦9克，五味子（打）3克，大枣（切）3枚；治法：益气缓肝"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.95,
+      "participants": [
+        {
+          "entity_name": "龚丶X",
+          "role": "患者",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "低烧",
+          "role": "症状",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "手足心热",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "午后热甚",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "自汗",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "头晕",
+          "role": "症状",
+          "membership_degree": 0.6
+        },
+        {
+          "entity_name": "周身酸困",
+          "role": "症状",
+          "membership_degree": 0.6
+        },
+        {
+          "entity_name": "咳嗽",
+          "role": "症状",
+          "membership_degree": 0.5
+        },
+        {
+          "entity_name": "气液不足",
+          "role": "证候",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "患者龚丶X表现为低烧、手足心热、午后热甚等症状，辨证为气液不足"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "气液不足",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "内伤发热（低热）_气液不足_治疗方",
+          "role": "处方",
+          "membership_degree": 1.0
+        }
+      ],
+      "description": "针对气液不足证候，采用益气养阴的治法，处方为内伤发热（低热）_气液不足_治疗方"
+    },
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "龚丶X",
+          "role": "患者",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "脾气虚弱",
+          "role": "证候",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "患者龚丶X表现为肠胃欠佳、腹痛、大便偏稀等症状，辨证为脾气虚弱"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "脾气虚弱",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "内伤发热（低热）_脾气虚弱_治疗方",
+          "role": "处方",
+          "membership_degree": 1.0
+        }
+      ],
+      "description": "针对脾气虚弱证候，采用益气缓肝的治法，处方为内伤发热（低热）_脾气虚弱_治疗方"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.8,
+      "participants": [
+        {
+          "entity_name": "内伤发热（低热）_气液不足_治疗方",
+          "role": "原处方",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "内伤发热（低热）_脾气虚弱_治疗方",
+          "role": "新处方",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "根据病情变化，从益气养阴的处方调整为益气缓肝的处方"
+    }
+  ]
+}

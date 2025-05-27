@@ -1,0 +1,152 @@
+{
+  "entities": [
+    {
+      "entity_name": "夏xx",
+      "entity_type": "患者信息",
+      "description": "女，35岁，初诊日期：1964年4月18日"
+    },
+    {
+      "entity_name": "咳嗽气喘",
+      "entity_type": "症状",
+      "description": "咳嗽气喘，痰白，时吐清水"
+    },
+    {
+      "entity_name": "大便溏泄",
+      "entity_type": "症状",
+      "description": "经常大便溏泄，进生冷油腻时，则每日须溏泄4～5次"
+    },
+    {
+      "entity_name": "恶寒畏冷",
+      "entity_type": "症状",
+      "description": "恶寒畏冷，肢末欠温"
+    },
+    {
+      "entity_name": "月经量多色淡",
+      "entity_type": "症状",
+      "description": "月经周期正常，但量多色较淡"
+    },
+    {
+      "entity_name": "面部微浮",
+      "entity_type": "症状",
+      "description": "面部微浮"
+    },
+    {
+      "entity_name": "舌苔白滑",
+      "entity_type": "症状",
+      "description": "舌苔白滑"
+    },
+    {
+      "entity_name": "脉象沉小",
+      "entity_type": "症状",
+      "description": "脉象沉小"
+    },
+    {
+      "entity_name": "脾肾阳虚",
+      "entity_type": "证候",
+      "description": "脾肾阳虚"
+    },
+    {
+      "entity_name": "咳嗽",
+      "entity_type": "疾病",
+      "description": "咳嗽"
+    },
+    {
+      "entity_name": "咳嗽_脾肾阳虚_治疗方",
+      "entity_type": "处方",
+      "description": "茯苓、菟丝子各9克，附子、法夏、苏子各6克，陈皮、五味各4.5克，葫芦巴12克，炙甘草3克；治法：温中蠲饮，摄肾纳气"
+    },
+    {
+      "entity_name": "桂附理中汤加味",
+      "entity_type": "处方",
+      "description": "潞党参、炒白术、附子、葫芦巴各9克，干姜、炙甘草、破故纸各6克，五味子4.5克，肉桂1.2克（另研冲）；治法：益火生土"
+    },
+    {
+      "entity_name": "桂附八味丸",
+      "entity_type": "处方",
+      "description": "桂附八味丸；治法：收功"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.95,
+      "participants": [
+        {
+          "entity_name": "夏xx",
+          "role": "患者",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "咳嗽气喘",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "大便溏泄",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "恶寒畏冷",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "脾肾阳虚",
+          "role": "证候",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "患者夏xx的症状表现为咳嗽气喘、大便溏泄、恶寒畏冷，辨证为脾肾阳虚"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "脾肾阳虚",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "咳嗽_脾肾阳虚_治疗方",
+          "role": "处方",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "桂附理中汤加味",
+          "role": "处方",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "桂附八味丸",
+          "role": "处方",
+          "membership_degree": 0.7
+        }
+      ],
+      "description": "针对脾肾阳虚证候，采用温中蠲饮、摄肾纳气的治法，先后使用咳嗽_脾肾阳虚_治疗方、桂附理中汤加味和桂附八味丸进行治疗"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "咳嗽_脾肾阳虚_治疗方",
+          "role": "原处方",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "桂附理中汤加味",
+          "role": "新处方",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "大便溏泄",
+          "role": "症状",
+          "membership_degree": 0.7
+        }
+      ],
+      "description": "因多食青菜导致咳喘泄泻复发，在原处方基础上调整，使用桂附理中汤加味以益火生土"
+    }
+  ]
+}

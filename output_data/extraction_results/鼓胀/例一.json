@@ -1,0 +1,147 @@
+{
+  "entities": [
+    {
+      "entity_name": "林左",
+      "entity_type": "患者信息",
+      "description": "男性，年近花甲"
+    },
+    {
+      "entity_name": "大腹胀满",
+      "entity_type": "症状",
+      "description": "腹胀如鼓"
+    },
+    {
+      "entity_name": "小溲清白",
+      "entity_type": "症状",
+      "description": "小便清长"
+    },
+    {
+      "entity_name": "脉象沉细",
+      "entity_type": "症状",
+      "description": "脉象沉细"
+    },
+    {
+      "entity_name": "脾阳不运",
+      "entity_type": "证候",
+      "description": "脾阳不运"
+    },
+    {
+      "entity_name": "浊湿凝聚",
+      "entity_type": "证候",
+      "description": "浊湿凝聚"
+    },
+    {
+      "entity_name": "阳虚气鼓",
+      "entity_type": "证候",
+      "description": "阳虚气鼓"
+    },
+    {
+      "entity_name": "鼓胀",
+      "entity_type": "疾病",
+      "description": "腹胀如鼓"
+    },
+    {
+      "entity_name": "鼓胀_阳虚气鼓_治疗方",
+      "entity_type": "处方",
+      "description": "熟附子块3克，淡干姜2.4克，生白术9克，陈皮3克，制川朴3克，大腹皮6克，鸡金炭4.5克，炒谷芽12克，陈葫芦瓢12克，清炙草1.5克；治法：温运分消"
+    },
+    {
+      "entity_name": "鼓胀_阳虚气鼓_治疗方_二诊",
+      "entity_type": "处方",
+      "description": "炒潞党参9克，熟附子4.5克，淡干姜2.4克，清炙草1.5克，陈广皮3克，大砂仁(研)2.4克，葫芦巴4.5克，炒补骨脂4.5克，煨益智4.5克，陈葫芦瓢12克；治法：益火消阴，补虚运脾"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.95,
+      "participants": [
+        {
+          "entity_name": "林左",
+          "role": "患者",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "大腹胀满",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "小溲清白",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "脉象沉细",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "脾阳不运",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "浊湿凝聚",
+          "role": "证候",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "阳虚气鼓",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "鼓胀",
+          "role": "疾病",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "患者林左因脾阳不运，浊湿凝聚导致鼓胀，证属阳虚气鼓"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "鼓胀_阳虚气鼓_治疗方",
+          "role": "处方",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "阳虚气鼓",
+          "role": "证候",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "鼓胀",
+          "role": "疾病",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "针对阳虚气鼓的鼓胀，采用温运分消的治法"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "鼓胀_阳虚气鼓_治疗方_二诊",
+          "role": "处方",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "鼓胀_阳虚气鼓_治疗方",
+          "role": "处方",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "阳虚气鼓",
+          "role": "证候",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "二诊时根据病情变化，调整处方为益火消阴、补虚运脾"
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "entities": [
+    {
+      "entity_name": "田XX",
+      "entity_type": "患者信息",
+      "description": "男性，成年，初诊日期：1958年4月17日"
+    },
+    {
+      "entity_name": "不寐",
+      "entity_type": "疾病",
+      "description": "失眠多梦"
+    },
+    {
+      "entity_name": "失眠多梦",
+      "entity_type": "症状",
+      "description": "睡眠障碍，多梦"
+    },
+    {
+      "entity_name": "头痛偏左",
+      "entity_type": "症状",
+      "description": "左侧头痛"
+    },
+    {
+      "entity_name": "水火不济",
+      "entity_type": "证候",
+      "description": "阴阳失衡，水火不济"
+    },
+    {
+      "entity_name": "肝阳上亢",
+      "entity_type": "证候",
+      "description": "肝阳上亢，浮阳上扰"
+    },
+    {
+      "entity_name": "不寐_水火不济_肝阳上亢_治疗方",
+      "entity_type": "处方",
+      "description": "大生地12克，天麦冬各9克，细石斛9克，珍珠母18克(先煎)，煅龙齿12克(先煎)，辰茯神9克，炒枣仁9克，夜交藤12克，夜合花6克，炒杭菊9克，嫩钩藤9克(后下)，炒丹皮4.5克；治法：滋水济火，平肝潜阳"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.95,
+      "participants": [
+        {
+          "entity_name": "田XX",
+          "role": "患者",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "失眠多梦",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "头痛偏左",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "水火不济",
+          "role": "证候",
+          "membership_degree": 0.85
+        },
+        {
+          "entity_name": "肝阳上亢",
+          "role": "证候",
+          "membership_degree": 0.85
+        }
+      ],
+      "description": "患者田XX因失眠多梦、头痛偏左，辨证为水火不济、肝阳上亢"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "不寐_水火不济_肝阳上亢_治疗方",
+          "role": "处方",
+          "membership_degree": 0.95
+        },
+        {
+          "entity_name": "水火不济",
+          "role": "证候",
+          "membership_degree": 0.85
+        },
+        {
+          "entity_name": "肝阳上亢",
+          "role": "证候",
+          "membership_degree": 0.85
+        }
+      ],
+      "description": "针对水火不济、肝阳上亢的证候，采用滋水济火、平肝潜阳的治法"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.8,
+      "participants": [
+        {
+          "entity_name": "不寐_水火不济_肝阳上亢_治疗方",
+          "role": "处方",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "失眠多梦",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "头痛偏左",
+          "role": "症状",
+          "membership_degree": 0.7
+        }
+      ],
+      "description": "处方中药物针对失眠多梦、头痛偏左的症状进行加减"
+    }
+  ]
+}

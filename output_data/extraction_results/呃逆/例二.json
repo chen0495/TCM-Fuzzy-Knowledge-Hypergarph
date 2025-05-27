@@ -1,0 +1,267 @@
+{
+  "entities": [
+    {
+      "entity_name": "邵XX",
+      "entity_type": "患者信息",
+      "description": "男性，63岁"
+    },
+    {
+      "entity_name": "呃逆",
+      "entity_type": "疾病",
+      "description": "气逆上冲，呃声连作，不能自制的证候"
+    },
+    {
+      "entity_name": "食物下胃不化",
+      "entity_type": "症状",
+      "description": "食物下胃不化"
+    },
+    {
+      "entity_name": "呃逆时作",
+      "entity_type": "症状",
+      "description": "呃逆时作"
+    },
+    {
+      "entity_name": "滞而作痛",
+      "entity_type": "症状",
+      "description": "滞而作痛"
+    },
+    {
+      "entity_name": "入腹之后，其痛更剧",
+      "entity_type": "症状",
+      "description": "入腹之后，其痛更剧"
+    },
+    {
+      "entity_name": "肝脾不和，气食两滞",
+      "entity_type": "证候",
+      "description": "肝脾不和，气食两滞"
+    },
+    {
+      "entity_name": "呃逆_肝脾不和，气食两滞_治疗方",
+      "entity_type": "处方",
+      "description": "空沙参12克焦冬术9克炒枳壳9克连水烧川朴3克黄郁金9克制乳没各9克沉香曲9克·生熟稻芽各9克佛手片9克焦鸡金9克白蔻仁9克甘草梢6克鲜荷梗1尺生荸荠3枚捣"
+    },
+    {
+      "entity_name": "腹痛已愈，惟尚作呃逆，咽物下胃，尚微作痛",
+      "entity_type": "症状",
+      "description": "腹痛已愈，惟尚作呃逆，咽物下胃，尚微作痛"
+    },
+    {
+      "entity_name": "肝胃未和",
+      "entity_type": "证候",
+      "description": "肝胃未和"
+    },
+    {
+      "entity_name": "呃逆_肝胃未和_治疗方",
+      "entity_type": "处方",
+      "description": "南沙参12克五味槟榔9克郁金9克炒枳壳9克焦鸡金9克佛手片9克蔻仁6克六神曲9克炒稻芽9克土炒杭芍9克甘草3克鲜荷梗1尺"
+    },
+    {
+      "entity_name": "不能平睡，睡下则胃部发梗而气不通",
+      "entity_type": "症状",
+      "description": "不能平睡，睡下则胃部发梗而气不通"
+    },
+    {
+      "entity_name": "气食两滞",
+      "entity_type": "证候",
+      "description": "气食两滞"
+    },
+    {
+      "entity_name": "呃逆_气食两滞_治疗方",
+      "entity_type": "处方",
+      "description": "空沙参12克姜川朴3克六神曲9克山楂炭9克五味槟榔9克盐砂仁6克青木香6克炒稻芽9克黄郁金6克藿香梗6克焦鸡金9克佛手片9克鲜荷梗1尺"
+    },
+    {
+      "entity_name": "胃部作梗而更痛",
+      "entity_type": "症状",
+      "description": "胃部作梗而更痛"
+    },
+    {
+      "entity_name": "呃逆_气食两滞_治疗方2",
+      "entity_type": "处方",
+      "description": "空沙参9克苦桔梗9克沉香曲9克真郁金9克广木香6克盐砂仁6克川牛膝9克蔻仁3克花槟榔9克首乌藤12克炒稻芽9克甘草梢3克鲜荷梗1尺"
+    },
+    {
+      "entity_name": "食物下胃，仍上泛作吐，腹痛不减，入夜睡后更甚",
+      "entity_type": "症状",
+      "description": "食物下胃，仍上泛作吐，腹痛不减，入夜睡后更甚"
+    },
+    {
+      "entity_name": "肠脾不和",
+      "entity_type": "证候",
+      "description": "肠脾不和"
+    },
+    {
+      "entity_name": "呃逆_肠脾不和_治疗方",
+      "entity_type": "处方",
+      "description": "南沙参12克连水炒川朴3克六神曲9克焦鸡金9克佛手片9克生熟稻芽各9克川黄连木香各1．5克制乳没各6克盐砂仁6克五味槟榔9克灵磁石12克(先煎)赤芍药9克生荷梗1尺"
+    },
+    {
+      "entity_name": "胃钝不开，食滞不化，食物下咽，往往停蓄脘间，作胀且痛",
+      "entity_type": "症状",
+      "description": "胃钝不开，食滞不化，食物下咽，往往停蓄脘间，作胀且痛"
+    },
+    {
+      "entity_name": "呃逆_食滞不化_治疗方",
+      "entity_type": "处方",
+      "description": "空沙参12克黄郁金9克沉香9克盐砂仁9克麸炒积实6克焦鸡金9克炒稻芽12克腹皮9克盐炒槟榔9克苦杏仁9克广木香9克皮茯苓12克佛手片9克干藕节5枚"
+    },
+    {
+      "entity_name": "尚吐痰涎，不吐则呃逆上冲难受",
+      "entity_type": "症状",
+      "description": "尚吐痰涎，不吐则呃逆上冲难受"
+    },
+    {
+      "entity_name": "胃热脾湿",
+      "entity_type": "证候",
+      "description": "胃热脾湿"
+    },
+    {
+      "entity_name": "呃逆_胃热脾湿_治疗方",
+      "entity_type": "处方",
+      "description": "南沙参12克焦冬术9克炒枳壳9克白蔻仁9克黄郁金9克连水炒川朴3克酒黄芩9克六神曲9克五味槟榔9克青竹茹9克盐砂仁6克甘草梢6克生荷叶1角带梗5寸"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "邵XX",
+          "role": "患者",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "呃逆",
+          "role": "疾病",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "肝脾不和，气食两滞",
+          "role": "证候",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "患者邵XX患有呃逆，证属肝脾不和，气食两滞"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "呃逆_肝脾不和，气食两滞_治疗方",
+          "role": "处方",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "肝脾不和，气食两滞",
+          "role": "证候",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "针对肝脾不和，气食两滞的证候，采用滋肾养阴，清热降火的治法"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.8,
+      "participants": [
+        {
+          "entity_name": "呃逆_肝胃未和_治疗方",
+          "role": "处方",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "肝胃未和",
+          "role": "证候",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "根据病情变化，调整处方以应对肝胃未和的证候"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.8,
+      "participants": [
+        {
+          "entity_name": "呃逆_气食两滞_治疗方",
+          "role": "处方",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "气食两滞",
+          "role": "证候",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "根据病情变化，调整处方以应对气食两滞的证候"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.8,
+      "participants": [
+        {
+          "entity_name": "呃逆_气食两滞_治疗方2",
+          "role": "处方",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "气食两滞",
+          "role": "证候",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "根据病情变化，调整处方以应对气食两滞的证候"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.8,
+      "participants": [
+        {
+          "entity_name": "呃逆_肠脾不和_治疗方",
+          "role": "处方",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "肠脾不和",
+          "role": "证候",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "根据病情变化，调整处方以应对肠脾不和的证候"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.8,
+      "participants": [
+        {
+          "entity_name": "呃逆_食滞不化_治疗方",
+          "role": "处方",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "食滞不化",
+          "role": "证候",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "根据病情变化，调整处方以应对食滞不化的证候"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.8,
+      "participants": [
+        {
+          "entity_name": "呃逆_胃热脾湿_治疗方",
+          "role": "处方",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "胃热脾湿",
+          "role": "证候",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "根据病情变化，调整处方以应对胃热脾湿的证候"
+    }
+  ]
+}

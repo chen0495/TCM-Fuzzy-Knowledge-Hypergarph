@@ -1,0 +1,147 @@
+{
+  "entities": [
+    {
+      "entity_name": "王××",
+      "entity_type": "患者信息",
+      "description": "女，52岁，门诊号：77／8475，初诊日期：1977年3月10日"
+    },
+    {
+      "entity_name": "左手足震颤",
+      "entity_type": "症状",
+      "description": "左手足震颤已八年，始于左上肢，以后发展至左上下肢震颤抖动，但以手指部震颤最严重"
+    },
+    {
+      "entity_name": "行动缓慢",
+      "entity_type": "症状",
+      "description": "行动缓慢"
+    },
+    {
+      "entity_name": "振振摇搐",
+      "entity_type": "症状",
+      "description": "振振摇搐"
+    },
+    {
+      "entity_name": "纳谷不佳",
+      "entity_type": "症状",
+      "description": "纳谷不佳"
+    },
+    {
+      "entity_name": "睡眠不酣",
+      "entity_type": "症状",
+      "description": "睡眠不酣"
+    },
+    {
+      "entity_name": "口干便坚",
+      "entity_type": "症状",
+      "description": "口干便坚"
+    },
+    {
+      "entity_name": "脉弦细",
+      "entity_type": "症状",
+      "description": "脉弦细"
+    },
+    {
+      "entity_name": "苔薄腻",
+      "entity_type": "症状",
+      "description": "苔薄腻"
+    },
+    {
+      "entity_name": "质偏红",
+      "entity_type": "症状",
+      "description": "质偏红"
+    },
+    {
+      "entity_name": "肝血虚",
+      "entity_type": "证候",
+      "description": "肝血虚，血不养筋则肢摇震颤"
+    },
+    {
+      "entity_name": "肝风内动",
+      "entity_type": "证候",
+      "description": "肝风内动，风动则肢摇"
+    },
+    {
+      "entity_name": "震颤麻痹",
+      "entity_type": "疾病",
+      "description": "震颤麻痹（帕金森氏病）"
+    },
+    {
+      "entity_name": "震颤麻痹_肝血虚_治疗方",
+      "entity_type": "处方",
+      "description": "生熟地各12克，全当归9克，赤白芍各9克，花龙骨30克(先煎），生牡蛎30克(先煎），珍珠母30克(先煎），生黄芪12克，潞党参12克，制首乌12克，枸杞子9克，川石斛12克(先煎），怀牛膝12克，单桃仁9克，杜红花6克，玄精石18克，仙灵脾18克。治法：平肝柔肝，养血熄风"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "王××",
+          "role": "患者",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "左手足震颤",
+          "role": "症状",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "肝血虚",
+          "role": "证候",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "肝风内动",
+          "role": "证候",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "患者左手足震颤等症状辨证为肝血虚、肝风内动"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "王××",
+          "role": "患者",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "震颤麻痹_肝血虚_治疗方",
+          "role": "处方",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "肝血虚",
+          "role": "证候",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "肝风内动",
+          "role": "证候",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "针对肝血虚、肝风内动证候，采用平肝柔肝、养血熄风的治法"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.8,
+      "participants": [
+        {
+          "entity_name": "震颤麻痹_肝血虚_治疗方",
+          "role": "处方",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "左手足震颤",
+          "role": "症状",
+          "membership_degree": 0.7
+        }
+      ],
+      "description": "处方根据症状变化进行加减，左下肢震颤已明显好转"
+    }
+  ]
+}

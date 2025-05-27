@@ -1,0 +1,144 @@
+{
+  "entities": [
+    {
+      "entity_name": "高XX",
+      "entity_type": "患者信息",
+      "description": "男，56岁，门诊号76／34981"
+    },
+    {
+      "entity_name": "类风湿关节炎",
+      "entity_type": "疾病",
+      "description": "患类风湿关节炎三年余"
+    },
+    {
+      "entity_name": "手指足趾肿痛变形",
+      "entity_type": "症状",
+      "description": "手指足趾肿痛变形"
+    },
+    {
+      "entity_name": "畏寒乏力",
+      "entity_type": "症状",
+      "description": "畏寒乏力"
+    },
+    {
+      "entity_name": "脉沉细",
+      "entity_type": "症状",
+      "description": "脉沉细"
+    },
+    {
+      "entity_name": "苔薄白",
+      "entity_type": "症状",
+      "description": "苔薄白"
+    },
+    {
+      "entity_name": "风寒湿久阻脉络，挟瘀凝结",
+      "entity_type": "证候",
+      "description": "风寒湿久阻脉络，挟瘀凝结"
+    },
+    {
+      "entity_name": "痹证_风寒湿久阻脉络，挟瘀凝结_治疗方",
+      "entity_type": "处方",
+      "description": "制川草乌各9克(先煎)生黄芪15克净麻黄6克全当归9克细辛3克生甘草9克川桂枝9克炒赤白芍各9克桃仁9克红花6克蕲蛇9克全蝎粉1．2克(分吞)纯蜜15克(冲)"
+    },
+    {
+      "entity_name": "痹证_风寒湿久阻脉络，挟瘀凝结_治疗方_二诊",
+      "entity_type": "处方",
+      "description": "制川草乌各9克(先煎)生黄芪18克净麻黄6克川桂枝9克北细辛3克炒赤白芍各9克熟附片9克(先煎)生甘草9克全当归15克露蜂房9克全蝎粉1．2克(分吞)蕲蛇9克纯蜜15克"
+    },
+    {
+      "entity_name": "痹证_风寒湿久阻脉络，挟瘀凝结_治疗方_三诊",
+      "entity_type": "处方",
+      "description": "制川草乌各9克(先煎)熟附片9克(先煎)全当归15克川桂枝9克北细辛3克大熟地15克炙黄芪15克炒亦白芍各9克炒川芎6克鹿角片9克全蝎粉1．2克(分吞)蕲蛇9克纯蜜15克(冲)"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.95,
+      "participants": [
+        {
+          "entity_name": "高XX",
+          "role": "患者",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "手指足趾肿痛变形",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "畏寒乏力",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "脉沉细",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "苔薄白",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "风寒湿久阻脉络，挟瘀凝结",
+          "role": "证候",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "根据症状和体征，辨证为风寒湿久阻脉络，挟瘀凝结"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "风寒湿久阻脉络，挟瘀凝结",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "痹证_风寒湿久阻脉络，挟瘀凝结_治疗方",
+          "role": "处方",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "针对风寒湿久阻脉络，挟瘀凝结的证候，采用大乌头煎参入化瘀搜络之晶的治法"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "痹证_风寒湿久阻脉络，挟瘀凝结_治疗方",
+          "role": "处方",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "痹证_风寒湿久阻脉络，挟瘀凝结_治疗方_二诊",
+          "role": "处方",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "二诊时根据病情变化，对原处方进行增损"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "痹证_风寒湿久阻脉络，挟瘀凝结_治疗方_二诊",
+          "role": "处方",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "痹证_风寒湿久阻脉络，挟瘀凝结_治疗方_三诊",
+          "role": "处方",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "三诊时根据病情变化，对原处方进行增损，参入益气养血之品"
+    }
+  ]
+}

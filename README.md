@@ -109,7 +109,7 @@ HyperGraphRAG/
 
 ```env
 SILICONFLOW_API_KEY="YOUR_SILICONFLOW_API_KEY"
-SILICONFLOW_MODEL="deepseek-ai/DeepSeek-V2"  # 或者您希望使用的其他兼容模型
+SILICONFLOW_MODEL="deepseek-ai/DeepSeek-V3"  # 或者您希望使用的其他兼容模型
 SILICONFLOW_API_URL="https://api.siliconflow.cn/v1"
 ```
 

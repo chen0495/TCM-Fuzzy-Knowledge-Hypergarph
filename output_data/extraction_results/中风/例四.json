@@ -1,0 +1,122 @@
+{
+  "entities": [
+    {
+      "entity_name": "谢X",
+      "entity_type": "患者信息",
+      "description": "64岁，因心中懊侬非常，素性嗜酒，近因心中懊侬，益以酒浇愁，饥时恒以烧酒当饭。"
+    },
+    {
+      "entity_name": "头疼",
+      "entity_type": "症状",
+      "description": "旬日前即觉头疼，一日晨起至工所，忽仆于地，状若昏厥，移时复苏，其左手足遂不能动，且觉头疼甚剧。"
+    },
+    {
+      "entity_name": "左手足不能动",
+      "entity_type": "症状",
+      "description": "其左手足遂不能动。"
+    },
+    {
+      "entity_name": "心中甚热",
+      "entity_type": "症状",
+      "description": "心中甚热。"
+    },
+    {
+      "entity_name": "脉左部弦长，右洪长，皆重按有力",
+      "entity_type": "症状",
+      "description": "脉左部弦长，右洪长，皆重按有力。"
+    },
+    {
+      "entity_name": "肝火上亢，化风煽动",
+      "entity_type": "证候",
+      "description": "凡猝倒昏瞀，痰气上壅之中风，皆由肝火上亢，化风煽动，激起气血，并走于上，直冲犯脑，震扰神经而为昏不识人，喁斜倾跌，肢体不遂，言语不清诸症，皆脑神经失其功能之病。"
+    },
+    {
+      "entity_name": "中风",
+      "entity_type": "疾病",
+      "description": "因心中懊侬非常，旬日前即觉头疼，不以为意。一日晨起至工所，忽仆于地，状若昏厥。移时复苏，其左手足遂不能动，且觉头疼甚剧。"
+    },
+    {
+      "entity_name": "中风_肝火上亢，化风煽动_治疗方",
+      "entity_type": "处方",
+      "description": "怀牛膝30克，生龙骨18克(打)，生牡蛎18克(打)，川楝子12克，生杭芍18克，生石膏30克(研细)，代赭石18克(生打)，乌玄参12克，龙胆草9克，生甘草6克。治法：降血平脑。"
+    },
+    {
+      "entity_name": "镇肝熄风汤加减",
+      "entity_type": "处方",
+      "description": "原方去茵陈、天冬、龟板，加生石膏、胆草以加强清热泻肝之力，重用牛膝以引血下行，折其亢盛之风阳。"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.95,
+      "participants": [
+        {
+          "entity_name": "谢X",
+          "role": "患者",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "头疼",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "左手足不能动",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "心中甚热",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "脉左部弦长，右洪长，皆重按有力",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "肝火上亢，化风煽动",
+          "role": "证候",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "患者谢X因情志不遂，素性嗜酒，导致肝火上亢，化风煽动，引发中风。"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "肝火上亢，化风煽动",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "中风_肝火上亢，化风煽动_治疗方",
+          "role": "处方",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "针对肝火上亢，化风煽动的证候，采用降血平脑的治法，处方为怀牛膝、生龙骨、生牡蛎等药物组成的中风_肝火上亢，化风煽动_治疗方。"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "镇肝熄风汤加减",
+          "role": "处方",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "中风_肝火上亢，化风煽动_治疗方",
+          "role": "处方",
+          "membership_degree": 0.7
+        }
+      ],
+      "description": "在镇肝熄风汤的基础上，去茵陈、天冬、龟板，加生石膏、胆草以加强清热泻肝之力，重用牛膝以引血下行，折其亢盛之风阳。"
+    }
+  ]
+}

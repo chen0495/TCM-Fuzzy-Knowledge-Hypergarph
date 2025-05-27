@@ -1,0 +1,157 @@
+{
+  "entities": [
+    {
+      "entity_name": "詹××",
+      "entity_type": "患者信息",
+      "description": "男，31岁"
+    },
+    {
+      "entity_name": "疟疾",
+      "entity_type": "疾病",
+      "description": "患牡疟20余日"
+    },
+    {
+      "entity_name": "寒战发抖",
+      "entity_type": "症状",
+      "description": "每日午后即作，寒战发抖"
+    },
+    {
+      "entity_name": "头痛体困",
+      "entity_type": "症状",
+      "description": "头痛体困"
+    },
+    {
+      "entity_name": "寒战踡卧",
+      "entity_type": "症状",
+      "description": "虽时值三伏，仍寒战踡卧"
+    },
+    {
+      "entity_name": "冷汗自出",
+      "entity_type": "症状",
+      "description": "冷汗自出"
+    },
+    {
+      "entity_name": "厌食胸闷",
+      "entity_type": "症状",
+      "description": "厌食胸闷"
+    },
+    {
+      "entity_name": "恶心欲吐",
+      "entity_type": "症状",
+      "description": "恶心欲吐"
+    },
+    {
+      "entity_name": "四肢厥冷",
+      "entity_type": "症状",
+      "description": "四肢厥冷"
+    },
+    {
+      "entity_name": "面青白",
+      "entity_type": "症状",
+      "description": "面青白"
+    },
+    {
+      "entity_name": "舌淡微青",
+      "entity_type": "症状",
+      "description": "舌淡微青"
+    },
+    {
+      "entity_name": "苔白腻",
+      "entity_type": "症状",
+      "description": "苔白腻"
+    },
+    {
+      "entity_name": "六脉安细",
+      "entity_type": "症状",
+      "description": "六脉安细"
+    },
+    {
+      "entity_name": "两尺尤弱",
+      "entity_type": "症状",
+      "description": "两尺尤弱"
+    },
+    {
+      "entity_name": "阳气素虚，脾为阴邪所困",
+      "entity_type": "证候",
+      "description": "阳气素虚，脾为阴邪所困，寒邪久伏少阴"
+    },
+    {
+      "entity_name": "疟疾_阳气素虚，脾为阴邪所困_治疗方",
+      "entity_type": "处方",
+      "description": "黑天雄120克(开水先煎透）炮姜30克炙草9克厚朴9克烧草果1个(去壳）苍术15克炒常山6克草寇6克浮小麦15克大枣5个(酒烧）"
+    },
+    {
+      "entity_name": "疟疾_阳气素虚，脾为阴邪所困_调理方",
+      "entity_type": "处方",
+      "description": "黑天雄45克(开水先煎透）潞党参15克自术15克炮姜15克法半夏9克烧乌梅1个陈皮9克炙草9克茯苓9克烧草果1个(去壳）大枣5个(酒烧）"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "詹××",
+          "role": "患者",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "疟疾",
+          "role": "疾病",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "阳气素虚，脾为阴邪所困",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "寒战发抖",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "四肢厥冷",
+          "role": "症状",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "患者詹××患牡疟20余日，证属阳气素虚，脾为阴邪所困"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "疟疾_阳气素虚，脾为阴邪所困_治疗方",
+          "role": "处方",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "阳气素虚，脾为阴邪所困",
+          "role": "证候",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "治以辛温助阳，健脾补气"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.8,
+      "participants": [
+        {
+          "entity_name": "疟疾_阳气素虚，脾为阴邪所困_治疗方",
+          "role": "原处方",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "疟疾_阳气素虚，脾为阴邪所困_调理方",
+          "role": "调整后处方",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "复诊时调整处方以调理善后"
+    }
+  ]
+}

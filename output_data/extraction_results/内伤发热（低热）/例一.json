@@ -1,0 +1,199 @@
+{
+  "entities": [
+    {
+      "entity_name": "黄xX",
+      "entity_type": "患者信息",
+      "description": "女，39岁，初诊日期：1976年11月6日"
+    },
+    {
+      "entity_name": "低热",
+      "entity_type": "症状",
+      "description": "半年来每天低热（37.2℃～37.3℃）"
+    },
+    {
+      "entity_name": "鼻干而塞",
+      "entity_type": "症状",
+      "description": "鼻干而塞"
+    },
+    {
+      "entity_name": "口干怕冷",
+      "entity_type": "症状",
+      "description": "口干怕冷"
+    },
+    {
+      "entity_name": "烦热不得眠",
+      "entity_type": "症状",
+      "description": "到后半夜烦热不得眠"
+    },
+    {
+      "entity_name": "面赤",
+      "entity_type": "症状",
+      "description": "面赤"
+    },
+    {
+      "entity_name": "头及手足出汗",
+      "entity_type": "症状",
+      "description": "头及手足出汗而全身无汗"
+    },
+    {
+      "entity_name": "口渴欲饮",
+      "entity_type": "症状",
+      "description": "口渴欲饮"
+    },
+    {
+      "entity_name": "咳嗽痰多",
+      "entity_type": "症状",
+      "description": "咳嗽痰多如白沫"
+    },
+    {
+      "entity_name": "大便秘结",
+      "entity_type": "症状",
+      "description": "大便秘结"
+    },
+    {
+      "entity_name": "脉迟细",
+      "entity_type": "症状",
+      "description": "脉迟细"
+    },
+    {
+      "entity_name": "舌中心苔黄",
+      "entity_type": "症状",
+      "description": "舌色尚正，中心苔黄，舌边起滤泡"
+    },
+    {
+      "entity_name": "寒郁化热",
+      "entity_type": "证候",
+      "description": "寒邪失于汗解，寒郁化热，邪在气分留恋"
+    },
+    {
+      "entity_name": "内伤发热",
+      "entity_type": "疾病",
+      "description": "低热"
+    },
+    {
+      "entity_name": "内伤发热_寒郁化热_治疗方",
+      "entity_type": "处方",
+      "description": "柴胡4.5克，黄芩9克，知母9克，生石膏12克，焦山栀9克，淡豆豉9克，杏仁9克，生甘草4.5克，鱼腥草30克，赤白芍各9克，炒枳壳9克，制大黄9克，姜半夏12克。治法：表里双解，仿防风通圣散法"
+    },
+    {
+      "entity_name": "郭xx",
+      "entity_type": "患者信息",
+      "description": "女，40岁，初诊日期：1973年6月17日"
+    },
+    {
+      "entity_name": "下午低烧",
+      "entity_type": "症状",
+      "description": "3年来下午低烧，常达37.7℃～37.8℃"
+    },
+    {
+      "entity_name": "夜间两腿发麻",
+      "entity_type": "症状",
+      "description": "每到夜间两腿发麻"
+    },
+    {
+      "entity_name": "精神萎顿不振",
+      "entity_type": "症状",
+      "description": "精神萎顿不振"
+    },
+    {
+      "entity_name": "脉细而稍数",
+      "entity_type": "症状",
+      "description": "脉细而稍数，左关稍弦"
+    },
+    {
+      "entity_name": "舌无苔略红",
+      "entity_type": "症状",
+      "description": "舌无苔略红"
+    },
+    {
+      "entity_name": "阴虚肝旺",
+      "entity_type": "证候",
+      "description": "阴虚肝旺"
+    },
+    {
+      "entity_name": "内伤发热_阴虚肝旺_治疗方",
+      "entity_type": "处方",
+      "description": "生地黄24克，山萸肉12克，怀山药12克，丹皮12克，泽泻9克，茯苓9克，柴胡9克，五味子6克，白芍9克，紫肉桂6克。治法：滋阴调肝"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "黄xX",
+          "role": "患者",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "低热",
+          "role": "症状",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "寒郁化热",
+          "role": "证候",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "患者黄xX表现为低热等症状，辨证为寒郁化热"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "寒郁化热",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "内伤发热_寒郁化热_治疗方",
+          "role": "处方",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "针对寒郁化热证候，采用表里双解的治法"
+    },
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "郭xx",
+          "role": "患者",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "下午低烧",
+          "role": "症状",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "阴虚肝旺",
+          "role": "证候",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "患者郭xx表现为下午低烧等症状，辨证为阴虚肝旺"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "阴虚肝旺",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "内伤发热_阴虚肝旺_治疗方",
+          "role": "处方",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "针对阴虚肝旺证候，采用滋阴调肝的治法"
+    }
+  ]
+}

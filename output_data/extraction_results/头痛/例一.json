@@ -1,0 +1,117 @@
+{
+  "entities": [
+    {
+      "entity_name": "若X",
+      "entity_type": "患者信息",
+      "description": "患者姓名"
+    },
+    {
+      "entity_name": "头痛",
+      "entity_type": "症状",
+      "description": "患者主诉症状"
+    },
+    {
+      "entity_name": "干呕",
+      "entity_type": "症状",
+      "description": "患者伴随症状"
+    },
+    {
+      "entity_name": "咳嗽引腹中痛",
+      "entity_type": "症状",
+      "description": "患者伴随症状"
+    },
+    {
+      "entity_name": "按之则益不可忍",
+      "entity_type": "症状",
+      "description": "患者伴随症状"
+    },
+    {
+      "entity_name": "身无热",
+      "entity_type": "症状",
+      "description": "患者伴随症状"
+    },
+    {
+      "entity_name": "脉微弱",
+      "entity_type": "症状",
+      "description": "患者脉象"
+    },
+    {
+      "entity_name": "恶见火光",
+      "entity_type": "症状",
+      "description": "患者伴随症状"
+    },
+    {
+      "entity_name": "口中燥",
+      "entity_type": "症状",
+      "description": "患者伴随症状"
+    },
+    {
+      "entity_name": "阳明悍热之气上循入脑",
+      "entity_type": "证候",
+      "description": "患者证候"
+    },
+    {
+      "entity_name": "头痛_阳明悍热之气上循入脑_治疗方",
+      "entity_type": "处方",
+      "description": "生川军9克芒硝9克枳实12克厚朴3克，治法：釜底抽薪"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.95,
+      "participants": [
+        {
+          "entity_name": "若X",
+          "role": "患者",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "头痛",
+          "role": "症状",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "阳明悍热之气上循入脑",
+          "role": "证候",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "患者若X的症状和证候辨证为阳明悍热之气上循入脑"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "阳明悍热之气上循入脑",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "头痛_阳明悍热之气上循入脑_治疗方",
+          "role": "处方",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "针对阳明悍热之气上循入脑的证候，采用釜底抽薪的治法"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.8,
+      "participants": [
+        {
+          "entity_name": "头痛_阳明悍热之气上循入脑_治疗方",
+          "role": "处方",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "头痛",
+          "role": "症状",
+          "membership_degree": 0.7
+        }
+      ],
+      "description": "根据头痛症状的变化调整处方"
+    }
+  ]
+}

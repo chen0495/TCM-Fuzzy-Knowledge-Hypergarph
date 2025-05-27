@@ -1,0 +1,199 @@
+{
+  "entities": [
+    {
+      "entity_name": "刘Xx",
+      "entity_type": "患者信息",
+      "description": "男，17岁，门诊号：565375"
+    },
+    {
+      "entity_name": "发热",
+      "entity_type": "症状",
+      "description": "每日下午4点至夜间2点发热（38.5℃）"
+    },
+    {
+      "entity_name": "恶寒",
+      "entity_type": "症状",
+      "description": "烧前先有恶寒"
+    },
+    {
+      "entity_name": "无汗",
+      "entity_type": "症状",
+      "description": "无汗"
+    },
+    {
+      "entity_name": "头晕",
+      "entity_type": "症状",
+      "description": "伴有头晕"
+    },
+    {
+      "entity_name": "咽干",
+      "entity_type": "症状",
+      "description": "咽干"
+    },
+    {
+      "entity_name": "胸部隐痛",
+      "entity_type": "症状",
+      "description": "胸部觉隐痛"
+    },
+    {
+      "entity_name": "汗出热退",
+      "entity_type": "症状",
+      "description": "随后汗出热退"
+    },
+    {
+      "entity_name": "舌苔白厚质红",
+      "entity_type": "症状",
+      "description": "舌苔白厚、质红"
+    },
+    {
+      "entity_name": "脉细稍数略显浮象",
+      "entity_type": "症状",
+      "description": "脉细稍数，略显浮象"
+    },
+    {
+      "entity_name": "阴虚发热",
+      "entity_type": "证候",
+      "description": "证属阴虚发热"
+    },
+    {
+      "entity_name": "营卫不和",
+      "entity_type": "证候",
+      "description": "营卫不和"
+    },
+    {
+      "entity_name": "内伤发热",
+      "entity_type": "疾病",
+      "description": "内伤发热（高热）"
+    },
+    {
+      "entity_name": "内伤发热_阴虚发热_治疗方",
+      "entity_type": "处方",
+      "description": "青蒿10克，鳖甲10克，秦艽6克，地骨皮12克，玄参12克，银花15克，天花粉15克，鲜生地12克，丹皮10克，赤白芍各10克，僵蚕6克，鲜石斛30克，灯芯1.5克，桂枝3克，甘草6克，鲜茅根30克，银柴胡3克。治法：养阴清热，调和营卫"
+    },
+    {
+      "entity_name": "内伤发热_阴虚发热_治疗方_加减1",
+      "entity_type": "处方",
+      "description": "上方去桂枝加常山3.5克，银柴胡改为3.5克"
+    },
+    {
+      "entity_name": "内伤发热_阴虚发热_治疗方_加减2",
+      "entity_type": "处方",
+      "description": "上方加焦槟榔10克，蝉蜕3.5克"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "刘Xx",
+          "role": "患者",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "发热",
+          "role": "症状",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "恶寒",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "咽干",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "舌苔白厚质红",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "脉细稍数略显浮象",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "阴虚发热",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "营卫不和",
+          "role": "证候",
+          "membership_degree": 0.7
+        }
+      ],
+      "description": "患者发热三月余，夜热早凉，咽干、舌红，脉细数，证属阴虚发热，营卫不和"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "阴虚发热",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "营卫不和",
+          "role": "证候",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "内伤发热_阴虚发热_治疗方",
+          "role": "处方",
+          "membership_degree": 1.0
+        }
+      ],
+      "description": "治法：养阴清热，调和营卫，方用青蒿鳖甲汤、清骨散加减"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.8,
+      "participants": [
+        {
+          "entity_name": "内伤发热_阴虚发热_治疗方",
+          "role": "原处方",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "内伤发热_阴虚发热_治疗方_加减1",
+          "role": "加减处方",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "胸部隐痛",
+          "role": "症状",
+          "membership_degree": 0.6
+        }
+      ],
+      "description": "服上方4剂后，热势稍减，胸部时痛，上方去桂枝加常山3.5克，银柴胡改为3.5克"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.8,
+      "participants": [
+        {
+          "entity_name": "内伤发热_阴虚发热_治疗方_加减1",
+          "role": "原处方",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "内伤发热_阴虚发热_治疗方_加减2",
+          "role": "加减处方",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "舌苔白厚质红",
+          "role": "症状",
+          "membership_degree": 0.7
+        }
+      ],
+      "description": "药后曾有两天体温正常，昨日又达38℃，苔白较厚，上方加焦槟榔10克，蝉蜕3.5克"
+    }
+  ]
+}

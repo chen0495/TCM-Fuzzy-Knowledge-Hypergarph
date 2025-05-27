@@ -1,0 +1,313 @@
+{
+  "entities": [
+    {
+      "entity_name": "项XX",
+      "entity_type": "患者信息",
+      "description": "男，21岁，住院号75／1004"
+    },
+    {
+      "entity_name": "发热39．3℃",
+      "entity_type": "症状",
+      "description": "昨起发热39．3℃"
+    },
+    {
+      "entity_name": "咳嗽痰粘",
+      "entity_type": "症状",
+      "description": "咳嗽痰粘，不易咯出"
+    },
+    {
+      "entity_name": "身热灼手",
+      "entity_type": "症状",
+      "description": "今身热灼手，汗出浸衣"
+    },
+    {
+      "entity_name": "咳引右胸疼痛",
+      "entity_type": "症状",
+      "description": "咳引右胸疼痛"
+    },
+    {
+      "entity_name": "咯黄脓腥臭痰",
+      "entity_type": "症状",
+      "description": "咯黄脓腥臭痰"
+    },
+    {
+      "entity_name": "风温外受，湿热内蕴，熏蒸太阴，热毒伤肺，清肃无权，热壅血瘀，蕴酿成痈",
+      "entity_type": "证候",
+      "description": "辨证结果"
+    },
+    {
+      "entity_name": "肺痈",
+      "entity_type": "疾病",
+      "description": "右上叶后段肺脓疡，空洞液平形成"
+    },
+    {
+      "entity_name": "肺痈_风温外受，湿热内蕴，熏蒸太阴，热毒伤肺，清肃无权，热壅血瘀，蕴酿成痈_治疗方",
+      "entity_type": "处方",
+      "description": "麻杏石甘汤合千金苇茎汤：炙麻黄6克杏仁9克生石膏30克米仁30克桔梗6克甘草6克红藤30克鱼腥草18克芦根1支桃仁12克冬瓜子12克开金锁30克"
+    },
+    {
+      "entity_name": "千金苇茎汤合犀(牛)黄醒消丸",
+      "entity_type": "处方",
+      "description": "银花18克连翘18克芦根1支桃仁6克冬瓜子18克米仁30克鱼腥草30克红藤30克败酱草30克开金锁30克牛黄醒消丸4．5克(分吞)"
+    },
+    {
+      "entity_name": "养阴化痰方",
+      "entity_type": "处方",
+      "description": "北沙参12克麦冬9克甜杏仁9克桑叶皮各9克茯苓9克蛤粉炒阿胶9克山药12克白芨9克川贝粉4．5克枇杷叶12克茜草根12克"
+    },
+    {
+      "entity_name": "俞XX",
+      "entity_type": "患者信息",
+      "description": "女，31岁，患肺结核三年，伴肺不张"
+    },
+    {
+      "entity_name": "咯血",
+      "entity_type": "症状",
+      "description": "经常咯血"
+    },
+    {
+      "entity_name": "午后潮热",
+      "entity_type": "症状",
+      "description": "午后潮热"
+    },
+    {
+      "entity_name": "咳嗽痰稠",
+      "entity_type": "症状",
+      "description": "咳嗽痰稠"
+    },
+    {
+      "entity_name": "右胸隐痛",
+      "entity_type": "症状",
+      "description": "右胸隐痛"
+    },
+    {
+      "entity_name": "盱区作胀",
+      "entity_type": "症状",
+      "description": "盱区作胀"
+    },
+    {
+      "entity_name": "面浮神疲",
+      "entity_type": "症状",
+      "description": "面浮神疲"
+    },
+    {
+      "entity_name": "形瘦色萎",
+      "entity_type": "症状",
+      "description": "形瘦色萎"
+    },
+    {
+      "entity_name": "不思纳谷",
+      "entity_type": "症状",
+      "description": "不思纳谷"
+    },
+    {
+      "entity_name": "大便干结",
+      "entity_type": "症状",
+      "description": "大便干结"
+    },
+    {
+      "entity_name": "肺脏气阴不足，肝经气火有余，脾胃运化不健",
+      "entity_type": "证候",
+      "description": "辨证结果"
+    },
+    {
+      "entity_name": "肺结核",
+      "entity_type": "疾病",
+      "description": "患肺结核三年，伴肺不张"
+    },
+    {
+      "entity_name": "肺结核_肺脏气阴不足，肝经气火有余，脾胃运化不健_治疗方",
+      "entity_type": "处方",
+      "description": "炙黄芪9克炒白术9克炙甘草3克杏仁9克陈皮4．5克半夏4．5克蒸百部9克知母9克青蒿子4．5克炙鸡金4．5克"
+    },
+    {
+      "entity_name": "滋阴清肺，疏盱和胃方",
+      "entity_type": "处方",
+      "description": "南沙参12克炙甘草4。5克桑叶皮各9克银柴胡4．5克元参9克青蒿9克白蒺藜9克海蛤壳12克白前薇各9克淡竹茹4．5克陈皮4.5克广郁金9克"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.95,
+      "participants": [
+        {
+          "entity_name": "项XX",
+          "role": "患者",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "发热39．3℃",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "咳嗽痰粘",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "身热灼手",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "咳引右胸疼痛",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "咯黄脓腥臭痰",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "风温外受，湿热内蕴，熏蒸太阴，热毒伤肺，清肃无权，热壅血瘀，蕴酿成痈",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "肺痈",
+          "role": "疾病",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "根据症状和检查结果辨证为风温外受，湿热内蕴，熏蒸太阴，热毒伤肺，清肃无权，热壅血瘀，蕴酿成痈"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "风温外受，湿热内蕴，熏蒸太阴，热毒伤肺，清肃无权，热壅血瘀，蕴酿成痈",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "肺痈_风温外受，湿热内蕴，熏蒸太阴，热毒伤肺，清肃无权，热壅血瘀，蕴酿成痈_治疗方",
+          "role": "处方",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "针对证候采用清热解毒而化痰瘀的治法，处方为麻杏石甘汤合千金苇茎汤"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "肺痈_风温外受，湿热内蕴，熏蒸太阴，热毒伤肺，清肃无权，热壅血瘀，蕴酿成痈_治疗方",
+          "role": "原处方",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "千金苇茎汤合犀(牛)黄醒消丸",
+          "role": "新处方",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "根据病情变化，原方加减服六剂后，身热净退，咳嗽痰多，呈脓血状，但腥臭味已减，改用千金苇茎汤合犀(牛)黄醒消丸"
+    },
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.95,
+      "participants": [
+        {
+          "entity_name": "俞XX",
+          "role": "患者",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "咯血",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "午后潮热",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "咳嗽痰稠",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "右胸隐痛",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "盱区作胀",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "面浮神疲",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "形瘦色萎",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "不思纳谷",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "大便干结",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "肺脏气阴不足，肝经气火有余，脾胃运化不健",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "肺结核",
+          "role": "疾病",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "根据症状和检查结果辨证为肺脏气阴不足，肝经气火有余，脾胃运化不健"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "肺脏气阴不足，肝经气火有余，脾胃运化不健",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "肺结核_肺脏气阴不足，肝经气火有余，脾胃运化不健_治疗方",
+          "role": "处方",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "针对证候采用益肺气，健脾胃，佐以肃肺，顺气、清热的治法"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "肺结核_肺脏气阴不足，肝经气火有余，脾胃运化不健_治疗方",
+          "role": "原处方",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "滋阴清肺，疏盱和胃方",
+          "role": "新处方",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "根据病情变化，原方连服50余剂后，低热已平，胃纳较佳，大便正常，改用滋阴清肺，疏盱和胃之法"
+    }
+  ]
+}

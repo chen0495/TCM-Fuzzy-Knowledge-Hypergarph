@@ -1,0 +1,132 @@
+{
+  "entities": [
+    {
+      "entity_name": "张XX",
+      "entity_type": "患者信息",
+      "description": "男，40岁，初诊日期：1955年7月"
+    },
+    {
+      "entity_name": "咳嗽",
+      "entity_type": "症状",
+      "description": "患者的主要症状"
+    },
+    {
+      "entity_name": "头部出汗甚少",
+      "entity_type": "症状",
+      "description": "患者头部出汗较少"
+    },
+    {
+      "entity_name": "肢体乏力",
+      "entity_type": "症状",
+      "description": "患者感到肢体无力"
+    },
+    {
+      "entity_name": "大便干结",
+      "entity_type": "症状",
+      "description": "患者大便干燥"
+    },
+    {
+      "entity_name": "小漫不清",
+      "entity_type": "症状",
+      "description": "患者小便不清"
+    },
+    {
+      "entity_name": "食物不多",
+      "entity_type": "症状",
+      "description": "患者食欲不振"
+    },
+    {
+      "entity_name": "胸际阻闷",
+      "entity_type": "症状",
+      "description": "患者胸部感到闷堵"
+    },
+    {
+      "entity_name": "伏暑咳嗽",
+      "entity_type": "疾病",
+      "description": "患者的主要疾病"
+    },
+    {
+      "entity_name": "伏暑兼挟气郁",
+      "entity_type": "证候",
+      "description": "患者的证候"
+    },
+    {
+      "entity_name": "咳嗽_伏暑兼挟气郁_治疗方",
+      "entity_type": "处方",
+      "description": "鲜霍香9克黄芩9克六一散（包）9克鲜佩兰9克茯苓9克瓜萎皮18克杏仁泥9克陈皮4．5克鲜荷叶一大张（剪碎）枳壳4．5克"
+    },
+    {
+      "entity_name": "咳嗽_伏暑兼挟气郁_治疗方_增味",
+      "entity_type": "处方",
+      "description": "杏仁泥9克黄芩9克川连2．1克法夏6克川厚朴4．5克黄郁金4．5克川贝9克茯苓9克六一散9克（布包）枳壳4．5克瓜萎皮18克生枇把叶6克（布包）"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "张XX",
+          "role": "患者",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "伏暑咳嗽",
+          "role": "疾病",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "伏暑兼挟气郁",
+          "role": "证候",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "患者张XX被诊断为伏暑咳嗽，证候为伏暑兼挟气郁"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "咳嗽_伏暑兼挟气郁_治疗方",
+          "role": "处方",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "伏暑咳嗽",
+          "role": "疾病",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "伏暑兼挟气郁",
+          "role": "证候",
+          "membership_degree": 0.7
+        }
+      ],
+      "description": "针对伏暑咳嗽和伏暑兼挟气郁，开具了芳香和化宣达的处方"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.8,
+      "participants": [
+        {
+          "entity_name": "咳嗽_伏暑兼挟气郁_治疗方_增味",
+          "role": "处方",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "咳嗽_伏暑兼挟气郁_治疗方",
+          "role": "处方",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "胸际阻闷",
+          "role": "症状",
+          "membership_degree": 0.6
+        }
+      ],
+      "description": "根据患者胸际阻闷的症状，对原处方进行了增味调整"
+    }
+  ]
+}

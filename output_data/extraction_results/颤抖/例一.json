@@ -1,0 +1,276 @@
+{
+  "entities": [
+    {
+      "entity_name": "王ｘｘ",
+      "entity_type": "患者信息",
+      "description": "女性患者，沉默，偶或呆笑，所答非所问，口唇及四肢颤抖不休，有低热"
+    },
+    {
+      "entity_name": "沉默",
+      "entity_type": "症状",
+      "description": "患者沉默不语"
+    },
+    {
+      "entity_name": "呆笑",
+      "entity_type": "症状",
+      "description": "患者偶或呆笑"
+    },
+    {
+      "entity_name": "所答非所问",
+      "entity_type": "症状",
+      "description": "患者回答问题时答非所问"
+    },
+    {
+      "entity_name": "口唇颤抖",
+      "entity_type": "症状",
+      "description": "患者口唇颤抖不休"
+    },
+    {
+      "entity_name": "四肢颤抖",
+      "entity_type": "症状",
+      "description": "患者四肢颤抖不休"
+    },
+    {
+      "entity_name": "低热",
+      "entity_type": "症状",
+      "description": "患者有低热"
+    },
+    {
+      "entity_name": "自言自语",
+      "entity_type": "症状",
+      "description": "患者前夜自言自语"
+    },
+    {
+      "entity_name": "吵闹",
+      "entity_type": "症状",
+      "description": "患者吵闹整晚"
+    },
+    {
+      "entity_name": "言语稀少",
+      "entity_type": "症状",
+      "description": "患者言语稀少"
+    },
+    {
+      "entity_name": "记忆减退",
+      "entity_type": "症状",
+      "description": "患者记忆稍减退"
+    },
+    {
+      "entity_name": "四肢运动不灵活",
+      "entity_type": "症状",
+      "description": "患者四肢运动稍不灵活"
+    },
+    {
+      "entity_name": "肌张力增强",
+      "entity_type": "症状",
+      "description": "患者肌张力稍增强"
+    },
+    {
+      "entity_name": "腱反射增高",
+      "entity_type": "症状",
+      "description": "患者腱反射增高"
+    },
+    {
+      "entity_name": "睡眠欠佳",
+      "entity_type": "症状",
+      "description": "患者睡眠欠佳"
+    },
+    {
+      "entity_name": "四肢乏力",
+      "entity_type": "症状",
+      "description": "患者四肢感觉乏力"
+    },
+    {
+      "entity_name": "亚急性脑炎",
+      "entity_type": "疾病",
+      "description": "西医诊断为亚急性脑炎"
+    },
+    {
+      "entity_name": "颤抖",
+      "entity_type": "疾病",
+      "description": "中医病名为颤抖"
+    },
+    {
+      "entity_name": "血虚风动",
+      "entity_type": "证候",
+      "description": "治以养血潜镇，清热熄风之剂"
+    },
+    {
+      "entity_name": "颤抖_血虚风动_治疗方",
+      "entity_type": "处方",
+      "description": "当归9克白芍9克远志3克钩藤15克磁石9克丹皮9克朱茯神9克龙胆草6克龙齿9克天麻9克僵蚕9克"
+    },
+    {
+      "entity_name": "颤抖_血虚风动_治疗方_二诊",
+      "entity_type": "处方",
+      "description": "原方加玉竹9克银花9克"
+    },
+    {
+      "entity_name": "颤抖_血虚风动_治疗方_三诊",
+      "entity_type": "处方",
+      "description": "龙齿12克朱茯神9克龙胆草6克珍珠母30克天麻9克全蝎3支枣仁9克白芍9克玉竹9克钩藤15克天竺黄6克当归9克银花9克"
+    },
+    {
+      "entity_name": "颤抖_血虚风动_治疗方_四诊",
+      "entity_type": "处方",
+      "description": "珍珠母30克朱茯神9克移山参3克龙齿9克生地15克全蝎5支枣仁9克钩藤9克山药9克天竺黄3克合欢皮9克"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "王ｘｘ",
+          "role": "患者",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "沉默",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "呆笑",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "所答非所问",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "口唇颤抖",
+          "role": "症状",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "四肢颤抖",
+          "role": "症状",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "低热",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "自言自语",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "吵闹",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "血虚风动",
+          "role": "证候",
+          "membership_degree": 1.0
+        }
+      ],
+      "description": "患者表现为沉默、呆笑、所答非所问、口唇及四肢颤抖、低热等症状，辨证为血虚风动"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "血虚风动",
+          "role": "证候",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "颤抖_血虚风动_治疗方",
+          "role": "处方",
+          "membership_degree": 1.0
+        }
+      ],
+      "description": "针对血虚风动证候，采用养血潜镇、清热熄风的治疗方法，处方为当归、白芍、远志、钩藤等药物组成"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.8,
+      "participants": [
+        {
+          "entity_name": "颤抖_血虚风动_治疗方",
+          "role": "原处方",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "颤抖_血虚风动_治疗方_二诊",
+          "role": "新处方",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "言语稀少",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "颤抖轻微",
+          "role": "症状",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "二诊时患者言语稀少、颤抖轻微，原方加玉竹、银花"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.8,
+      "participants": [
+        {
+          "entity_name": "颤抖_血虚风动_治疗方_二诊",
+          "role": "原处方",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "颤抖_血虚风动_治疗方_三诊",
+          "role": "新处方",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "记忆稍差",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "言语稍不清",
+          "role": "症状",
+          "membership_degree": 0.7
+        }
+      ],
+      "description": "三诊时患者记忆稍差、言语稍不清，调整处方为龙齿、朱茯神、龙胆草、珍珠母等药物组成"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.8,
+      "participants": [
+        {
+          "entity_name": "颤抖_血虚风动_治疗方_三诊",
+          "role": "原处方",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "颤抖_血虚风动_治疗方_四诊",
+          "role": "新处方",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "睡眠欠佳",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "四肢乏力",
+          "role": "症状",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "四诊时患者睡眠欠佳、四肢乏力，调整处方为珍珠母、朱茯神、移山参、龙齿等药物组成"
+    }
+  ]
+}

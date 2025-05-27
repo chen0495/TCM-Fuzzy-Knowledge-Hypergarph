@@ -1,0 +1,219 @@
+{
+  "entities": [
+    {
+      "entity_name": "周X",
+      "entity_type": "患者信息",
+      "description": "男，34岁，初诊日期：1976年1月24日"
+    },
+    {
+      "entity_name": "喘证",
+      "entity_type": "疾病",
+      "description": "哮喘"
+    },
+    {
+      "entity_name": "婴儿时期曾患奶癣",
+      "entity_type": "症状",
+      "description": "婴儿时期曾患奶癣"
+    },
+    {
+      "entity_name": "四岁开始病哮喘",
+      "entity_type": "症状",
+      "description": "四岁开始病哮喘"
+    },
+    {
+      "entity_name": "每逢春秋必发",
+      "entity_type": "症状",
+      "description": "每逢春秋必发"
+    },
+    {
+      "entity_name": "逐年加重",
+      "entity_type": "症状",
+      "description": "逐年加重"
+    },
+    {
+      "entity_name": "持续二、三月尚不见缓解",
+      "entity_type": "症状",
+      "description": "持续二、三月尚不见缓解"
+    },
+    {
+      "entity_name": "平时特别伯冷",
+      "entity_type": "症状",
+      "description": "平时特别伯冷"
+    },
+    {
+      "entity_name": "易感冒",
+      "entity_type": "症状",
+      "description": "易感冒"
+    },
+    {
+      "entity_name": "不欲饮水",
+      "entity_type": "症状",
+      "description": "不欲饮水"
+    },
+    {
+      "entity_name": "半夜后哮鸣气急",
+      "entity_type": "症状",
+      "description": "半夜后哮鸣气急"
+    },
+    {
+      "entity_name": "舌苔薄白",
+      "entity_type": "症状",
+      "description": "舌苔薄白"
+    },
+    {
+      "entity_name": "脉细弦",
+      "entity_type": "症状",
+      "description": "脉细弦"
+    },
+    {
+      "entity_name": "外寒内饮为患，久病体虚，气阳不足",
+      "entity_type": "证候",
+      "description": "外寒内饮为患，久病体虚，气阳不足"
+    },
+    {
+      "entity_name": "喘证_外寒内饮为患，久病体虚，气阳不足_治疗方",
+      "entity_type": "处方",
+      "description": "生麻黄6克桂枝6克生白芍9克生甘草6克苏子12克姜半夏9克陈皮6克炙细辛3克熟附片12克（先煎）磁石30克14剂。另黄芪片100片，每日3次，每次5片。治法：助阳解表蠲饮，标本并图"
+    },
+    {
+      "entity_name": "黑锡丹",
+      "entity_type": "处方",
+      "description": "黑锡丹6克分吞"
+    },
+    {
+      "entity_name": "胆荚片",
+      "entity_type": "处方",
+      "description": "胆荚片（猪胆汁、皂荚、草河车）两包，每日3次，每次5片"
+    },
+    {
+      "entity_name": "附桂八味丸",
+      "entity_type": "处方",
+      "description": "附桂八味丸温肾扶阳为主"
+    },
+    {
+      "entity_name": "黄芪片",
+      "entity_type": "处方",
+      "description": "黄芪片吞服"
+    },
+    {
+      "entity_name": "地龙片",
+      "entity_type": "处方",
+      "description": "地龙片吞服"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.95,
+      "participants": [
+        {
+          "entity_name": "周X",
+          "role": "患者",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "喘证",
+          "role": "疾病",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "外寒内饮为患，久病体虚，气阳不足",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "半夜后哮鸣气急",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "舌苔薄白",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "脉细弦",
+          "role": "症状",
+          "membership_degree": 0.7
+        }
+      ],
+      "description": "患者周X患有喘证，证候为外寒内饮为患，久病体虚，气阳不足"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "周X",
+          "role": "患者",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "喘证_外寒内饮为患，久病体虚，气阳不足_治疗方",
+          "role": "处方",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "外寒内饮为患，久病体虚，气阳不足",
+          "role": "证候",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "患者周X使用喘证_外寒内饮为患，久病体虚，气阳不足_治疗方进行治疗"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "周X",
+          "role": "患者",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "喘证_外寒内饮为患，久病体虚，气阳不足_治疗方",
+          "role": "处方",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "黑锡丹",
+          "role": "处方",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "胆荚片",
+          "role": "处方",
+          "membership_degree": 0.7
+        }
+      ],
+      "description": "患者周X在原方基础上加用黑锡丹和胆荚片"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.8,
+      "participants": [
+        {
+          "entity_name": "周X",
+          "role": "患者",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "附桂八味丸",
+          "role": "处方",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "黄芪片",
+          "role": "处方",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "地龙片",
+          "role": "处方",
+          "membership_degree": 0.7
+        }
+      ],
+      "description": "患者周X改用附桂八味丸、黄芪片和地龙片进行治疗"
+    }
+  ]
+}

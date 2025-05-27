@@ -1,0 +1,266 @@
+{
+  "entities": [
+    {
+      "entity_name": "高X",
+      "entity_type": "患者信息",
+      "description": "男，42岁，已婚，门诊号c00091"
+    },
+    {
+      "entity_name": "遗精早泄",
+      "entity_type": "症状",
+      "description": "前患遗精早泄"
+    },
+    {
+      "entity_name": "阳萎不举",
+      "entity_type": "症状",
+      "description": "近半年来阳萎不举，房事无能，全无欲念"
+    },
+    {
+      "entity_name": "阴囊萎缩",
+      "entity_type": "症状",
+      "description": "阴囊萎缩"
+    },
+    {
+      "entity_name": "腰间冷痛",
+      "entity_type": "症状",
+      "description": "腰间冷痛"
+    },
+    {
+      "entity_name": "下肢痿软",
+      "entity_type": "症状",
+      "description": "下肢痿软"
+    },
+    {
+      "entity_name": "精神疲乏",
+      "entity_type": "症状",
+      "description": "精神疲乏"
+    },
+    {
+      "entity_name": "不思饮食",
+      "entity_type": "症状",
+      "description": "不思饮食"
+    },
+    {
+      "entity_name": "脸色青白",
+      "entity_type": "症状",
+      "description": "脸色青白"
+    },
+    {
+      "entity_name": "恶寒",
+      "entity_type": "症状",
+      "description": "时而恶寒"
+    },
+    {
+      "entity_name": "手足皆冷",
+      "entity_type": "症状",
+      "description": "手足皆冷"
+    },
+    {
+      "entity_name": "两尺沉迟",
+      "entity_type": "症状",
+      "description": "诊脉两尺沉迟"
+    },
+    {
+      "entity_name": "关脉缓弱",
+      "entity_type": "症状",
+      "description": "关脉缓弱"
+    },
+    {
+      "entity_name": "舌苔薄白",
+      "entity_type": "症状",
+      "description": "舌苔薄白"
+    },
+    {
+      "entity_name": "肾阳不足，命门火衰，肝脾衰弱",
+      "entity_type": "证候",
+      "description": "辨证：肾阳不足，命门火衰，肝脾衰弱"
+    },
+    {
+      "entity_name": "阳萎",
+      "entity_type": "疾病",
+      "description": "病名: 阳萎"
+    },
+    {
+      "entity_name": "阳萎_肾阳不足，命门火衰，肝脾衰弱_治疗方",
+      "entity_type": "处方",
+      "description": "大熟地15克，山药15克，巴戟肉15克，补骨脂6克，锁阳6克，肉苁蓉6克，西党参15克，茯苓9克，鹿角胶6克，全当归9克，山萸肉6克，西枸杞9克"
+    },
+    {
+      "entity_name": "阳萎_肾阳不足，命门火衰，肝脾衰弱_治疗方_二诊",
+      "entity_type": "处方",
+      "description": "大熟地15克，山药15克，巴戟肉15克，补骨脂6克，锁阳6克，肉苁蓉6克，西党参15克，茯苓9克，鹿角胶6克，全当归9克，山萸肉6克，西枸杞9克，菟丝子9克"
+    },
+    {
+      "entity_name": "阳萎_肾阳不足，命门火衰，肝脾衰弱_治疗方_三诊",
+      "entity_type": "处方",
+      "description": "大熟地15克，山药15克，巴戟肉15克，补骨脂6克，锁阳6克，西党参15克，茯苓9克，鹿角片6克，全当归9克，山萸肉6克，西枸杞9克，菟丝子9克，肉豆蔻1.5克，神曲1.5克，谷芽9克"
+    },
+    {
+      "entity_name": "阳萎_肾阳不足，命门火衰，肝脾衰弱_治疗方_末诊",
+      "entity_type": "处方",
+      "description": "大熟地15克，山药15克，巴戟肉15克，补骨脂6克，锁阳6克，西党参15克，茯苓9克，鹿角片6克，全当归9克，山萸肉6克，西枸杞9克，菟丝子9克，肉豆蔻1.5克，神曲1.5克，谷芽9克，龟板15克"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.95,
+      "participants": [
+        {
+          "entity_name": "高X",
+          "role": "患者",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "阳萎不举",
+          "role": "症状",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "阴囊萎缩",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "腰间冷痛",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "下肢痿软",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "精神疲乏",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "不思饮食",
+          "role": "症状",
+          "membership_degree": 0.6
+        },
+        {
+          "entity_name": "脸色青白",
+          "role": "症状",
+          "membership_degree": 0.6
+        },
+        {
+          "entity_name": "恶寒",
+          "role": "症状",
+          "membership_degree": 0.5
+        },
+        {
+          "entity_name": "手足皆冷",
+          "role": "症状",
+          "membership_degree": 0.5
+        },
+        {
+          "entity_name": "两尺沉迟",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "关脉缓弱",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "舌苔薄白",
+          "role": "症状",
+          "membership_degree": 0.6
+        },
+        {
+          "entity_name": "肾阳不足，命门火衰，肝脾衰弱",
+          "role": "证候",
+          "membership_degree": 1.0
+        }
+      ],
+      "description": "根据症状和脉象辨证为肾阳不足，命门火衰，肝脾衰弱"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "肾阳不足，命门火衰，肝脾衰弱",
+          "role": "证候",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "阳萎_肾阳不足，命门火衰，肝脾衰弱_治疗方",
+          "role": "处方",
+          "membership_degree": 1.0
+        }
+      ],
+      "description": "针对肾阳不足，命门火衰，肝脾衰弱的证候，采用补肝脾，固肾气的治法"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "阳萎_肾阳不足，命门火衰，肝脾衰弱_治疗方",
+          "role": "原处方",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "阳萎_肾阳不足，命门火衰，肝脾衰弱_治疗方_二诊",
+          "role": "新处方",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "精神疲乏",
+          "role": "症状",
+          "membership_degree": 0.7
+        }
+      ],
+      "description": "二诊时精神气色转好，原方加菟丝子9克以补髓填精"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.8,
+      "participants": [
+        {
+          "entity_name": "阳萎_肾阳不足，命门火衰，肝脾衰弱_治疗方_二诊",
+          "role": "原处方",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "阳萎_肾阳不足，命门火衰，肝脾衰弱_治疗方_三诊",
+          "role": "新处方",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "感寒泄泻",
+          "role": "症状",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "三诊时因感寒泄泻，原方去肉苁蓉，鹿角胶换鹿角片，加肉豆蔻1.5克，神曲1.5克，谷芽9克"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.75,
+      "participants": [
+        {
+          "entity_name": "阳萎_肾阳不足，命门火衰，肝脾衰弱_治疗方_三诊",
+          "role": "原处方",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "阳萎_肾阳不足，命门火衰，肝脾衰弱_治疗方_末诊",
+          "role": "新处方",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "阳事较前容易勃起",
+          "role": "症状",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "末诊时阳事容易勃起，诸症皆愈，原方加龟板15克以滋肾阴"
+    }
+  ]
+}

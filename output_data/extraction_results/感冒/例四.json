@@ -1,0 +1,144 @@
+{
+  "entities": [
+    {
+      "entity_name": "钱X",
+      "entity_type": "患者信息",
+      "description": "男，39岁"
+    },
+    {
+      "entity_name": "感冒",
+      "entity_type": "疾病",
+      "description": "半年前曾连患感冒数次"
+    },
+    {
+      "entity_name": "低热",
+      "entity_type": "症状",
+      "description": "每日下午仍自发热，不甚高，约在摄氏38度左右"
+    },
+    {
+      "entity_name": "汗出",
+      "entity_type": "症状",
+      "description": "时有汗出"
+    },
+    {
+      "entity_name": "纳食不佳",
+      "entity_type": "症状",
+      "description": "纳食亦不见佳"
+    },
+    {
+      "entity_name": "舌绛口干",
+      "entity_type": "症状",
+      "description": "舌绛口干"
+    },
+    {
+      "entity_name": "脉沉弦",
+      "entity_type": "症状",
+      "description": "诊脉沉弦，时复冒上如驶，重取尚有抗力"
+    },
+    {
+      "entity_name": "感冒后余邪内恋",
+      "entity_type": "证候",
+      "description": "证属感冒后余邪内恋"
+    },
+    {
+      "entity_name": "感冒_感冒后余邪内恋_治疗方",
+      "entity_type": "处方",
+      "description": "丹皮、丹参各6克，赤白芍各6克，细、鲜生地各9克，青蒿9克，地骨皮9克，黑芥穗9克，浮萍6克，大豆卷24克，山桅子9克，木通4.5克，银柴胡4.5克，片黄芩9克，另：羚羊角1.8克、牛黄0.6克共研细面，分M次冲服"
+    },
+    {
+      "entity_name": "养阴存津肃清余热方",
+      "entity_type": "处方",
+      "description": "白茅苇根各12克，生地黄15克，鳖甲15克，寸麦冬9克，寒水石12克（滑石块15克同打布包），白薇6克，赤苓芍各9克，胡黄连4.5克，蝉衣4.5克，润元参12克，粉丹皮9克，知母6克，炒枳壳6克，南花粉12克，草梢3克"
+    },
+    {
+      "entity_name": "补益气血丸方",
+      "entity_type": "处方",
+      "description": "生熟地各30克，党参60克，陈阿胶60克，白术60克，当归身30克，洋参30克，五味子30克，玉竹60克，酒杭芍60克，龟板60克，甘枸杞60克，丹参60克，绵黄芪90克，天冬30克，云茯苓神各30克，炙草30克，右药共研细末，炼蜜为丸，重9克，每日早晚备服1丸，白开水送下"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "钱X",
+          "role": "患者",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "低热",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "汗出",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "舌绛口干",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "感冒后余邪内恋",
+          "role": "证候",
+          "membership_degree": 1.0
+        }
+      ],
+      "description": "患者半年前曾患感冒数次，愈后低热不退，时有汗出，证属正虚邪恋所致"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "感冒后余邪内恋",
+          "role": "证候",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "感冒_感冒后余邪内恋_治疗方",
+          "role": "处方",
+          "membership_degree": 1.0
+        }
+      ],
+      "description": "施氏抓住深伏之邪有欲自寻出路之象，治当因势利导，用引病外出之法"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.8,
+      "participants": [
+        {
+          "entity_name": "感冒_感冒后余邪内恋_治疗方",
+          "role": "原处方",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "养阴存津肃清余热方",
+          "role": "新处方",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "前药眼2剂，微汗，尿赤，觉热度大减，虽有潮时，亦不定在午后，烦躁顿去，思食。接予养阴存津肃清余热，以期消减残邪，巩固成果"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.8,
+      "participants": [
+        {
+          "entity_name": "养阴存津肃清余热方",
+          "role": "原处方",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "补益气血丸方",
+          "role": "新处方",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "连进5剂，烧热逐渐退净，脉静身凉，小便由赤而黄而清长，已无余邪留恋。但气血亏损之处，应当从速补偿，立丸方善后"
+    }
+  ]
+}

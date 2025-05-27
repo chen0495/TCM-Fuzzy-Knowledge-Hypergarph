@@ -1,0 +1,166 @@
+{
+  "entities": [
+    {
+      "entity_name": "徐ｘｘ",
+      "entity_type": "患者信息",
+      "description": "男，30岁，初诊日期：1971年4月25日"
+    },
+    {
+      "entity_name": "头痛偏左",
+      "entity_type": "症状",
+      "description": "头痛偏左已一年，发作时痛甚剧，兼有重压感"
+    },
+    {
+      "entity_name": "血压有时偏高",
+      "entity_type": "症状",
+      "description": "血压有时偏高"
+    },
+    {
+      "entity_name": "夜寐较短",
+      "entity_type": "症状",
+      "description": "平时多用脑力，夜寐较短"
+    },
+    {
+      "entity_name": "舌质红，苔薄黄，脉弦",
+      "entity_type": "症状",
+      "description": "舌质红，苔薄黄，脉弦"
+    },
+    {
+      "entity_name": "肝阳扰动，络有宿瘀",
+      "entity_type": "证候",
+      "description": "肝阳扰动，络有宿瘀"
+    },
+    {
+      "entity_name": "头痛",
+      "entity_type": "疾病",
+      "description": "头痛偏左已一年，发作时痛甚剧"
+    },
+    {
+      "entity_name": "头痛_肝阳扰动，络有宿瘀_治疗方",
+      "entity_type": "处方",
+      "description": "天麻4.5克，石决明30克，钩藤15克，赤白芍各9克，蔓荆子12克，桑叶9克，菊花9克，桃仁9克，全蝎粉1.5克(吞服，另装胶囊），7剂。头痛剧烈时，另吞羚羊角粉0.9克。治法：平肝潜阳，活血通络"
+    },
+    {
+      "entity_name": "头痛_肝阳扰动，络有宿瘀_治疗方_二诊",
+      "entity_type": "处方",
+      "description": "全蝎改用1.5克，加北沙参15克，共服14剂"
+    },
+    {
+      "entity_name": "头痛_肝阳扰动，络有宿瘀_治疗方_三诊",
+      "entity_type": "处方",
+      "description": "北沙参12克，赤白芍9克，石决明12克，钩藤12克，麦冬9克，菊花9克，桃仁9克，鸡血藤12克，夜交藤30克。治法：清养气阴，平肝潜阳"
+    },
+    {
+      "entity_name": "巩固疗效方",
+      "entity_type": "处方",
+      "description": "菊花、麦冬、北沙参各9克，煎汤饮之，以巩固疗效"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.95,
+      "participants": [
+        {
+          "entity_name": "徐ｘｘ",
+          "role": "患者",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "头痛偏左",
+          "role": "症状",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "血压有时偏高",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "夜寐较短",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "舌质红，苔薄黄，脉弦",
+          "role": "症状",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "肝阳扰动，络有宿瘀",
+          "role": "证候",
+          "membership_degree": 1.0
+        }
+      ],
+      "description": "根据症状和舌脉，辨证为肝阳扰动，络有宿瘀"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "肝阳扰动，络有宿瘀",
+          "role": "证候",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "头痛_肝阳扰动，络有宿瘀_治疗方",
+          "role": "处方",
+          "membership_degree": 1.0
+        }
+      ],
+      "description": "针对肝阳扰动，络有宿瘀的证候，采用平肝潜阳，活血通络的治法"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "头痛_肝阳扰动，络有宿瘀_治疗方",
+          "role": "原处方",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "头痛_肝阳扰动，络有宿瘀_治疗方_二诊",
+          "role": "调整处方",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "二诊时头痛大减，全蝎改用1.5克，加北沙参15克"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "头痛_肝阳扰动，络有宿瘀_治疗方_二诊",
+          "role": "原处方",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "头痛_肝阳扰动，络有宿瘀_治疗方_三诊",
+          "role": "调整处方",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "三诊时头痛已少发作，调整处方以清养气阴，平肝潜阳"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.8,
+      "participants": [
+        {
+          "entity_name": "肝阳扰动，络有宿瘀",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "巩固疗效方",
+          "role": "处方",
+          "membership_degree": 0.7
+        }
+      ],
+      "description": "为防止复发，采用巩固疗效方"
+    }
+  ]
+}

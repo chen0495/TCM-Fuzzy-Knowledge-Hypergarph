@@ -1,0 +1,174 @@
+{
+  "entities": [
+    {
+      "entity_name": "向X",
+      "entity_type": "患者信息",
+      "description": "男，33岁，喘息经常发作已有三年"
+    },
+    {
+      "entity_name": "喘息",
+      "entity_type": "症状",
+      "description": "喘息经常发作已有三年，秋冬较重夏日略轻"
+    },
+    {
+      "entity_name": "咳喘心跳",
+      "entity_type": "症状",
+      "description": "发作时咳喘心跳"
+    },
+    {
+      "entity_name": "痰唾不出",
+      "entity_type": "症状",
+      "description": "发作时痰唾不出"
+    },
+    {
+      "entity_name": "呼吸有水鸣声",
+      "entity_type": "症状",
+      "description": "发作时呼吸有水鸣声"
+    },
+    {
+      "entity_name": "胸廓胀闷",
+      "entity_type": "症状",
+      "description": "发作时胸廓胀闷，不能平卧"
+    },
+    {
+      "entity_name": "不能平卧",
+      "entity_type": "症状",
+      "description": "发作时不能平卧"
+    },
+    {
+      "entity_name": "影响食眠",
+      "entity_type": "症状",
+      "description": "发作时影响食眠"
+    },
+    {
+      "entity_name": "慢性气管炎支气管喘息",
+      "entity_type": "疾病",
+      "description": "医院检查诊断为慢性气管炎支气管喘息"
+    },
+    {
+      "entity_name": "火逆于上，气不得降，肺气被痰热阻塞",
+      "entity_type": "证候",
+      "description": "辨证为火逆于上，气不得降，肺气被痰热阻塞，以致呼吸不利"
+    },
+    {
+      "entity_name": "喘证_火逆于上，气不得降，肺气被痰热阻塞_治疗方",
+      "entity_type": "处方",
+      "description": "葶苈子6克（大枣5枚去核布包）炙紫苑、苏子各6克莱菔子6克（自芥子3克同炒）炙麻黄1．5克嫩射于4．5一68一克五味子4石克（细宰1．5克同打）半夏曲9克（枇把叶6克同布包）云茯苓神各9克炙自前、前胡各4．5克陈橘红络各4．5克炙甘草3克"
+    },
+    {
+      "entity_name": "喘证_火逆于上，气不得降，肺气被痰热阻塞_治疗方_二诊",
+      "entity_type": "处方",
+      "description": "葶苈子6克（大红枣5枚去核布包）全瓜萎24克（薤白9克同打）炙紫苑、苏子各9克（打）苦桔梗4．5克炒枳壳4石克半夏曲9克（枇把叶6克布包）五味子4．5克（细辛1．5克同打）莱菔子6克（白芥子3克同炒）嫩射干4．5克炙麻黄2．4克炙前胡、化红各6克炙甘草3克"
+    },
+    {
+      "entity_name": "喘证_火逆于上，气不得降，肺气被痰热阻塞_治疗方_三诊",
+      "entity_type": "处方",
+      "description": "葶苈子4石克（大红枣5枚去核布包）五味子4石克（细辛1．5克同打）炒枳壳4．5克苦桔梗4．5克炙苏子化红各6克莱菔子6克（白芥子3克同炒）半夏曲9克（枇把叶6克布包）白杏仁（炒）6克冬虫草（炙）9克淡苁蓉15克明党参6克远志（炒）9克"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.95,
+      "participants": [
+        {
+          "entity_name": "向X",
+          "role": "患者",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "喘息",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "咳喘心跳",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "痰唾不出",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "呼吸有水鸣声",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "胸廓胀闷",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "不能平卧",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "影响食眠",
+          "role": "症状",
+          "membership_degree": 0.6
+        },
+        {
+          "entity_name": "火逆于上，气不得降，肺气被痰热阻塞",
+          "role": "证候",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "患者向X的症状表现为喘息、咳喘心跳、痰唾不出等，辨证为火逆于上，气不得降，肺气被痰热阻塞"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "火逆于上，气不得降，肺气被痰热阻塞",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "喘证_火逆于上，气不得降，肺气被痰热阻塞_治疗方",
+          "role": "处方",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "针对证候火逆于上，气不得降，肺气被痰热阻塞，采用处方喘证_火逆于上，气不得降，肺气被痰热阻塞_治疗方进行治疗"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "喘证_火逆于上，气不得降，肺气被痰热阻塞_治疗方",
+          "role": "原处方",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "喘证_火逆于上，气不得降，肺气被痰热阻塞_治疗方_二诊",
+          "role": "调整后处方",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "根据患者病情变化，对原处方进行加减调整"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "喘证_火逆于上，气不得降，肺气被痰热阻塞_治疗方_二诊",
+          "role": "原处方",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "喘证_火逆于上，气不得降，肺气被痰热阻塞_治疗方_三诊",
+          "role": "调整后处方",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "根据患者病情变化，对二诊处方进行加减调整"
+    }
+  ]
+}

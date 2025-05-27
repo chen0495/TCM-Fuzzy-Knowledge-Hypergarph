@@ -1,0 +1,162 @@
+{
+  "entities": [
+    {
+      "entity_name": "高X",
+      "entity_type": "患者信息",
+      "description": "女，45岁，已婚"
+    },
+    {
+      "entity_name": "左上半身感觉减退",
+      "entity_type": "症状",
+      "description": "左上半身感觉减退、麻木、无汗五年多"
+    },
+    {
+      "entity_name": "麻木",
+      "entity_type": "症状",
+      "description": "左上半身麻木感"
+    },
+    {
+      "entity_name": "无汗",
+      "entity_type": "症状",
+      "description": "左侧头面部、胸背部及上肢不出汗"
+    },
+    {
+      "entity_name": "局部发凉",
+      "entity_type": "症状",
+      "description": "患部发凉"
+    },
+    {
+      "entity_name": "左手握力差",
+      "entity_type": "症状",
+      "description": "左手握力差，不能持重物"
+    },
+    {
+      "entity_name": "腹泻",
+      "entity_type": "症状",
+      "description": "多年来常有腹泻，每天大便两三次，较稀，便前有时腹痛"
+    },
+    {
+      "entity_name": "面黄",
+      "entity_type": "症状",
+      "description": "患者面黄"
+    },
+    {
+      "entity_name": "精神不振",
+      "entity_type": "症状",
+      "description": "患者精神不振"
+    },
+    {
+      "entity_name": "舌质淡红",
+      "entity_type": "症状",
+      "description": "舌质淡红"
+    },
+    {
+      "entity_name": "舌苔薄白",
+      "entity_type": "症状",
+      "description": "舌苔薄白"
+    },
+    {
+      "entity_name": "脉沉细而弱",
+      "entity_type": "症状",
+      "description": "脉沉细而弱"
+    },
+    {
+      "entity_name": "脾肾不足，气血两虚，风寒内袭，阻闭经络",
+      "entity_type": "证候",
+      "description": "辨证：脾肾不足，气血两虚，风寒内袭，阻闭经络"
+    },
+    {
+      "entity_name": "偏风",
+      "entity_type": "疾病",
+      "description": "病名: 偏风"
+    },
+    {
+      "entity_name": "脊髓空洞症",
+      "entity_type": "疾病",
+      "description": "西医诊断脊髓空洞症"
+    },
+    {
+      "entity_name": "神经根炎",
+      "entity_type": "疾病",
+      "description": "西医诊断神经根炎"
+    },
+    {
+      "entity_name": "偏风_脾肾不足，气血两虚，风寒内袭，阻闭经络_治疗方",
+      "entity_type": "处方",
+      "description": "方药：山药30克熟地15克麻黄4．5克炮姜9克鹿角胶(烊化，也可用阿胶代之)12克桂枝9克补骨脂12克白术(土炒)15克陈曲(炒)9克醋香附12克当归12克熟附子9克山茱萸12克木香9克生黄芪12克骨碎补12克鸡血藤12克水煎两遍，兑在一起，早晚各1次，温服。治法：温肾健脾，补气养血，温经通阳"
+    },
+    {
+      "entity_name": "偏风_脾肾不足，气血两虚，风寒内袭，阻闭经络_治疗方_加减",
+      "entity_type": "处方",
+      "description": "方药：山药30克熟地15克麻黄4．5克炮姜9克鹿角胶(烊化)15克桂枝9克补骨脂12克陈曲(炒)9克白术(土炒)15克醋香附12克当归12克熟附子12克淫羊藿12克枸杞子15克生黄芪15克生菟丝子24克骨碎补15克鸡血藤15克"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.95,
+      "participants": [
+        {
+          "entity_name": "高X",
+          "role": "患者",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "左上半身感觉减退",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "麻木",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "无汗",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "脾肾不足，气血两虚，风寒内袭，阻闭经络",
+          "role": "证候",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "患者高X的症状表现为左上半身感觉减退、麻木、无汗，辨证为脾肾不足，气血两虚，风寒内袭，阻闭经络"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "脾肾不足，气血两虚，风寒内袭，阻闭经络",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "偏风_脾肾不足，气血两虚，风寒内袭，阻闭经络_治疗方",
+          "role": "处方",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "针对证候脾肾不足，气血两虚，风寒内袭，阻闭经络，采用处方偏风_脾肾不足，气血两虚，风寒内袭，阻闭经络_治疗方进行治疗"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "偏风_脾肾不足，气血两虚，风寒内袭，阻闭经络_治疗方",
+          "role": "原处方",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "偏风_脾肾不足，气血两虚，风寒内袭，阻闭经络_治疗方_加减",
+          "role": "加减处方",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "在原处方基础上进行加减，形成新的处方偏风_脾肾不足，气血两虚，风寒内袭，阻闭经络_治疗方_加减"
+    }
+  ]
+}

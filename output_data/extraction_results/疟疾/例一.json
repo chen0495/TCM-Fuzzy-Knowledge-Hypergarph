@@ -1,0 +1,167 @@
+{
+  "entities": [
+    {
+      "entity_name": "王",
+      "entity_type": "患者信息",
+      "description": "男性，30岁，8月就诊"
+    },
+    {
+      "entity_name": "疟发间日而胱",
+      "entity_type": "症状",
+      "description": "疟疾发作间隔一日"
+    },
+    {
+      "entity_name": "先寒后热",
+      "entity_type": "症状",
+      "description": "疟疾发作时先感到寒冷后发热"
+    },
+    {
+      "entity_name": "头痛",
+      "entity_type": "症状",
+      "description": "头部疼痛"
+    },
+    {
+      "entity_name": "胸满欲呕",
+      "entity_type": "症状",
+      "description": "胸部满闷感，有呕吐欲望"
+    },
+    {
+      "entity_name": "腹笥作胀",
+      "entity_type": "症状",
+      "description": "腹部胀满"
+    },
+    {
+      "entity_name": "舌苔厚腻",
+      "entity_type": "症状",
+      "description": "舌苔厚重且粘腻"
+    },
+    {
+      "entity_name": "脉象弦滑",
+      "entity_type": "症状",
+      "description": "脉象弦而滑"
+    },
+    {
+      "entity_name": "痰湿内伏，枢机不和",
+      "entity_type": "证候",
+      "description": "痰湿内伏，少阳枢机不和"
+    },
+    {
+      "entity_name": "疟疾",
+      "entity_type": "疾病",
+      "description": "疟疾"
+    },
+    {
+      "entity_name": "疟疾_痰湿内伏，枢机不和_治疗方",
+      "entity_type": "处方",
+      "description": "制厚朴4．5克，煨草果4．5克，制茅术4．5克，柴胡4．5克，炒黄芩6克，姜半夏7．5克，威灵仙9克，白蒺藜9克，小青皮4．5克，茯苓12克，乌药9克，生姜3片，竹茹9克。治法：蠲化痰湿，和解枢机"
+    },
+    {
+      "entity_name": "疟疾_痰湿内伏，枢机不和_治疗方_二诊",
+      "entity_type": "处方",
+      "description": "柴胡2．4克，黄芩4．5克，茯苓12克，制川朴2．4克，小青皮4．5克，白蒺藜9克，姜半夏7．5克，生谷芽9克，威灵仙9克，煨草果2．4克，制茅术4．5克，台乌药6克。治法：蠲化痰湿，和解枢机"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.95,
+      "participants": [
+        {
+          "entity_name": "王",
+          "role": "患者",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "疟发间日而胱",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "先寒后热",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "头痛",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "胸满欲呕",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "腹笥作胀",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "舌苔厚腻",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "脉象弦滑",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "痰湿内伏，枢机不和",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "疟疾",
+          "role": "疾病",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "患者王，男性，30岁，8月就诊，诊断为疟疾，证属痰湿内伏，枢机不和"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "疟疾_痰湿内伏，枢机不和_治疗方",
+          "role": "处方",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "痰湿内伏，枢机不和",
+          "role": "证候",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "疟疾",
+          "role": "疾病",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "针对疟疾，证属痰湿内伏，枢机不和，采用清脾饮加味治疗，蠲化痰湿，和解枢机"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "疟疾_痰湿内伏，枢机不和_治疗方_二诊",
+          "role": "处方",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "疟疾_痰湿内伏，枢机不和_治疗方",
+          "role": "处方",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "痰湿内伏，枢机不和",
+          "role": "证候",
+          "membership_degree": 0.7
+        }
+      ],
+      "description": "二诊时根据病情变化，调整处方，继续蠲化痰湿，和解枢机"
+    }
+  ]
+}

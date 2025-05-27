@@ -1,0 +1,167 @@
+{
+  "entities": [
+    {
+      "entity_name": "关姓",
+      "entity_type": "患者信息",
+      "description": "男性患者，肝郁已久"
+    },
+    {
+      "entity_name": "小溲极少而赤",
+      "entity_type": "症状",
+      "description": "小便量少且颜色发红"
+    },
+    {
+      "entity_name": "大便溏秘不匀",
+      "entity_type": "症状",
+      "description": "大便时溏时秘，不规律"
+    },
+    {
+      "entity_name": "肤色黯黑",
+      "entity_type": "症状",
+      "description": "皮肤颜色黯黑"
+    },
+    {
+      "entity_name": "目白睛浑黄",
+      "entity_type": "症状",
+      "description": "眼白部分浑浊发黄"
+    },
+    {
+      "entity_name": "唇紫而焦",
+      "entity_type": "症状",
+      "description": "嘴唇发紫且干燥"
+    },
+    {
+      "entity_name": "舌苔白腻",
+      "entity_type": "症状",
+      "description": "舌苔白而腻"
+    },
+    {
+      "entity_name": "形冷",
+      "entity_type": "症状",
+      "description": "身体发冷"
+    },
+    {
+      "entity_name": "痞满膨胀",
+      "entity_type": "症状",
+      "description": "腹部痞满膨胀"
+    },
+    {
+      "entity_name": "四肢微肿",
+      "entity_type": "症状",
+      "description": "四肢轻微肿胀"
+    },
+    {
+      "entity_name": "气机不畅",
+      "entity_type": "症状",
+      "description": "气机运行不畅"
+    },
+    {
+      "entity_name": "俯时尤甚",
+      "entity_type": "症状",
+      "description": "俯身时症状加重"
+    },
+    {
+      "entity_name": "右侧胸膺胁际环引腰肢均感刺痛",
+      "entity_type": "症状",
+      "description": "右侧胸胁至腰部感到刺痛"
+    },
+    {
+      "entity_name": "肝硬化",
+      "entity_type": "疾病",
+      "description": "西医诊断为肝硬化"
+    },
+    {
+      "entity_name": "脾脏肿大",
+      "entity_type": "疾病",
+      "description": "西医诊断为脾脏肿大"
+    },
+    {
+      "entity_name": "鼓胀",
+      "entity_type": "疾病",
+      "description": "中医诊断为鼓胀"
+    },
+    {
+      "entity_name": "肝郁脾虚",
+      "entity_type": "证候",
+      "description": "肝郁已久，脾土受湿"
+    },
+    {
+      "entity_name": "气滞血瘀",
+      "entity_type": "证候",
+      "description": "气机滞阻，郁而为热，热留为湿"
+    },
+    {
+      "entity_name": "鼓胀_肝郁脾虚_治疗方",
+      "entity_type": "处方",
+      "description": "荆三棱15克蓬莪木15克炒二丑各9克北细辛1．5克川椒目1．5克生桃仁9克赤小豆(布包煎）30克干百合(苏叶2．1克同水煨）15克瞿麦12克萹蓄12克云苓皮9克旋复花(布包煎）12克代储石12克川萆薢12克生知柏各9克汉防己9克煨木香4．5克犀黄丸9克(冲服）禹余粮丸9克(冲）金匮肾气丸(布包煎）3克水煎温服，早晚各一次"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "关姓",
+          "role": "患者",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "肝郁脾虚",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "气滞血瘀",
+          "role": "证候",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "患者肝郁已久，脾土受湿，气机滞阻，郁而为热，热留为湿"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "鼓胀_肝郁脾虚_治疗方",
+          "role": "处方",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "肝郁脾虚",
+          "role": "证候",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "气滞血瘀",
+          "role": "证候",
+          "membership_degree": 0.7
+        }
+      ],
+      "description": "治以柔肝化瘀、和中利水、化湿清热以建中央，而兼顾肾气"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.8,
+      "participants": [
+        {
+          "entity_name": "鼓胀_肝郁脾虚_治疗方",
+          "role": "处方",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "肝硬化",
+          "role": "疾病",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "脾脏肿大",
+          "role": "疾病",
+          "membership_degree": 0.7
+        }
+      ],
+      "description": "处方中包含犀黄丸、禹余粮丸、金匮肾气丸等，以疏肝化瘀、理脾调气、和脉达络、通调水道"
+    }
+  ]
+}

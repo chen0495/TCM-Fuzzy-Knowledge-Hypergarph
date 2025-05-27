@@ -1,0 +1,165 @@
+{
+  "entities": [
+    {
+      "entity_name": "胡左",
+      "entity_type": "患者信息",
+      "description": "男性，年龄20岁左右"
+    },
+    {
+      "entity_name": "胸脘迫窄",
+      "entity_type": "症状",
+      "description": "胸部及胃脘部有压迫感"
+    },
+    {
+      "entity_name": "痰涎常滞",
+      "entity_type": "症状",
+      "description": "痰液和唾液经常滞留"
+    },
+    {
+      "entity_name": "咳呛易作",
+      "entity_type": "症状",
+      "description": "容易发生咳嗽和呛咳"
+    },
+    {
+      "entity_name": "舌苔粘腻不化",
+      "entity_type": "症状",
+      "description": "舌苔粘腻不易消退"
+    },
+    {
+      "entity_name": "遗泄频仍",
+      "entity_type": "症状",
+      "description": "频繁遗精"
+    },
+    {
+      "entity_name": "形体羸瘦",
+      "entity_type": "症状",
+      "description": "身体瘦弱"
+    },
+    {
+      "entity_name": "精神颓败",
+      "entity_type": "症状",
+      "description": "精神状态不佳"
+    },
+    {
+      "entity_name": "心肾欠亏",
+      "entity_type": "证候",
+      "description": "心肾功能不足"
+    },
+    {
+      "entity_name": "君相之火不藏",
+      "entity_type": "证候",
+      "description": "心火和相火不收敛"
+    },
+    {
+      "entity_name": "肺有痰湿",
+      "entity_type": "证候",
+      "description": "肺部有痰湿"
+    },
+    {
+      "entity_name": "虚损",
+      "entity_type": "疾病",
+      "description": "脏腑亏损，元气虚弱而致多种慢性病的总称"
+    },
+    {
+      "entity_name": "虚损_心肾欠亏_治疗方",
+      "entity_type": "处方",
+      "description": "大熟地150克煅牡蛎150克黑料豆120克女贞子30克粉丹皮45克川黄柏45克建泽泻60克(盐水炒)车前子90克(盐水炒)云茯苓60克焦白术60克菟丝子120克抱木茯神60克湘莲子(连心)150克上药共为细末，以肥玉竹60克煎汤泛丸。如梧桐子大，每晚淡盐汤送下9克。治法：丸方缓调"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.95,
+      "participants": [
+        {
+          "entity_name": "胡左",
+          "role": "患者",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "胸脘迫窄",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "痰涎常滞",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "咳呛易作",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "舌苔粘腻不化",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "遗泄频仍",
+          "role": "症状",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "形体羸瘦",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "精神颓败",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "心肾欠亏",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "君相之火不藏",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "肺有痰湿",
+          "role": "证候",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "虚损",
+          "role": "疾病",
+          "membership_degree": 1.0
+        }
+      ],
+      "description": "患者胡左表现为多种症状，辨证为心肾欠亏、君相之火不藏、肺有痰湿，诊断为虚损"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "胡左",
+          "role": "患者",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "虚损_心肾欠亏_治疗方",
+          "role": "处方",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "虚损",
+          "role": "疾病",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "心肾欠亏",
+          "role": "证候",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "针对患者胡左的虚损疾病和心肾欠亏证候，采用丸方缓调的治疗方法"
+    }
+  ]
+}

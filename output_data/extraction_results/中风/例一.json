@@ -1,0 +1,216 @@
+{
+  "entities": [
+    {
+      "entity_name": "陈XX",
+      "entity_type": "患者信息",
+      "description": "男，52岁，躯体肥胖"
+    },
+    {
+      "entity_name": "眩晕",
+      "entity_type": "症状",
+      "description": "常感眩晕"
+    },
+    {
+      "entity_name": "口眼喁斜",
+      "entity_type": "症状",
+      "description": "近忽口眼喁斜"
+    },
+    {
+      "entity_name": "舌强语涩",
+      "entity_type": "症状",
+      "description": "舌强语涩"
+    },
+    {
+      "entity_name": "眼角流泪",
+      "entity_type": "症状",
+      "description": "眼角流泪"
+    },
+    {
+      "entity_name": "口角流涎",
+      "entity_type": "症状",
+      "description": "口角流涎"
+    },
+    {
+      "entity_name": "手足麻木无力",
+      "entity_type": "症状",
+      "description": "手足麻木无力"
+    },
+    {
+      "entity_name": "脉弦滑",
+      "entity_type": "症状",
+      "description": "脉弦滑"
+    },
+    {
+      "entity_name": "苔白腻",
+      "entity_type": "症状",
+      "description": "苔白腻"
+    },
+    {
+      "entity_name": "情绪抑郁",
+      "entity_type": "症状",
+      "description": "因情绪抑郁而发"
+    },
+    {
+      "entity_name": "风痰中络",
+      "entity_type": "证候",
+      "description": "风痰内动，首中经络"
+    },
+    {
+      "entity_name": "中风",
+      "entity_type": "疾病",
+      "description": "病名: 中风"
+    },
+    {
+      "entity_name": "中风_风痰中络_治疗方",
+      "entity_type": "处方",
+      "description": "朱茯神10克，制半夏10克，瓜蒌仁(炒)10克，姜竹茹10克，双钩藤10克，旋复花(布包)7克，川郁金7克，左秦艽?克，胆南星5克，明天麻7克，远志肉(水炙)5克，九节蒲3克，炒枳实3克。治法：达郁调气，郁舒则风熄，气和则痰消"
+    },
+    {
+      "entity_name": "中风_风痰中络_治疗方_复诊",
+      "entity_type": "处方",
+      "description": "上方去九节蒲、枳实，加当归身10克、稀签草10克。治法：濡血熄风，血行风自灭"
+    },
+    {
+      "entity_name": "中风_风痰中络_治疗方_三诊",
+      "entity_type": "处方",
+      "description": "复诊方改远志肉3克，去瓜蒌仁、郁金，加枸杞10克、滁菊花7克。治法：涤痰定风"
+    },
+    {
+      "entity_name": "中风_风痰中络_治疗方_四诊",
+      "entity_type": "处方",
+      "description": "三诊方去胆南星，加酸枣仁10克。治法：涤痰定风"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "陈XX",
+          "role": "患者",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "眩晕",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "口眼喁斜",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "舌强语涩",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "眼角流泪",
+          "role": "症状",
+          "membership_degree": 0.6
+        },
+        {
+          "entity_name": "口角流涎",
+          "role": "症状",
+          "membership_degree": 0.6
+        },
+        {
+          "entity_name": "手足麻木无力",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "脉弦滑",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "苔白腻",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "情绪抑郁",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "风痰中络",
+          "role": "证候",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "患者因情绪抑郁而发，风痰内动，首中经络"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "风痰中络",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "中风_风痰中络_治疗方",
+          "role": "处方",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "治宜涤痰开郁，佐以养血活络，则风证自熄"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.8,
+      "participants": [
+        {
+          "entity_name": "中风_风痰中络_治疗方",
+          "role": "处方",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "中风_风痰中络_治疗方_复诊",
+          "role": "处方",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "复诊时去九节蒲、枳实，加当归身、稀签草"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.8,
+      "participants": [
+        {
+          "entity_name": "中风_风痰中络_治疗方_复诊",
+          "role": "处方",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "中风_风痰中络_治疗方_三诊",
+          "role": "处方",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "三诊时改远志肉，去瓜蒌仁、郁金，加枸杞、滁菊花"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.8,
+      "participants": [
+        {
+          "entity_name": "中风_风痰中络_治疗方_三诊",
+          "role": "处方",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "中风_风痰中络_治疗方_四诊",
+          "role": "处方",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "四诊时去胆南星，加酸枣仁"
+    }
+  ]
+}

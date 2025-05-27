@@ -1,0 +1,167 @@
+{
+  "entities": [
+    {
+      "entity_name": "例四XXX",
+      "entity_type": "患者信息",
+      "description": "男，40岁，初诊日期：1962年12月"
+    },
+    {
+      "entity_name": "不寐",
+      "entity_type": "疾病",
+      "description": "失眠、多梦心悸，偏头痛，耳鸣，为时较久"
+    },
+    {
+      "entity_name": "失眠",
+      "entity_type": "症状",
+      "description": "睡眠障碍"
+    },
+    {
+      "entity_name": "多梦心悸",
+      "entity_type": "症状",
+      "description": "睡眠中多梦且心悸"
+    },
+    {
+      "entity_name": "偏头痛",
+      "entity_type": "症状",
+      "description": "头部一侧疼痛"
+    },
+    {
+      "entity_name": "耳鸣",
+      "entity_type": "症状",
+      "description": "耳内鸣响"
+    },
+    {
+      "entity_name": "胸腹胀闷",
+      "entity_type": "症状",
+      "description": "胸腹部胀满不适"
+    },
+    {
+      "entity_name": "鼻阻塞",
+      "entity_type": "症状",
+      "description": "睡眠中鼻塞，呼吸不利"
+    },
+    {
+      "entity_name": "目瞀花",
+      "entity_type": "症状",
+      "description": "视力模糊"
+    },
+    {
+      "entity_name": "咽干",
+      "entity_type": "症状",
+      "description": "咽喉干燥"
+    },
+    {
+      "entity_name": "大便不正常",
+      "entity_type": "症状",
+      "description": "大便坚实或溏泻"
+    },
+    {
+      "entity_name": "口臭",
+      "entity_type": "症状",
+      "description": "口腔异味"
+    },
+    {
+      "entity_name": "泛酸",
+      "entity_type": "症状",
+      "description": "胃酸上逆"
+    },
+    {
+      "entity_name": "小溲次频而滴沥不尽",
+      "entity_type": "症状",
+      "description": "小便频繁且滴沥不尽"
+    },
+    {
+      "entity_name": "疲倦软乏",
+      "entity_type": "症状",
+      "description": "身体疲倦乏力"
+    },
+    {
+      "entity_name": "舌苔微黄而厚",
+      "entity_type": "症状",
+      "description": "舌苔颜色微黄且厚"
+    },
+    {
+      "entity_name": "脉细劲",
+      "entity_type": "症状",
+      "description": "脉象细而有力"
+    },
+    {
+      "entity_name": "胃有燥火，肺胃津伤",
+      "entity_type": "证候",
+      "description": "胃部燥热，肺胃津液不足"
+    },
+    {
+      "entity_name": "不寐_胃有燥火，肺胃津伤_治疗方",
+      "entity_type": "处方",
+      "description": "太子参60克麦冬90克北沙参90克杏仁(去皮尖)90克白芍60克金石斛90克玉竹60克茯神120克火麻仁60克焦六曲60克泽泻60克白扁豆60克知母60克乌玄参90克北秫米120克川贝母15克生甘草30克生地黄120克红枣90克阿胶60克龟板胶60克蜜500克，冰糖250克收膏。治法：降胃为主，甘凉濡润"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.95,
+      "participants": [
+        {
+          "entity_name": "例四XXX",
+          "role": "患者",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "不寐",
+          "role": "疾病",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "胃有燥火，肺胃津伤",
+          "role": "证候",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "患者例四XXX患有失眠，证属胃有燥火，肺胃津伤"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "胃有燥火，肺胃津伤",
+          "role": "证候",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "不寐_胃有燥火，肺胃津伤_治疗方",
+          "role": "处方",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "针对胃有燥火，肺胃津伤的证候，采用降胃为主，甘凉濡润的治法"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "不寐_胃有燥火，肺胃津伤_治疗方",
+          "role": "处方",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "大便不正常",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "口臭",
+          "role": "症状",
+          "membership_degree": 0.6
+        },
+        {
+          "entity_name": "泛酸",
+          "role": "症状",
+          "membership_degree": 0.6
+        }
+      ],
+      "description": "处方中针对大便不正常、口臭、泛酸等症状进行了相应的药物加减"
+    }
+  ]
+}

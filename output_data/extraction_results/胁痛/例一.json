@@ -1,0 +1,124 @@
+{
+  "entities": [
+    {
+      "entity_name": "马××",
+      "entity_type": "患者信息",
+      "description": "男，70岁"
+    },
+    {
+      "entity_name": "脘胀胁痛",
+      "entity_type": "症状",
+      "description": "左侧较甚，微觉发热，吸气时及饮食后胁痛更甚"
+    },
+    {
+      "entity_name": "脉沉滞",
+      "entity_type": "症状",
+      "description": "脉象沉滞"
+    },
+    {
+      "entity_name": "气滞血凝作痛",
+      "entity_type": "证候",
+      "description": "肝气郁结，血行不畅，瘀阻经络"
+    },
+    {
+      "entity_name": "胁痛",
+      "entity_type": "疾病",
+      "description": "脘胀胁痛，左侧较甚"
+    },
+    {
+      "entity_name": "胁痛_气滞血凝作痛_治疗方",
+      "entity_type": "处方",
+      "description": "归须15克，红花3克，赤白芍各9克，没药6克，丹皮6克，炮甲珠4.5克，元胡4.5克，郁金3克，枳壳3克，黄芩4.5克，云苓9克，天麦冬各15克，朴花2.4克；治法：活血理气"
+    },
+    {
+      "entity_name": "胁痛_气滞血凝作痛_治疗方_二诊",
+      "entity_type": "处方",
+      "description": "前方去炮甲珠、黄芩，加花粉15克；治法：活血理气"
+    },
+    {
+      "entity_name": "胁痛_气滞血凝作痛_治疗方_三诊",
+      "entity_type": "处方",
+      "description": "前方去丹皮、赤白芍改白芍12克；治法：活血理气"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.95,
+      "participants": [
+        {
+          "entity_name": "马××",
+          "role": "患者",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "脘胀胁痛",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "脉沉滞",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "气滞血凝作痛",
+          "role": "证候",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "患者脘胀胁痛，左侧为甚，脉沉滞，辨证为气滞血凝作痛"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "气滞血凝作痛",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "胁痛_气滞血凝作痛_治疗方",
+          "role": "处方",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "证属气滞血凝作痛，治以活血理气"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "胁痛_气滞血凝作痛_治疗方",
+          "role": "原处方",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "胁痛_气滞血凝作痛_治疗方_二诊",
+          "role": "新处方",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "二诊时已不发热，胁痛腹胀均减轻，仍觉口干，前方去炮甲珠、黄芩，加花粉15克"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "胁痛_气滞血凝作痛_治疗方_二诊",
+          "role": "原处方",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "胁痛_气滞血凝作痛_治疗方_三诊",
+          "role": "新处方",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "三诊时诸症均减，前方去丹皮、赤白芍改白芍12克"
+    }
+  ]
+}

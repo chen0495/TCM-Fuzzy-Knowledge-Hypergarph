@@ -1,0 +1,107 @@
+{
+  "entities": [
+    {
+      "entity_name": "曹Ｘ",
+      "entity_type": "患者信息",
+      "description": "男性患者"
+    },
+    {
+      "entity_name": "形寒骨楚",
+      "entity_type": "症状",
+      "description": "患者感到寒冷和骨骼酸痛"
+    },
+    {
+      "entity_name": "不更衣七日",
+      "entity_type": "症状",
+      "description": "患者七天未排便"
+    },
+    {
+      "entity_name": "风寒束干太阳之表",
+      "entity_type": "证候",
+      "description": "风寒邪气束缚太阳经表"
+    },
+    {
+      "entity_name": "感冒",
+      "entity_type": "疾病",
+      "description": "风寒感冒"
+    },
+    {
+      "entity_name": "感冒_风寒束干太阳之表_治疗方",
+      "entity_type": "处方",
+      "description": "川桂枝3克（后下）生麻黄3克蔓荆子3克羌活9克生锦纹3克（挫细末分吞）郁李仁12克杏仁泥18克晚蚕砂9克（包）粉甘草3克，治法：表里双解"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.95,
+      "participants": [
+        {
+          "entity_name": "曹Ｘ",
+          "role": "患者",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "形寒骨楚",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "不更衣七日",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "风寒束干太阳之表",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "感冒",
+          "role": "疾病",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "患者曹Ｘ因风寒感冒，表现为形寒骨楚、不更衣七日，证属风寒束干太阳之表"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "风寒束干太阳之表",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "感冒_风寒束干太阳之表_治疗方",
+          "role": "处方",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "针对风寒束干太阳之表证候，采用表里双解的治疗方法"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "感冒_风寒束干太阳之表_治疗方",
+          "role": "处方",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "形寒骨楚",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "不更衣七日",
+          "role": "症状",
+          "membership_degree": 0.7
+        }
+      ],
+      "description": "处方中麻黄、羌活加强解表之力以缓解形寒骨楚，郁李仁、杏仁润肠以解决不更衣七日的问题"
+    }
+  ]
+}

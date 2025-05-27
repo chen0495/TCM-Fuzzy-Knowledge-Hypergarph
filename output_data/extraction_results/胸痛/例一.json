@@ -1,0 +1,175 @@
+{
+  "entities": [
+    {
+      "entity_name": "林ｘｘ",
+      "entity_type": "患者信息",
+      "description": "男，初诊日期：1976年2月13日"
+    },
+    {
+      "entity_name": "心痛彻背",
+      "entity_type": "症状",
+      "description": "心痛彻背"
+    },
+    {
+      "entity_name": "胸闷气短",
+      "entity_type": "症状",
+      "description": "胸闷气短"
+    },
+    {
+      "entity_name": "头晕头昏",
+      "entity_type": "症状",
+      "description": "头晕头昏"
+    },
+    {
+      "entity_name": "心累心跳",
+      "entity_type": "症状",
+      "description": "心累心跳"
+    },
+    {
+      "entity_name": "烦躁失眠",
+      "entity_type": "症状",
+      "description": "烦躁失眠"
+    },
+    {
+      "entity_name": "周身乏力",
+      "entity_type": "症状",
+      "description": "周身乏力"
+    },
+    {
+      "entity_name": "食少腰痛",
+      "entity_type": "症状",
+      "description": "食少腰痛"
+    },
+    {
+      "entity_name": "膝以下肿",
+      "entity_type": "症状",
+      "description": "膝以下肿"
+    },
+    {
+      "entity_name": "体态肥胖",
+      "entity_type": "症状",
+      "description": "体态肥胖"
+    },
+    {
+      "entity_name": "脉细弱，两尺尤弱",
+      "entity_type": "症状",
+      "description": "脉细弱，两尺尤弱"
+    },
+    {
+      "entity_name": "舌体胖嫩，质红少苔",
+      "entity_type": "症状",
+      "description": "舌体胖嫩，质红少苔"
+    },
+    {
+      "entity_name": "心阳不宣，心脉失养",
+      "entity_type": "证候",
+      "description": "心阳不宣，心脉失养"
+    },
+    {
+      "entity_name": "冠心病",
+      "entity_type": "疾病",
+      "description": "冠心病"
+    },
+    {
+      "entity_name": "高脂血症",
+      "entity_type": "疾病",
+      "description": "高脂血症"
+    },
+    {
+      "entity_name": "冠心病_心阳不宣，心脉失养_治疗方",
+      "entity_type": "处方",
+      "description": "党参、柏子仁、炒枣仁、茯神、远志肉、天冬、生地、当归、元参各9克，丹参12克，五味子6克，甘草3克；治法：补心之气阴，安神镇静，兼顾其肾"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "林ｘｘ",
+          "role": "患者",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "心痛彻背",
+          "role": "症状",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "胸闷气短",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "头晕头昏",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "心累心跳",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "烦躁失眠",
+          "role": "症状",
+          "membership_degree": 0.6
+        },
+        {
+          "entity_name": "周身乏力",
+          "role": "症状",
+          "membership_degree": 0.6
+        },
+        {
+          "entity_name": "食少腰痛",
+          "role": "症状",
+          "membership_degree": 0.5
+        },
+        {
+          "entity_name": "膝以下肿",
+          "role": "症状",
+          "membership_degree": 0.5
+        },
+        {
+          "entity_name": "体态肥胖",
+          "role": "症状",
+          "membership_degree": 0.4
+        },
+        {
+          "entity_name": "脉细弱，两尺尤弱",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "舌体胖嫩，质红少苔",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "心阳不宣，心脉失养",
+          "role": "证候",
+          "membership_degree": 1.0
+        }
+      ],
+      "description": "根据症状和体征，辨证为心阳不宣，心脉失养"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "心阳不宣，心脉失养",
+          "role": "证候",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "冠心病_心阳不宣，心脉失养_治疗方",
+          "role": "处方",
+          "membership_degree": 1.0
+        }
+      ],
+      "description": "针对心阳不宣，心脉失养的证候，采用补心之气阴，安神镇静，兼顾其肾的治法"
+    }
+  ]
+}

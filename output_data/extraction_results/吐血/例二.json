@@ -1,0 +1,217 @@
+{
+  "entities": [
+    {
+      "entity_name": "肖XX",
+      "entity_type": "患者信息",
+      "description": "男性，40岁"
+    },
+    {
+      "entity_name": "胃脘当心而痛",
+      "entity_type": "症状",
+      "description": "经常胃脘当心而痛"
+    },
+    {
+      "entity_name": "胸膈痞胀",
+      "entity_type": "症状",
+      "description": "胸膈痞胀"
+    },
+    {
+      "entity_name": "头昏目眩",
+      "entity_type": "症状",
+      "description": "头昏目眩"
+    },
+    {
+      "entity_name": "耳鸣心悸",
+      "entity_type": "症状",
+      "description": "耳鸣心悸"
+    },
+    {
+      "entity_name": "自汗失眠",
+      "entity_type": "症状",
+      "description": "自汗失眠"
+    },
+    {
+      "entity_name": "少气不足以息",
+      "entity_type": "症状",
+      "description": "少气不足以息"
+    },
+    {
+      "entity_name": "背恶寒",
+      "entity_type": "症状",
+      "description": "背恶寒"
+    },
+    {
+      "entity_name": "面色皓白",
+      "entity_type": "症状",
+      "description": "面色皓白"
+    },
+    {
+      "entity_name": "脉虚弦无力",
+      "entity_type": "症状",
+      "description": "脉虚弦无力"
+    },
+    {
+      "entity_name": "舌质淡红",
+      "entity_type": "症状",
+      "description": "舌质淡红"
+    },
+    {
+      "entity_name": "数次大量吐血",
+      "entity_type": "症状",
+      "description": "数次大量吐血"
+    },
+    {
+      "entity_name": "大便溏黑",
+      "entity_type": "症状",
+      "description": "大便溏黑"
+    },
+    {
+      "entity_name": "困倦异常",
+      "entity_type": "症状",
+      "description": "困倦异常"
+    },
+    {
+      "entity_name": "胃络大伤，脾失统血之职",
+      "entity_type": "证候",
+      "description": "胃络大伤，脾失统血之职"
+    },
+    {
+      "entity_name": "吐血",
+      "entity_type": "疾病",
+      "description": "吐血多由胃中出血，从口腔吐出于外"
+    },
+    {
+      "entity_name": "吐血_胃络大伤，脾失统血之职_治疗方",
+      "entity_type": "处方",
+      "description": "炙黄芪10克，西党参10克，淮山药10克，炒枣仁10克，熟地黄10克，北五味3克，当归身10克，北枸杞10克，云茯神7克，山萸肉?克，炙远志3克，广陈皮3克，炙甘草5克。治法：益气摄血"
+    },
+    {
+      "entity_name": "复诊处方",
+      "entity_type": "处方",
+      "description": "按上方去地黄、五味，加蒸于术7克，龙眼肉10克。治法：更益心脾"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.95,
+      "participants": [
+        {
+          "entity_name": "肖XX",
+          "role": "患者",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "胃脘当心而痛",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "胸膈痞胀",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "头昏目眩",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "耳鸣心悸",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "自汗失眠",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "少气不足以息",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "背恶寒",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "面色皓白",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "脉虚弦无力",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "舌质淡红",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "数次大量吐血",
+          "role": "症状",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "大便溏黑",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "困倦异常",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "胃络大伤，脾失统血之职",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "吐血",
+          "role": "疾病",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "患者肖XX出现一系列症状，辨证为胃络大伤，脾失统血之职，诊断为吐血"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "胃络大伤，脾失统血之职",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "吐血_胃络大伤，脾失统血之职_治疗方",
+          "role": "处方",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "针对胃络大伤，脾失统血之职的证候，采用益气摄血的治法，处方为吐血_胃络大伤，脾失统血之职_治疗方"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "吐血_胃络大伤，脾失统血之职_治疗方",
+          "role": "原处方",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "复诊处方",
+          "role": "新处方",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "根据复诊情况，原处方去地黄、五味，加蒸于术7克，龙眼肉10克，更益心脾"
+    }
+  ]
+}

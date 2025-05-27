@@ -1,0 +1,162 @@
+{
+  "entities": [
+    {
+      "entity_name": "林",
+      "entity_type": "患者信息",
+      "description": "50岁男性患者"
+    },
+    {
+      "entity_name": "猝然昏仆不省人事",
+      "entity_type": "症状",
+      "description": "突然昏倒，失去意识"
+    },
+    {
+      "entity_name": "左肢不遂",
+      "entity_type": "症状",
+      "description": "左侧肢体瘫痪"
+    },
+    {
+      "entity_name": "脉弦劲",
+      "entity_type": "症状",
+      "description": "脉象弦而有力"
+    },
+    {
+      "entity_name": "头偏右痛",
+      "entity_type": "症状",
+      "description": "头部右侧疼痛"
+    },
+    {
+      "entity_name": "面红目赤",
+      "entity_type": "症状",
+      "description": "面部发红，眼睛充血"
+    },
+    {
+      "entity_name": "口眼喁斜",
+      "entity_type": "症状",
+      "description": "口眼歪斜"
+    },
+    {
+      "entity_name": "舌苔厚腻，微黄",
+      "entity_type": "症状",
+      "description": "舌苔厚腻且微黄"
+    },
+    {
+      "entity_name": "口苦有火味",
+      "entity_type": "症状",
+      "description": "口中有苦味和火气"
+    },
+    {
+      "entity_name": "肝阳上亢，痰热蒙蔽清窍",
+      "entity_type": "证候",
+      "description": "肝阳上亢，痰热蒙蔽清窍"
+    },
+    {
+      "entity_name": "中风",
+      "entity_type": "疾病",
+      "description": "中风"
+    },
+    {
+      "entity_name": "中风_肝阳上亢痰热蒙蔽清窍_治疗方",
+      "entity_type": "处方",
+      "description": "栀子6克黄芩6克陈皮4.5克半夏6克胆南星6克牛膝9克元参9克羚羊汁一匙；石决明30克生牡蛎30克磁石30克龙骨18克龟板18克先煎代水煎药"
+    },
+    {
+      "entity_name": "二诊处方",
+      "entity_type": "处方",
+      "description": "陈皮4.5克半夏6克川连2.1克黄芩4.5克竹茹6克枳壳4.5克莱菔子6克旋复花6克代赭石18克柿蒂6克"
+    },
+    {
+      "entity_name": "三诊处方",
+      "entity_type": "处方",
+      "description": "白蒺藜6克木瓜6克甘菊6克陈皮4.5克半夏6克枳壳4.5克白芍6克胆南星6克川连2.1克钩藤9克(后下)竹茹6克麦芽9克羚羊汁一匙；代赭石18克龟板18克龙骨13克磁石20克石决明30克生牡蛎30克(先煎代水煎药)"
+    },
+    {
+      "entity_name": "四诊处方",
+      "entity_type": "处方",
+      "description": "原方加牛膝9克，川楝9克，去竹茹、麦芽"
+    },
+    {
+      "entity_name": "五诊处方",
+      "entity_type": "处方",
+      "description": "熟地12克淮山药9克山茱6克牛膝9克枸杞9克甘菊6克龟板15克(先煎)磁石18克(先煎)石决明18克(先煎)白芍6克青葙子6克杜仲9克续断6克"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.95,
+      "participants": [
+        {
+          "entity_name": "林",
+          "role": "患者",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "猝然昏仆不省人事",
+          "role": "症状",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "左肢不遂",
+          "role": "症状",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "肝阳上亢，痰热蒙蔽清窍",
+          "role": "证候",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "中风",
+          "role": "疾病",
+          "membership_degree": 1.0
+        }
+      ],
+      "description": "患者林，50岁，猝然昏仆不省人事，左肢不遂，证属肝阳上亢、痰热蒙蔽清窍"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "肝阳上亢，痰热蒙蔽清窍",
+          "role": "证候",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "中风_肝阳上亢痰热蒙蔽清窍_治疗方",
+          "role": "处方",
+          "membership_degree": 1.0
+        }
+      ],
+      "description": "治以平肝熄风镇逆、降火涤痰通络之法"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "二诊处方",
+          "role": "处方",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "三诊处方",
+          "role": "处方",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "四诊处方",
+          "role": "处方",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "五诊处方",
+          "role": "处方",
+          "membership_degree": 1.0
+        }
+      ],
+      "description": "根据病情变化调整处方"
+    }
+  ]
+}

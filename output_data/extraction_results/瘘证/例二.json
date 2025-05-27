@@ -1,0 +1,186 @@
+{
+  "entities": [
+    {
+      "entity_name": "赵",
+      "entity_type": "患者信息",
+      "description": "男性，31岁，就诊时间10月"
+    },
+    {
+      "entity_name": "瘘证",
+      "entity_type": "疾病",
+      "description": "肢体筋脉弛缓，手足痿软的病证"
+    },
+    {
+      "entity_name": "胭内消瘦",
+      "entity_type": "症状",
+      "description": "下肢肌肉消瘦"
+    },
+    {
+      "entity_name": "筋骨痿软",
+      "entity_type": "症状",
+      "description": "筋骨软弱无力"
+    },
+    {
+      "entity_name": "下肢不能伸缩",
+      "entity_type": "症状",
+      "description": "下肢活动受限"
+    },
+    {
+      "entity_name": "脉象濡细",
+      "entity_type": "症状",
+      "description": "脉象细弱无力"
+    },
+    {
+      "entity_name": "舌苔薄白",
+      "entity_type": "症状",
+      "description": "舌苔薄而白"
+    },
+    {
+      "entity_name": "气血不足，筋肉失于濡养",
+      "entity_type": "证候",
+      "description": "气血亏虚，筋肉得不到滋养"
+    },
+    {
+      "entity_name": "湿热久蕴，营卫受阻",
+      "entity_type": "证候",
+      "description": "湿热长期积聚，营卫运行受阻"
+    },
+    {
+      "entity_name": "瘘证_气血不足，筋肉失于濡养_治疗方",
+      "entity_type": "处方",
+      "description": "清炙黄芪15克，酒炒当归12克，桂枝尖2.4克，炙广地龙9克，炒天虫9克，老钩藤12克，丝瓜络15克，杜红花3克，酒炒川断9克，伸筋草12克，千年健6克；治法：气血并补，舒筋通络"
+    },
+    {
+      "entity_name": "瘘证_气血俱亏，不能温润肌肉筋脉_治疗方",
+      "entity_type": "处方",
+      "description": "清炙黄芪15克，酒炒当归9克，大熟地15克，杜红花3克，清炙广地龙9克，桂枝尖2.4克，炒赤白芍各6克，泽泻9克，茯苓12克，炒怀牛膝9克，炒黄柏4.5克；治法：气血并补，舒筋通络"
+    },
+    {
+      "entity_name": "瘘证_湿热浸淫，气血不充_治疗方",
+      "entity_type": "处方",
+      "description": "炒黄柏6克，炒苍术4.5克，酒炒当归9克，防己9克，川萆薜9克，怀牛膝9克，炙龟板15克，熟地15克，炙黄芪15克，炙甘草4.5克，茯苓12克；治法：化湿清热，补气血"
+    },
+    {
+      "entity_name": "瘘证_湿热日渐清化，筋脉得气血之濡养_治疗方",
+      "entity_type": "处方",
+      "description": "米炒上潞参9克，炙黄芪15克，酒炒当归9克，熟地24克，怀牛膝9克，炒黄柏4.5克，酒炒川续断9克，炒白芍9克，炙甘草4.5克，防己6克，盐水炒杜仲15克，健步虎潜丸12克(分吞)；治法：补气血填肝肾"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.95,
+      "participants": [
+        {
+          "entity_name": "赵",
+          "role": "患者",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "胭内消瘦",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "筋骨痿软",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "下肢不能伸缩",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "脉象濡细",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "舌苔薄白",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "气血不足，筋肉失于濡养",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "湿热久蕴，营卫受阻",
+          "role": "证候",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "患者赵因气血不足，筋肉失于濡养，湿热久蕴，营卫受阻，导致瘘证"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "瘘证_气血不足，筋肉失于濡养_治疗方",
+          "role": "处方",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "气血不足，筋肉失于濡养",
+          "role": "证候",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "针对气血不足，筋肉失于濡养的证候，采用气血并补，舒筋通络的治法"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "瘘证_气血俱亏，不能温润肌肉筋脉_治疗方",
+          "role": "处方",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "瘘证_气血不足，筋肉失于濡养_治疗方",
+          "role": "处方",
+          "membership_degree": 0.7
+        }
+      ],
+      "description": "根据病情变化，在原方基础上调整药物组成"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "瘘证_湿热浸淫，气血不充_治疗方",
+          "role": "处方",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "瘘证_气血俱亏，不能温润肌肉筋脉_治疗方",
+          "role": "处方",
+          "membership_degree": 0.7
+        }
+      ],
+      "description": "根据湿热浸淫，气血不充的证候变化，调整处方"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "瘘证_湿热日渐清化，筋脉得气血之濡养_治疗方",
+          "role": "处方",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "瘘证_湿热浸淫，气血不充_治疗方",
+          "role": "处方",
+          "membership_degree": 0.7
+        }
+      ],
+      "description": "根据湿热日渐清化，筋脉得气血之濡养的证候变化，调整处方"
+    }
+  ]
+}

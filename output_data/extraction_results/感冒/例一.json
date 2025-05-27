@@ -1,0 +1,174 @@
+{
+  "entities": [
+    {
+      "entity_name": "薛ＸＸ",
+      "entity_type": "患者信息",
+      "description": "男，60岁，初诊日期：1963年3月8日"
+    },
+    {
+      "entity_name": "发烧",
+      "entity_type": "症状",
+      "description": "感冒两周，尚发烧"
+    },
+    {
+      "entity_name": "鼻塞流涕",
+      "entity_type": "症状",
+      "description": "鼻塞流涕"
+    },
+    {
+      "entity_name": "咳嗽",
+      "entity_type": "症状",
+      "description": "咳嗽"
+    },
+    {
+      "entity_name": "咽痒且痛",
+      "entity_type": "症状",
+      "description": "咽痒且痛"
+    },
+    {
+      "entity_name": "大便干燥",
+      "entity_type": "症状",
+      "description": "大便干燥"
+    },
+    {
+      "entity_name": "脉浮微数",
+      "entity_type": "症状",
+      "description": "脉浮微数"
+    },
+    {
+      "entity_name": "舌淡苔白黄腻",
+      "entity_type": "症状",
+      "description": "舌淡苔白黄腻"
+    },
+    {
+      "entity_name": "感冒夹湿",
+      "entity_type": "证候",
+      "description": "属感冒夹湿"
+    },
+    {
+      "entity_name": "感冒",
+      "entity_type": "疾病",
+      "description": "病名: 感冒"
+    },
+    {
+      "entity_name": "感冒_感冒夹湿_治疗方",
+      "entity_type": "处方",
+      "description": "苏叶4．5克杏仁6克桔梗3克炒枳壳3克前胡3克制香附3克陈皮3克炒莱菔子4．5克薄荷（后下）3克荆芥3克甘草1．5克葱白（后下）3寸，治法：疏解"
+    },
+    {
+      "entity_name": "感冒_感冒夹湿_治疗方_二诊",
+      "entity_type": "处方",
+      "description": "苏叶6克杏仁6克桔梗3克炒枳壳4．5克前胡3克制香附4．5克陈皮3克炒莱菔子4．5克僵蚕4．5克炒神曲6克甘草1．5克豆豉9克葱白（后下）3寸，治法：疏解，兼理肠胃"
+    },
+    {
+      "entity_name": "感冒_感冒夹湿_治疗方_三诊",
+      "entity_type": "处方",
+      "description": "炒苍术6克厚朴6克陈皮4．5克炙甘草1．5克法半夏6克蕾香梗6克槟榔4．5克炒枳实3克大黄（另包后下）3克神曲（炒）6克生姜3片，治法：和脾消滞，清利湿热"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "薛ＸＸ",
+          "role": "患者",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "感冒夹湿",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "发烧",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "鼻塞流涕",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "咳嗽",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "咽痒且痛",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "大便干燥",
+          "role": "症状",
+          "membership_degree": 0.6
+        },
+        {
+          "entity_name": "脉浮微数",
+          "role": "症状",
+          "membership_degree": 0.6
+        },
+        {
+          "entity_name": "舌淡苔白黄腻",
+          "role": "症状",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "患者薛ＸＸ的症状和体征辨证为感冒夹湿"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "感冒夹湿",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "感冒_感冒夹湿_治疗方",
+          "role": "处方",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "针对感冒夹湿证候，采用疏解治法"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.8,
+      "participants": [
+        {
+          "entity_name": "感冒_感冒夹湿_治疗方",
+          "role": "处方",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "感冒_感冒夹湿_治疗方_二诊",
+          "role": "处方",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "二诊时根据病情变化调整处方，增加疏解兼理肠胃的药物"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.8,
+      "participants": [
+        {
+          "entity_name": "感冒_感冒夹湿_治疗方_二诊",
+          "role": "处方",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "感冒_感冒夹湿_治疗方_三诊",
+          "role": "处方",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "三诊时外邪已解，湿滞未尽，调整处方为和脾消滞，清利湿热"
+    }
+  ]
+}

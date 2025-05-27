@@ -1,0 +1,142 @@
+{
+  "entities": [
+    {
+      "entity_name": "患者信息",
+      "entity_type": "患者信息",
+      "description": "男，27岁，1967年秋初诊"
+    },
+    {
+      "entity_name": "夜游症",
+      "entity_type": "疾病",
+      "description": "患者不断在夜晚入睡之后，突然起床活动，次日问他，他说未曾起床"
+    },
+    {
+      "entity_name": "头晕",
+      "entity_type": "症状",
+      "description": "患者自诉经常头晕"
+    },
+    {
+      "entity_name": "心烦",
+      "entity_type": "症状",
+      "description": "患者自诉有时心烦"
+    },
+    {
+      "entity_name": "神色萎靡",
+      "entity_type": "症状",
+      "description": "察其神色似有萎靡"
+    },
+    {
+      "entity_name": "表情淡漠",
+      "entity_type": "症状",
+      "description": "表情略呈淡漠，寡语少言，目光无神"
+    },
+    {
+      "entity_name": "舌边舌尖红而少苔",
+      "entity_type": "症状",
+      "description": "舌边、舌尖红而少苔"
+    },
+    {
+      "entity_name": "脉细弦而稍数",
+      "entity_type": "症状",
+      "description": "脉细弦而稍数"
+    },
+    {
+      "entity_name": "肝阴不足，肾气上逆，火扰心神，伤阴生痰",
+      "entity_type": "证候",
+      "description": "辨证：肝阴不足，肾气上逆，火扰心神，伤阴生痰，以致魂不随神而动"
+    },
+    {
+      "entity_name": "夜游症_肝阴不足，肾气上逆，火扰心神，伤阴生痰_治疗方",
+      "entity_type": "处方",
+      "description": "炒枣仁30克柏子仁15克合欢皮12克夜交藤12克川芎10克知母12克茯神12克生龙骨12克生牡蛎12克朱砂末1．5克(分二次冲）水煎服，5剂。治法：养血安神，清热法痰"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.95,
+      "participants": [
+        {
+          "entity_name": "夜游症",
+          "role": "疾病",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "肝阴不足，肾气上逆，火扰心神，伤阴生痰",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "头晕",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "心烦",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "神色萎靡",
+          "role": "症状",
+          "membership_degree": 0.6
+        },
+        {
+          "entity_name": "表情淡漠",
+          "role": "症状",
+          "membership_degree": 0.6
+        },
+        {
+          "entity_name": "舌边舌尖红而少苔",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "脉细弦而稍数",
+          "role": "症状",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "根据症状和体征，辨证为肝阴不足，肾气上逆，火扰心神，伤阴生痰"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "肝阴不足，肾气上逆，火扰心神，伤阴生痰",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "夜游症_肝阴不足，肾气上逆，火扰心神，伤阴生痰_治疗方",
+          "role": "处方",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "针对肝阴不足，肾气上逆，火扰心神，伤阴生痰的证候，采用养血安神，清热法痰的治法"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "夜游症_肝阴不足，肾气上逆，火扰心神，伤阴生痰_治疗方",
+          "role": "处方",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "头晕",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "心烦",
+          "role": "症状",
+          "membership_degree": 0.7
+        }
+      ],
+      "description": "根据头晕、心烦等症状的变化，调整处方用量"
+    }
+  ]
+}

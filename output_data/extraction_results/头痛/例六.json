@@ -1,0 +1,87 @@
+{
+  "entities": [
+    {
+      "entity_name": "黄ｘｘ",
+      "entity_type": "患者信息",
+      "description": "男，45岁，头痛病史5-6年"
+    },
+    {
+      "entity_name": "头痛",
+      "entity_type": "疾病",
+      "description": "先患太阳头痛，渐至全部头痛，午后痛如锥如刺，经脉突起"
+    },
+    {
+      "entity_name": "血虚挟瘀",
+      "entity_type": "证候",
+      "description": "脉弦涩，午后痛剧，热敷略减，瘀塞经隧"
+    },
+    {
+      "entity_name": "金匮桂苓丸",
+      "entity_type": "处方",
+      "description": "初用方剂，数剂不效"
+    },
+    {
+      "entity_name": "头痛_血虚挟瘀_治疗方",
+      "entity_type": "处方",
+      "description": "通窍活血汤加减：川芎4.5克、桃仁6克、红花6克、赤芍9克、老葱六根、生姜3片、大枣3枚、麝香0.15克（后冲）、归尾9克、牛膝9克"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.95,
+      "participants": [
+        {
+          "entity_name": "黄ｘｘ",
+          "role": "患者",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "头痛",
+          "role": "疾病",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "血虚挟瘀",
+          "role": "证候",
+          "membership_degree": 0.85
+        }
+      ],
+      "description": "患者头痛多年，证属血虚挟瘀"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "血虚挟瘀",
+          "role": "证候",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "头痛_血虚挟瘀_治疗方",
+          "role": "处方",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "针对血虚挟瘀证候，采用通窍活血汤加减治疗"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "金匮桂苓丸",
+          "role": "处方",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "头痛_血虚挟瘀_治疗方",
+          "role": "处方",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "初用金匮桂苓丸无效，后改用通窍活血汤加减"
+    }
+  ]
+}

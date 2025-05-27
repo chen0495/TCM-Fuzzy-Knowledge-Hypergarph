@@ -1,0 +1,102 @@
+{
+  "entities": [
+    {
+      "entity_name": "例五×××夫人",
+      "entity_type": "患者信息",
+      "description": "41岁，印尼人，婚后20年，初次妊娠为左侧宫外孕，手术治疗后未能受孕"
+    },
+    {
+      "entity_name": "左侧头面作痛",
+      "entity_type": "症状",
+      "description": "月经来潮时左侧头面作痛"
+    },
+    {
+      "entity_name": "两乳发胀",
+      "entity_type": "症状",
+      "description": "月经来潮时两乳发胀"
+    },
+    {
+      "entity_name": "左侧输卵管阻塞",
+      "entity_type": "疾病",
+      "description": "手术后左侧输卵管阻塞"
+    },
+    {
+      "entity_name": "肝郁气滞夹热",
+      "entity_type": "证候",
+      "description": "舌正常，脉弦细有力，尺脉带涩象，眼睑下晦暗"
+    },
+    {
+      "entity_name": "丹栀逍遥散加减",
+      "entity_type": "处方",
+      "description": "柴胡3克，白芍6克，茯苓6克，甘草1.5克，当归6克，白术4.5克，生姜3克，丹皮4.5克，黑栀子6克，青皮3克，薄荷1克，陈皮3克，半夏4.5克，萸连3克，香附6克；治法：调肝解郁"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.95,
+      "participants": [
+        {
+          "entity_name": "例五×××夫人",
+          "role": "患者",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "左侧头面作痛",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "两乳发胀",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "肝郁气滞夹热",
+          "role": "证候",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "患者多年经治不愈，证属肝郁气滞夹热"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "肝郁气滞夹热",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "丹栀逍遥散加减",
+          "role": "处方",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "治法为调肝解郁，方用丹栀逍遥散加减"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "丹栀逍遥散加减",
+          "role": "处方",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "左侧头面作痛",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "两乳发胀",
+          "role": "症状",
+          "membership_degree": 0.7
+        }
+      ],
+      "description": "处方根据症状进行加减，效果显著"
+    }
+  ]
+}

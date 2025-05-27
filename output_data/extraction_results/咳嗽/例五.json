@@ -1,0 +1,132 @@
+{
+  "entities": [
+    {
+      "entity_name": "张xx",
+      "entity_type": "患者信息",
+      "description": "男，44岁，病案号：C139556"
+    },
+    {
+      "entity_name": "咳嗽",
+      "entity_type": "症状",
+      "description": "咳嗽、咯痰、胸痛，进行性呼吸困难"
+    },
+    {
+      "entity_name": "咯痰",
+      "entity_type": "症状",
+      "description": "咯痰略呈白色泡沫状，每日十余口"
+    },
+    {
+      "entity_name": "胸痛",
+      "entity_type": "症状",
+      "description": "胸胁经常痛，胸闷、气短，气喘"
+    },
+    {
+      "entity_name": "胸闷",
+      "entity_type": "症状",
+      "description": "胸中满闷，气短不足以息"
+    },
+    {
+      "entity_name": "气短",
+      "entity_type": "症状",
+      "description": "上楼或活动稍多则气短、乏力"
+    },
+    {
+      "entity_name": "颜面晦暗不华",
+      "entity_type": "症状",
+      "description": "颜面晦暗不华，唇甲青紫"
+    },
+    {
+      "entity_name": "舌体胖有齿痕",
+      "entity_type": "症状",
+      "description": "舌体胖，有齿痕，舌下静脉怒张"
+    },
+    {
+      "entity_name": "胸中大气下陷",
+      "entity_type": "证候",
+      "description": "本为胸中大气下陷"
+    },
+    {
+      "entity_name": "瘀血阻络痰浊不化",
+      "entity_type": "证候",
+      "description": "标为瘀血阻络，痰浊不化"
+    },
+    {
+      "entity_name": "肺泡蛋白沉着症",
+      "entity_type": "疾病",
+      "description": "确诊为肺泡蛋白沉着症，属于少见疑难病范围"
+    },
+    {
+      "entity_name": "升陷汤加味",
+      "entity_type": "处方",
+      "description": "生黄芪25克知母10克柴胡10克升麻3克桔梗10克当归10克川穹10克丹参15克旋复花（布包）10克海浮石（布包）10克葶苈子10克生意仁25克每日1剂，水煎服"
+    },
+    {
+      "entity_name": "肺泡蛋白沉着症_胸中大气下陷_治疗方",
+      "entity_type": "处方",
+      "description": "生黄芪25克党参15克知母10克桔梗10克柴胡10克升麻3克旋复花（布包）10克黛蛤散（布包）15克冬瓜子30克紫苑10克杏仁10克白前10克"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.95,
+      "participants": [
+        {
+          "entity_name": "张xx",
+          "role": "患者",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "咳嗽",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "胸中大气下陷",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "瘀血阻络痰浊不化",
+          "role": "证候",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "患者咳嗽、咯痰、胸痛等症状，辨证为胸中大气下陷，瘀血阻络痰浊不化"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "胸中大气下陷",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "升陷汤加味",
+          "role": "处方",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "针对胸中大气下陷证候，采用升陷汤加味治疗"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "升陷汤加味",
+          "role": "处方",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "肺泡蛋白沉着症_胸中大气下陷_治疗方",
+          "role": "处方",
+          "membership_degree": 0.7
+        }
+      ],
+      "description": "在升陷汤加味基础上，根据病情变化调整处方"
+    }
+  ]
+}

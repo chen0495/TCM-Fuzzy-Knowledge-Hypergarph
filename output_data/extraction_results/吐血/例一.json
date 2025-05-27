@@ -1,0 +1,197 @@
+{
+  "entities": [
+    {
+      "entity_name": "鲍姓",
+      "entity_type": "患者信息",
+      "description": "女性患者"
+    },
+    {
+      "entity_name": "胃痛",
+      "entity_type": "症状",
+      "description": "痛如刀割"
+    },
+    {
+      "entity_name": "脘中燔热",
+      "entity_type": "症状",
+      "description": "胃部灼热感"
+    },
+    {
+      "entity_name": "吞酸",
+      "entity_type": "症状",
+      "description": "胃酸上逆"
+    },
+    {
+      "entity_name": "满闷",
+      "entity_type": "症状",
+      "description": "胃部胀满不适"
+    },
+    {
+      "entity_name": "懊（忖-寸+农）作吐",
+      "entity_type": "症状",
+      "description": "恶心欲吐"
+    },
+    {
+      "entity_name": "吐血",
+      "entity_type": "症状",
+      "description": "吐物中伴有血出"
+    },
+    {
+      "entity_name": "大便秘结而黑",
+      "entity_type": "症状",
+      "description": "便秘且粪便呈黑色"
+    },
+    {
+      "entity_name": "舌苔垢腻",
+      "entity_type": "症状",
+      "description": "舌苔厚腻"
+    },
+    {
+      "entity_name": "脉弦紧而滑",
+      "entity_type": "症状",
+      "description": "脉象弦紧且滑"
+    },
+    {
+      "entity_name": "两关位独盛",
+      "entity_type": "症状",
+      "description": "关脉特别强盛"
+    },
+    {
+      "entity_name": "肝脾不和、湿热交蒸",
+      "entity_type": "证候",
+      "description": "肝脾功能失调，湿热内蕴"
+    },
+    {
+      "entity_name": "十二指肠溃疡",
+      "entity_type": "疾病",
+      "description": "十二指肠黏膜溃疡"
+    },
+    {
+      "entity_name": "胃出血",
+      "entity_type": "疾病",
+      "description": "胃部出血"
+    },
+    {
+      "entity_name": "吐血_肝脾不和、湿热交蒸_治疗方",
+      "entity_type": "处方",
+      "description": "石决明(生研先煎)24克, 青竹茹12克, 台乌药9克, 盐橘核12克, 龙胆草(酒炒)9克, 旋复花(布包煎)12克, 生赭石12克, 藕节?枚, 煨粉葛根1.5克, 水制甘草1.5克, 藿香梗9克, 陈皮6克, 焦栀子9克, 土炒焦白芍4.5克, 槟榔炭(醋炒)4.5克, 炒枳壳6克, 醋军炭4.5克, 川郁金(生白矾水浸)9克, 苏合香丸1粒(冲服), 犀黄丸6克(冲服)。治法：镇肝和胃，行气止痛，搜肃湿热以内消之。"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.95,
+      "participants": [
+        {
+          "entity_name": "鲍姓",
+          "role": "患者",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "肝脾不和、湿热交蒸",
+          "role": "证候",
+          "membership_degree": 0.95
+        },
+        {
+          "entity_name": "胃痛",
+          "role": "症状",
+          "membership_degree": 0.85
+        },
+        {
+          "entity_name": "脘中燔热",
+          "role": "症状",
+          "membership_degree": 0.85
+        },
+        {
+          "entity_name": "吞酸",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "满闷",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "懊（忖-寸+农）作吐",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "吐血",
+          "role": "症状",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "大便秘结而黑",
+          "role": "症状",
+          "membership_degree": 0.85
+        },
+        {
+          "entity_name": "舌苔垢腻",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "脉弦紧而滑",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "两关位独盛",
+          "role": "症状",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "患者鲍姓因肝脾不和、湿热交蒸导致胃痛、脘中燔热、吐血等症状。"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "鲍姓",
+          "role": "患者",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "肝脾不和、湿热交蒸",
+          "role": "证候",
+          "membership_degree": 0.95
+        },
+        {
+          "entity_name": "吐血_肝脾不和、湿热交蒸_治疗方",
+          "role": "处方",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "针对肝脾不和、湿热交蒸的证候，采用镇肝和胃、行气止痛、搜肃湿热的治法。"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "鲍姓",
+          "role": "患者",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "吐血_肝脾不和、湿热交蒸_治疗方",
+          "role": "处方",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "十二指肠溃疡",
+          "role": "疾病",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "胃出血",
+          "role": "疾病",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "根据患者十二指肠溃疡合并胃出血的情况，调整处方以镇肝和胃、搜肃湿热。"
+    }
+  ]
+}

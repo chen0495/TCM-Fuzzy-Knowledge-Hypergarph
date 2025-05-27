@@ -1,0 +1,142 @@
+{
+  "entities": [
+    {
+      "entity_name": "陈ｘｘ",
+      "entity_type": "患者信息",
+      "description": "女，34岁，慢性肝炎患者"
+    },
+    {
+      "entity_name": "纳减乏力",
+      "entity_type": "症状",
+      "description": "食欲减退，乏力"
+    },
+    {
+      "entity_name": "肝痛",
+      "entity_type": "症状",
+      "description": "肝脏疼痛"
+    },
+    {
+      "entity_name": "肝大",
+      "entity_type": "症状",
+      "description": "肝脏肿大"
+    },
+    {
+      "entity_name": "头晕目眩",
+      "entity_type": "症状",
+      "description": "头晕眼花"
+    },
+    {
+      "entity_name": "神疲乏力",
+      "entity_type": "症状",
+      "description": "精神疲倦，乏力"
+    },
+    {
+      "entity_name": "两胁胀痛",
+      "entity_type": "症状",
+      "description": "两侧胁肋部胀痛"
+    },
+    {
+      "entity_name": "午后低热",
+      "entity_type": "症状",
+      "description": "下午体温轻度升高"
+    },
+    {
+      "entity_name": "口燥咽干",
+      "entity_type": "症状",
+      "description": "口干咽燥"
+    },
+    {
+      "entity_name": "舌苔根黄腻，前半薄，质红带紫",
+      "entity_type": "症状",
+      "description": "舌苔根部黄腻，前半部薄，舌质红带紫色"
+    },
+    {
+      "entity_name": "脉象细数",
+      "entity_type": "症状",
+      "description": "脉搏细而快"
+    },
+    {
+      "entity_name": "肝邪久羁，瘀凝气滞，营阴耗伤",
+      "entity_type": "证候",
+      "description": "肝脏病邪长期滞留，气血瘀滞，营阴耗伤"
+    },
+    {
+      "entity_name": "慢性肝炎",
+      "entity_type": "疾病",
+      "description": "慢性肝脏炎症"
+    },
+    {
+      "entity_name": "胁痛_肝邪久羁，瘀凝气滞，营阴耗伤_治疗方",
+      "entity_type": "处方",
+      "description": "太子参18克，麦冬9克，生鳖甲18克，生地黄12克，生白芍12克，当归9克，枸杞子12克，黑山栀12克，制香附9克，制甘草4.5克。治法：养阴柔肝，调气活血"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.95,
+      "participants": [
+        {
+          "entity_name": "陈ｘｘ",
+          "role": "患者",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "肝邪久羁，瘀凝气滞，营阴耗伤",
+          "role": "证候",
+          "membership_degree": 0.95
+        },
+        {
+          "entity_name": "两胁胀痛",
+          "role": "症状",
+          "membership_degree": 0.85
+        },
+        {
+          "entity_name": "午后低热",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "口燥咽干",
+          "role": "症状",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "患者表现为两胁胀痛、午后低热、口燥咽干等症状，辨证为肝邪久羁，瘀凝气滞，营阴耗伤"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "肝邪久羁，瘀凝气滞，营阴耗伤",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "胁痛_肝邪久羁，瘀凝气滞，营阴耗伤_治疗方",
+          "role": "处方",
+          "membership_degree": 0.95
+        }
+      ],
+      "description": "针对肝邪久羁，瘀凝气滞，营阴耗伤的证候，采用养阴柔肝，调气活血的治法"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "胁痛_肝邪久羁，瘀凝气滞，营阴耗伤_治疗方",
+          "role": "处方",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "慢性肝炎",
+          "role": "疾病",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "根据慢性肝炎的病情变化，对处方进行加减调整"
+    }
+  ]
+}

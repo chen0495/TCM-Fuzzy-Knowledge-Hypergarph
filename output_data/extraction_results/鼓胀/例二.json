@@ -1,0 +1,152 @@
+{
+  "entities": [
+    {
+      "entity_name": "高ｘｘ",
+      "entity_type": "患者信息",
+      "description": "女，55岁"
+    },
+    {
+      "entity_name": "肝肿硬",
+      "entity_type": "症状",
+      "description": "肝肿硬半载"
+    },
+    {
+      "entity_name": "面色晦黯",
+      "entity_type": "症状",
+      "description": "面色晦黯"
+    },
+    {
+      "entity_name": "面浮足肿",
+      "entity_type": "症状",
+      "description": "面浮足肿"
+    },
+    {
+      "entity_name": "肝痛气逆",
+      "entity_type": "症状",
+      "description": "肝痛气逆"
+    },
+    {
+      "entity_name": "喘促",
+      "entity_type": "症状",
+      "description": "喘促"
+    },
+    {
+      "entity_name": "大腹膨胀如鼓",
+      "entity_type": "症状",
+      "description": "大腹膨胀如鼓，按之绷急而痛"
+    },
+    {
+      "entity_name": "低热",
+      "entity_type": "症状",
+      "description": "近有低热"
+    },
+    {
+      "entity_name": "湿热偏胜",
+      "entity_type": "证候",
+      "description": "湿热偏胜"
+    },
+    {
+      "entity_name": "鼓胀",
+      "entity_type": "疾病",
+      "description": "肢胀已成"
+    },
+    {
+      "entity_name": "鼓胀_湿热偏胜_治疗方",
+      "entity_type": "处方",
+      "description": "甜葶苈1．5克，龙胆草3克，老苏梗9克，青陈皮各6克，茯苓皮15克，干蟾皮9克，九香虫9克，大腹皮9克，鸡金9克，砂仁1．5克，麦芽9克，车前子12克(包），川椒目3克，7剂；另小温中丸120克，早晚各服6克"
+    },
+    {
+      "entity_name": "疏肝调气清热化湿方",
+      "entity_type": "处方",
+      "description": "广霍香9克，防己风各9克，自薇前各9克，白芍15克，陈皮6克，茯苓皮15克，砂寇壳各1.5克，泽泻9克，车前子12克(包），川桂枝3克，焦茅术5克，7剂"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "高ｘｘ",
+          "role": "患者",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "肝肿硬",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "面色晦黯",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "面浮足肿",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "肝痛气逆",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "喘促",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "大腹膨胀如鼓",
+          "role": "症状",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "湿热偏胜",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "鼓胀",
+          "role": "疾病",
+          "membership_degree": 1.0
+        }
+      ],
+      "description": "患者高ｘｘ因肝肿硬、面色晦黯、面浮足肿等症状，辨证为湿热偏胜的鼓胀"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "湿热偏胜",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "鼓胀_湿热偏胜_治疗方",
+          "role": "处方",
+          "membership_degree": 1.0
+        }
+      ],
+      "description": "针对湿热偏胜的证候，采用清热利湿为主的处方治疗"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.8,
+      "participants": [
+        {
+          "entity_name": "低热",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "疏肝调气清热化湿方",
+          "role": "处方",
+          "membership_degree": 1.0
+        }
+      ],
+      "description": "因患者出现低热，调整处方为疏肝调气清热化湿方"
+    }
+  ]
+}

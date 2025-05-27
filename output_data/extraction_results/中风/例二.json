@@ -1,0 +1,242 @@
+{
+  "entities": [
+    {
+      "entity_name": "贾XX",
+      "entity_type": "患者信息",
+      "description": "男，67岁，门诊号158230，形盛体胖"
+    },
+    {
+      "entity_name": "头晕而昏",
+      "entity_type": "症状",
+      "description": "患者头晕且感觉昏沉"
+    },
+    {
+      "entity_name": "舌謇",
+      "entity_type": "症状",
+      "description": "患者舌体僵硬，语言不灵"
+    },
+    {
+      "entity_name": "口吐涎沫",
+      "entity_type": "症状",
+      "description": "患者口中吐出涎沫"
+    },
+    {
+      "entity_name": "四肢麻",
+      "entity_type": "症状",
+      "description": "患者四肢麻木"
+    },
+    {
+      "entity_name": "行路略不稳",
+      "entity_type": "症状",
+      "description": "患者行走时略有不稳"
+    },
+    {
+      "entity_name": "舌淡苔黄腻",
+      "entity_type": "症状",
+      "description": "患者舌质淡，苔黄腻"
+    },
+    {
+      "entity_name": "两目微亦",
+      "entity_type": "症状",
+      "description": "患者两眼微睁"
+    },
+    {
+      "entity_name": "切脉弦硬",
+      "entity_type": "症状",
+      "description": "患者脉象弦硬"
+    },
+    {
+      "entity_name": "老年水亏木旺之体",
+      "entity_type": "证候",
+      "description": "患者年老体衰，肾水不足，肝木旺盛"
+    },
+    {
+      "entity_name": "痰湿内蕴",
+      "entity_type": "证候",
+      "description": "患者体内痰湿积聚"
+    },
+    {
+      "entity_name": "肝阳引动浊痰闭窍",
+      "entity_type": "证候",
+      "description": "肝阳上亢，浊痰阻塞清窍"
+    },
+    {
+      "entity_name": "中风",
+      "entity_type": "疾病",
+      "description": "患者诊断为中风"
+    },
+    {
+      "entity_name": "半夏白术天麻汤加减",
+      "entity_type": "处方",
+      "description": "决明子15克，茯神12克，制半夏9克，白术9克，灵磁石9克，钩藤9克，刺蒺藜9克，僵蚕9克，明天麻6克，石菖蒲3克。治法：补中气、化痰湿，熄风镇静"
+    },
+    {
+      "entity_name": "补中气和脾胃兼熄风化痰药",
+      "entity_type": "处方",
+      "description": "具体药物组成未提及，治法：补中气和脾胃兼熄风化痰"
+    },
+    {
+      "entity_name": "补肝肾活血方",
+      "entity_type": "处方",
+      "description": "具体药物组成未提及，治法：补肝肾活血"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.95,
+      "participants": [
+        {
+          "entity_name": "贾XX",
+          "role": "患者",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "头晕而昏",
+          "role": "症状",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "舌謇",
+          "role": "症状",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "口吐涎沫",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "四肢麻",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "行路略不稳",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "舌淡苔黄腻",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "两目微亦",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "切脉弦硬",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "老年水亏木旺之体",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "痰湿内蕴",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "肝阳引动浊痰闭窍",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "中风",
+          "role": "疾病",
+          "membership_degree": 1.0
+        }
+      ],
+      "description": "患者贾XX诊断为中风，证属老年水亏木旺之体，痰湿内蕴，肝阳引动浊痰闭窍"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "贾XX",
+          "role": "患者",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "半夏白术天麻汤加减",
+          "role": "处方",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "补中气和脾胃兼熄风化痰药",
+          "role": "处方",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "补肝肾活血方",
+          "role": "处方",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "中风",
+          "role": "疾病",
+          "membership_degree": 1.0
+        }
+      ],
+      "description": "患者贾XX中风，治以半夏白术天麻汤加减补中气、化痰湿，熄风镇静；后随证加减补中气和脾胃兼熄风化痰药及补肝肾活血方"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "贾XX",
+          "role": "患者",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "半夏白术天麻汤加减",
+          "role": "处方",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "补中气和脾胃兼熄风化痰药",
+          "role": "处方",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "补肝肾活血方",
+          "role": "处方",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "头晕而昏",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "舌謇",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "口吐涎沫",
+          "role": "症状",
+          "membership_degree": 0.6
+        },
+        {
+          "entity_name": "四肢麻",
+          "role": "症状",
+          "membership_degree": 0.6
+        },
+        {
+          "entity_name": "行路略不稳",
+          "role": "症状",
+          "membership_degree": 0.6
+        }
+      ],
+      "description": "患者贾XX症状变化，随证加减处方，从半夏白术天麻汤加减到补中气和脾胃兼熄风化痰药，再到补肝肾活血方"
+    }
+  ]
+}

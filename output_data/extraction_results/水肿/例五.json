@@ -1,0 +1,202 @@
+{
+  "entities": [
+    {
+      "entity_name": "例五患者",
+      "entity_type": "患者信息",
+      "description": "男性，26岁，北京人，职员"
+    },
+    {
+      "entity_name": "浮肿",
+      "entity_type": "症状",
+      "description": "荐骨部及下肢有轻度指凹性水肿"
+    },
+    {
+      "entity_name": "心尖部收缩期杂音",
+      "entity_type": "症状",
+      "description": "心尖部有收缩期杂音"
+    },
+    {
+      "entity_name": "高热",
+      "entity_type": "症状",
+      "description": "体温39.5℃"
+    },
+    {
+      "entity_name": "高血压",
+      "entity_type": "症状",
+      "description": "血压176/90毫米汞柱"
+    },
+    {
+      "entity_name": "尿蛋白(+++)",
+      "entity_type": "症状",
+      "description": "尿蛋白(+++)"
+    },
+    {
+      "entity_name": "颗粒管型",
+      "entity_type": "症状",
+      "description": "颗粒管型2～3/高视野"
+    },
+    {
+      "entity_name": "红细胞成堆",
+      "entity_type": "症状",
+      "description": "红细胞成堆/高视野"
+    },
+    {
+      "entity_name": "白细胞增多",
+      "entity_type": "症状",
+      "description": "白细胞3～10/高视野"
+    },
+    {
+      "entity_name": "非蛋白氮升高",
+      "entity_type": "症状",
+      "description": "非蛋白氮上升至150毫克%"
+    },
+    {
+      "entity_name": "二氧化碳结合力降低",
+      "entity_type": "症状",
+      "description": "二氧化碳结合力30.9容量%"
+    },
+    {
+      "entity_name": "精神不振",
+      "entity_type": "症状",
+      "description": "精神不振"
+    },
+    {
+      "entity_name": "无食欲",
+      "entity_type": "症状",
+      "description": "无食欲"
+    },
+    {
+      "entity_name": "呕吐",
+      "entity_type": "症状",
+      "description": "呕吐甚剧"
+    },
+    {
+      "entity_name": "吐血",
+      "entity_type": "症状",
+      "description": "伴有吐血"
+    },
+    {
+      "entity_name": "半昏迷状态",
+      "entity_type": "症状",
+      "description": "接近半昏迷状态"
+    },
+    {
+      "entity_name": "脉浮而沉取无脉",
+      "entity_type": "症状",
+      "description": "脉浮而沉取无脉"
+    },
+    {
+      "entity_name": "头晕",
+      "entity_type": "症状",
+      "description": "感头晕"
+    },
+    {
+      "entity_name": "肾虚水不运行",
+      "entity_type": "证候",
+      "description": "肾虚、水不运行，以致尿毒上犯于心"
+    },
+    {
+      "entity_name": "慢性肾炎",
+      "entity_type": "疾病",
+      "description": "慢性肾炎"
+    },
+    {
+      "entity_name": "上呼吸道感染",
+      "entity_type": "疾病",
+      "description": "上呼吸道感染"
+    },
+    {
+      "entity_name": "尿毒症",
+      "entity_type": "疾病",
+      "description": "尿毒症"
+    },
+    {
+      "entity_name": "金匮肾气汤加知母、牛膝",
+      "entity_type": "处方",
+      "description": "金匮肾气汤加知母、牛膝7剂(一星期)"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "例五患者",
+          "role": "患者",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "肾虚水不运行",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "浮肿",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "呕吐",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "吐血",
+          "role": "症状",
+          "membership_degree": 0.6
+        },
+        {
+          "entity_name": "半昏迷状态",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "脉浮而沉取无脉",
+          "role": "症状",
+          "membership_degree": 0.7
+        }
+      ],
+      "description": "患者肾虚水不运行，导致尿毒上犯于心，表现为浮肿、呕吐、吐血、半昏迷状态等症状"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "肾虚水不运行",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "金匮肾气汤加知母、牛膝",
+          "role": "处方",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "治疗肾虚水不运行，采用金匮肾气汤加知母、牛膝，以补肾治本，利水泄毒治标"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.8,
+      "participants": [
+        {
+          "entity_name": "金匮肾气汤加知母、牛膝",
+          "role": "处方",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "呕吐",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "吐血",
+          "role": "症状",
+          "membership_degree": 0.6
+        }
+      ],
+      "description": "处方中加入知母、牛膝以滋阴利水，引药下行，针对呕吐、吐血等症状"
+    }
+  ]
+}

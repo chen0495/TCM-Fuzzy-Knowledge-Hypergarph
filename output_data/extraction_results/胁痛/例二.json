@@ -1,0 +1,159 @@
+{
+  "entities": [
+    {
+      "entity_name": "王××9",
+      "entity_type": "患者信息",
+      "description": "女，42岁，患慢性肝炎3年"
+    },
+    {
+      "entity_name": "胸胁痛",
+      "entity_type": "症状",
+      "description": "胸胁疼痛加剧"
+    },
+    {
+      "entity_name": "头晕胸闷",
+      "entity_type": "症状",
+      "description": "头晕胸闷"
+    },
+    {
+      "entity_name": "食欲好",
+      "entity_type": "症状",
+      "description": "食欲好"
+    },
+    {
+      "entity_name": "大使秘结",
+      "entity_type": "症状",
+      "description": "大使秘结"
+    },
+    {
+      "entity_name": "身倦不愿活动",
+      "entity_type": "症状",
+      "description": "身倦不愿活动"
+    },
+    {
+      "entity_name": "体质肥胖",
+      "entity_type": "症状",
+      "description": "体质肥胖"
+    },
+    {
+      "entity_name": "肝大肋下四横指",
+      "entity_type": "症状",
+      "description": "肝大肋下四横指，质软"
+    },
+    {
+      "entity_name": "脉弦滑",
+      "entity_type": "症状",
+      "description": "脉弦滑"
+    },
+    {
+      "entity_name": "舌质淡红，苔黄腻",
+      "entity_type": "症状",
+      "description": "舌质淡红，苔黄腻"
+    },
+    {
+      "entity_name": "肝郁气滞，痰湿阻络",
+      "entity_type": "证候",
+      "description": "肝郁气滞，痰湿阻络"
+    },
+    {
+      "entity_name": "脂肪肝",
+      "entity_type": "疾病",
+      "description": "肝细胞脂肪浸润，诊为脂肪肝"
+    },
+    {
+      "entity_name": "胁痛_肝郁气滞，痰湿阻络_治疗方",
+      "entity_type": "处方",
+      "description": "丹参15克，青皮12克，栀子、枳实、郁金、乳香、没药、五灵脂、三棱、沉香各9克，甘草6克"
+    },
+    {
+      "entity_name": "胁痛_肝郁气滞，痰湿阻络_治疗方_二诊",
+      "entity_type": "处方",
+      "description": "加礞石、大黄、皂刺、丹皮，减栀子、没药、沉香、丹参"
+    },
+    {
+      "entity_name": "胁痛_肝郁气滞，痰湿阻络_治疗方_三诊",
+      "entity_type": "处方",
+      "description": "钩藤、丹参各15克，礞石、皂刺、三棱、莪术、郁金、乳香、五灵脂、南星各9克，甘草6克"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.95,
+      "participants": [
+        {
+          "entity_name": "王××9",
+          "role": "患者",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "胸胁痛",
+          "role": "症状",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "头晕胸闷",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "肝郁气滞，痰湿阻络",
+          "role": "证候",
+          "membership_degree": 1.0
+        }
+      ],
+      "description": "患者胸胁痛、头晕胸闷等症状辨证为肝郁气滞，痰湿阻络"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "肝郁气滞，痰湿阻络",
+          "role": "证候",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "胁痛_肝郁气滞，痰湿阻络_治疗方",
+          "role": "处方",
+          "membership_degree": 1.0
+        }
+      ],
+      "description": "针对肝郁气滞，痰湿阻络证候，采用舒肝理气，祛痰通络的治法"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "胁痛_肝郁气滞，痰湿阻络_治疗方",
+          "role": "原处方",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "胁痛_肝郁气滞，痰湿阻络_治疗方_二诊",
+          "role": "调整后处方",
+          "membership_degree": 1.0
+        }
+      ],
+      "description": "根据病情变化，调整处方，加礞石、大黄、皂刺、丹皮，减栀子、没药、沉香、丹参"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "胁痛_肝郁气滞，痰湿阻络_治疗方_二诊",
+          "role": "原处方",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "胁痛_肝郁气滞，痰湿阻络_治疗方_三诊",
+          "role": "调整后处方",
+          "membership_degree": 1.0
+        }
+      ],
+      "description": "根据病情变化，进一步调整处方，加钩藤、丹参等"
+    }
+  ]
+}

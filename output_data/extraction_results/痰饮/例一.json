@@ -1,0 +1,137 @@
+{
+  "entities": [
+    {
+      "entity_name": "俞",
+      "entity_type": "患者信息",
+      "description": "女，暴寒外束，痰饮内聚，支塞于肺，肃降失司"
+    },
+    {
+      "entity_name": "气喘咳嗽",
+      "entity_type": "症状",
+      "description": "大发，日夜不能平卧"
+    },
+    {
+      "entity_name": "形寒怯冷",
+      "entity_type": "症状",
+      "description": "患者感到寒冷和害怕寒冷"
+    },
+    {
+      "entity_name": "纳少泛恶",
+      "entity_type": "症状",
+      "description": "食欲减少，恶心"
+    },
+    {
+      "entity_name": "苔白腻",
+      "entity_type": "症状",
+      "description": "舌苔白而腻"
+    },
+    {
+      "entity_name": "脉浮弦而滑",
+      "entity_type": "症状",
+      "description": "脉象浮、弦且滑"
+    },
+    {
+      "entity_name": "暴寒外束，痰饮内聚",
+      "entity_type": "证候",
+      "description": "外感寒邪，痰饮内停"
+    },
+    {
+      "entity_name": "痰饮",
+      "entity_type": "疾病",
+      "description": "痰饮内聚，支塞于肺"
+    },
+    {
+      "entity_name": "小青龙汤加减",
+      "entity_type": "处方",
+      "description": "蜜炙麻黄1.2克，川桂枝2.4克，云苓9克，姜半夏6克，五味子1.2克，淡干姜1.2克，炙苏子6克，光杏仁9克，熟附片3克，鹅管石（煅）3克，哮吼紫金丹2粒（另吞），连服两天。治法：疏解外邪，温化痰饮"
+    },
+    {
+      "entity_name": "痰饮_暴寒外束，痰饮内聚_治疗方",
+      "entity_type": "处方",
+      "description": "川桂枝2.4克，云苓9克，姜半夏6克，橘红3克，五味子1.2克，淡干姜1.2克，水炙远志1.5克，光杏仁9克，炙苏子15克，旋覆花（包）15克，熟附片3克，鹅管石3克（煅）。治法：温化饮邪，肃降肺气"
+    },
+    {
+      "entity_name": "痰饮_暴寒外束，痰饮内聚_治疗方_二",
+      "entity_type": "处方",
+      "description": "原方去旋覆花、远志，加生白术15克，炒补骨脂15克。治法：理脾肃肺，温化痰饮"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.95,
+      "participants": [
+        {
+          "entity_name": "俞",
+          "role": "患者",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "暴寒外束，痰饮内聚",
+          "role": "证候",
+          "membership_degree": 0.95
+        },
+        {
+          "entity_name": "气喘咳嗽",
+          "role": "症状",
+          "membership_degree": 0.85
+        },
+        {
+          "entity_name": "形寒怯冷",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "纳少泛恶",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "苔白腻",
+          "role": "症状",
+          "membership_degree": 0.75
+        },
+        {
+          "entity_name": "脉浮弦而滑",
+          "role": "症状",
+          "membership_degree": 0.75
+        }
+      ],
+      "description": "患者俞表现为暴寒外束，痰饮内聚的证候"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "暴寒外束，痰饮内聚",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "小青龙汤加减",
+          "role": "处方",
+          "membership_degree": 0.85
+        }
+      ],
+      "description": "针对暴寒外束，痰饮内聚的证候，采用小青龙汤加减进行治疗"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "痰饮_暴寒外束，痰饮内聚_治疗方",
+          "role": "处方",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "痰饮_暴寒外束，痰饮内聚_治疗方_二",
+          "role": "处方",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "根据病情变化，调整处方药物组成"
+    }
+  ]
+}

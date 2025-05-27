@@ -1,0 +1,147 @@
+{
+  "entities": [
+    {
+      "entity_name": "周ｘｘ",
+      "entity_type": "患者信息",
+      "description": "女，45岁"
+    },
+    {
+      "entity_name": "头部冷痛",
+      "entity_type": "症状",
+      "description": "头部冷痛10余年，终年戴皮帽，还需以帛裹之，寒冬尤甚"
+    },
+    {
+      "entity_name": "四肢不温",
+      "entity_type": "症状",
+      "description": "四肢不温"
+    },
+    {
+      "entity_name": "足肿",
+      "entity_type": "症状",
+      "description": "间见足肿"
+    },
+    {
+      "entity_name": "夜间尿多",
+      "entity_type": "症状",
+      "description": "夜间尿多"
+    },
+    {
+      "entity_name": "舌淡苔白",
+      "entity_type": "症状",
+      "description": "舌淡苔白"
+    },
+    {
+      "entity_name": "脉安无力",
+      "entity_type": "症状",
+      "description": "脉安无力"
+    },
+    {
+      "entity_name": "产后气血虚弱，风寒入髓海",
+      "entity_type": "证候",
+      "description": "产后气血虚弱，风寒入髓海所致"
+    },
+    {
+      "entity_name": "头痛",
+      "entity_type": "疾病",
+      "description": "阳虚头痛"
+    },
+    {
+      "entity_name": "头痛_产后气血虚弱，风寒入髓海_治疗方",
+      "entity_type": "处方",
+      "description": "黄芪18克当归12克肉桂6克附片15克天麻10克藁本6克荷叶15克，治法：温阳散寒，补益气血"
+    },
+    {
+      "entity_name": "头痛_气血未复_治疗方",
+      "entity_type": "处方",
+      "description": "黄芪15克白术10克升麻10克柴胡10克晒党15克当归10克陈皮6克炙草5克川芎6克北辛3克，治法：益气养血"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.95,
+      "participants": [
+        {
+          "entity_name": "周ｘｘ",
+          "role": "患者",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "头部冷痛",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "四肢不温",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "足肿",
+          "role": "症状",
+          "membership_degree": 0.6
+        },
+        {
+          "entity_name": "夜间尿多",
+          "role": "症状",
+          "membership_degree": 0.6
+        },
+        {
+          "entity_name": "舌淡苔白",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "脉安无力",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "产后气血虚弱，风寒入髓海",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "头痛",
+          "role": "疾病",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "患者周ｘｘ因产后气血虚弱，风寒入髓海，导致阳虚头痛"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "产后气血虚弱，风寒入髓海",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "头痛_产后气血虚弱，风寒入髓海_治疗方",
+          "role": "处方",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "针对产后气血虚弱，风寒入髓海的证候，采用温阳散寒，补益气血的治法"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "头痛_产后气血虚弱，风寒入髓海_治疗方",
+          "role": "原处方",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "头痛_气血未复_治疗方",
+          "role": "新处方",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "患者头部冷痛好转后，寒凝已散，气血未复，改用益气养血的治法"
+    }
+  ]
+}

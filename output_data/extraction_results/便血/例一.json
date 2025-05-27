@@ -1,0 +1,157 @@
+{
+  "entities": [
+    {
+      "entity_name": "张X",
+      "entity_type": "患者信息",
+      "description": "男，50岁"
+    },
+    {
+      "entity_name": "便血",
+      "entity_type": "疾病",
+      "description": "大便下血，时发时止，历四、五年"
+    },
+    {
+      "entity_name": "直肠肛门出血",
+      "entity_type": "疾病",
+      "description": "或因内痔发展所致"
+    },
+    {
+      "entity_name": "血色鲜而量多",
+      "entity_type": "症状",
+      "description": "近期发作甚剧，血色鲜而量多，日五、六次"
+    },
+    {
+      "entity_name": "肛门堕脱",
+      "entity_type": "症状",
+      "description": "肛门堕脱"
+    },
+    {
+      "entity_name": "头晕眼黑",
+      "entity_type": "症状",
+      "description": "头晕眼黑"
+    },
+    {
+      "entity_name": "气短心跳",
+      "entity_type": "症状",
+      "description": "气短心跳"
+    },
+    {
+      "entity_name": "食不甘味",
+      "entity_type": "症状",
+      "description": "食不甘味"
+    },
+    {
+      "entity_name": "面色苍白",
+      "entity_type": "症状",
+      "description": "面色苍白"
+    },
+    {
+      "entity_name": "身疲",
+      "entity_type": "症状",
+      "description": "身疲"
+    },
+    {
+      "entity_name": "神倦",
+      "entity_type": "症状",
+      "description": "神倦"
+    },
+    {
+      "entity_name": "脉微无力",
+      "entity_type": "症状",
+      "description": "脉微无力"
+    },
+    {
+      "entity_name": "胃肠郁热",
+      "entity_type": "证候",
+      "description": "胃肠郁热"
+    },
+    {
+      "entity_name": "气血运行不周",
+      "entity_type": "证候",
+      "description": "气血运行不周"
+    },
+    {
+      "entity_name": "便血_胃肠郁热_治疗方",
+      "entity_type": "处方",
+      "description": "别植参6克煎浓汁分二次兑服炙黄芪18克漂白术9克杭白芍9克(柴胡4.5克同炒)黑升麻3克黑芥穗6克炒地榆9克炒槐米9克广皮炭6克当归身9克黑山栀6克炒枳壳6克陈阿胶9克(另溶分二次兑服)炙甘草4.5克，治法：止血清热，补中益气"
+    },
+    {
+      "entity_name": "便血_气血运行不周_治疗方",
+      "entity_type": "处方",
+      "description": "吉林参9克另煎浓汁分二次兑服野于术9克云茯苓神各9克山萸肉(炒)9克龙眼肉15克当归身9克大熟地9克淮山药15克炙绵芪24克远志(炒)9克广木香3克鹿角胶9克(另溶分二次兑服)五味子(打)9克炙甘草3克，治法：调补"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "张X",
+          "role": "患者",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "便血",
+          "role": "疾病",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "胃肠郁热",
+          "role": "证候",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "气血运行不周",
+          "role": "证候",
+          "membership_degree": 0.7
+        }
+      ],
+      "description": "患者张X患有便血，证属胃肠郁热，气血运行不周"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "便血_胃肠郁热_治疗方",
+          "role": "处方",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "胃肠郁热",
+          "role": "证候",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "便血",
+          "role": "疾病",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "针对胃肠郁热证候，使用止血清热、补中益气的处方治疗便血"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.8,
+      "participants": [
+        {
+          "entity_name": "便血_气血运行不周_治疗方",
+          "role": "处方",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "气血运行不周",
+          "role": "证候",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "便血",
+          "role": "疾病",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "血止后正气未复，改用调补之剂以巩固疗效"
+    }
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "entities": [
+    {
+      "entity_name": "蒋调",
+      "entity_type": "患者信息",
+      "description": "男，28岁，初诊日期：1977年7月12日"
+    },
+    {
+      "entity_name": "汗闭症",
+      "entity_type": "症状",
+      "description": "自幼就有汗闭症，暑天烦热难忍"
+    },
+    {
+      "entity_name": "低热",
+      "entity_type": "症状",
+      "description": "伴有低热"
+    },
+    {
+      "entity_name": "精神疲乏",
+      "entity_type": "症状",
+      "description": "精神疲乏"
+    },
+    {
+      "entity_name": "口干",
+      "entity_type": "症状",
+      "description": "口干"
+    },
+    {
+      "entity_name": "肢麻甚则作痛",
+      "entity_type": "症状",
+      "description": "肢麻甚则作痛"
+    },
+    {
+      "entity_name": "肌肤干燥",
+      "entity_type": "症状",
+      "description": "肌肤干燥"
+    },
+    {
+      "entity_name": "脉弦细而数",
+      "entity_type": "症状",
+      "description": "脉弦细而数"
+    },
+    {
+      "entity_name": "满舌裂纹、苔剥",
+      "entity_type": "症状",
+      "description": "满舌裂纹、苔剥"
+    },
+    {
+      "entity_name": "体温37．4℃",
+      "entity_type": "症状",
+      "description": "体温37．4℃"
+    },
+    {
+      "entity_name": "肺气、肺阴不足，不能宣散皮毛，汗源亦少",
+      "entity_type": "证候",
+      "description": "肺气、肺阴不足，不能宣散皮毛，汗源亦少"
+    },
+    {
+      "entity_name": "无汗症",
+      "entity_type": "疾病",
+      "description": "无汗症系指暑热之际饮热奔跑，阳气蒸发，当汗不汗之证"
+    },
+    {
+      "entity_name": "无汗症_肺气、肺阴不足，不能宣散皮毛，汗源亦少_治疗方",
+      "entity_type": "处方",
+      "description": "生石膏30克(先煎）玄参12克知母9克鸡苏散30克(包煎）太子参15克生地12克葛根9克山药9克桑白皮12克阿胶9克(烊冲），治法：益气养阴，清燥润肺"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.95,
+      "participants": [
+        {
+          "entity_name": "蒋调",
+          "role": "患者",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "汗闭症",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "肺气、肺阴不足，不能宣散皮毛，汗源亦少",
+          "role": "证候",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "患者蒋调自幼有汗闭症，伴有低热、精神疲乏等症状，辨证为肺气、肺阴不足，不能宣散皮毛，汗源亦少"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "肺气、肺阴不足，不能宣散皮毛，汗源亦少",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "无汗症_肺气、肺阴不足，不能宣散皮毛，汗源亦少_治疗方",
+          "role": "处方",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "针对肺气、肺阴不足，不能宣散皮毛，汗源亦少的证候，采用益气养阴，清燥润肺的治法，处方为生石膏、玄参、知母等药物组成"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "无汗症_肺气、肺阴不足，不能宣散皮毛，汗源亦少_治疗方",
+          "role": "处方",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "汗闭症",
+          "role": "症状",
+          "membership_degree": 0.7
+        }
+      ],
+      "description": "处方中加入了葛根、薄荷等药物以解肌疏表，针对汗闭症的症状进行随证加减"
+    }
+  ]
+}

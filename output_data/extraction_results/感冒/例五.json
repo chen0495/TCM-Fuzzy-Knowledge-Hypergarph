@@ -1,0 +1,216 @@
+{
+  "entities": [
+    {
+      "entity_name": "崔X",
+      "entity_type": "患者信息",
+      "description": "男，40岁"
+    },
+    {
+      "entity_name": "形寒背部为甚",
+      "entity_type": "症状",
+      "description": "背部形寒明显"
+    },
+    {
+      "entity_name": "喘逆",
+      "entity_type": "症状",
+      "description": "喘逆已持续一年，入冬加剧"
+    },
+    {
+      "entity_name": "咳嗽",
+      "entity_type": "症状",
+      "description": "咳嗽"
+    },
+    {
+      "entity_name": "舌苔白腻质粉红",
+      "entity_type": "症状",
+      "description": "舌苔白腻，舌质粉红"
+    },
+    {
+      "entity_name": "不思饮水",
+      "entity_type": "症状",
+      "description": "不思饮水"
+    },
+    {
+      "entity_name": "左胁内痛",
+      "entity_type": "症状",
+      "description": "左胁内痛，不能依左而卧"
+    },
+    {
+      "entity_name": "感冒传里",
+      "entity_type": "疾病",
+      "description": "感冒传里"
+    },
+    {
+      "entity_name": "与饮并留胁间",
+      "entity_type": "证候",
+      "description": "外感之邪侵袭入里与饮并留胁间"
+    },
+    {
+      "entity_name": "感冒_与饮并留胁间_治疗方",
+      "entity_type": "处方",
+      "description": "嫩前胡3克（麻黄汤煮透去麻黄）粗桂枝1．5克（赤芍6克同炒）家苏子4．5克白芥子1．5克桑白皮9克甜亭苈3克（焙）大红枣7枚法半夏9克（粉草3克同打）新绎屑4．5克生海石15克（先煎）苦杏仁9克建泻9克另：白蔻仁0．6克真琥泊0．9克M味同研，以胶囊装好，匀两次药汁送下。治法：温运化饮"
+    },
+    {
+      "entity_name": "感冒_与饮并留胁间_加减方",
+      "entity_type": "处方",
+      "description": "粗桂枝1．5克（赤芍4．5克同炒）嫩前胡3克桑白皮9克家苏子4．5克甜亭苈3克（焙）逍遥丸15克（布包）鲜枇把叶9克（布包）旋复花6克（布包）新绎屑6克法半夏9克（粉草3克同打）苦杏仁9克鲜偎姜2．1克大红枣7枚建泻9克焦苡米9克。治法：温运化饮加减"
+    },
+    {
+      "entity_name": "感冒_气滞停饮_治疗方",
+      "entity_type": "处方",
+      "description": "淡附片2．1克（用面糊偎透）粗桂枝1．5克（蜜炙）生紫苑3克法半夏9克（粉草3k同打）法制陈皮4．5克苦杏仁9克鲜枇把叶9克（市包）香砂枳术丸15克（布包）鲜煨姜2．1克大红枣7枚生熟谷麦芽各9克建泻9克冬瓜子30克象贝母12克连皮苓12克。治法：温和化饮"
+    },
+    {
+      "entity_name": "感冒_气血两亏_治疗方",
+      "entity_type": "处方",
+      "description": "全当归9克（粗桂枝1．5克同炒）法半夏9克（粉草3克同打）炙陈皮4．5克甜杏仁9克鲜煨姜2．1克大红枣10枚香砂六君子丸15克（布包）淡附片3克（用面糊煨透）潞党参9克（米炒）生熟麦谷芽各9克丝瓜络9克建泻9克。治法：调理气血"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "崔X",
+          "role": "患者",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "形寒背部为甚",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "喘逆",
+          "role": "症状",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "咳嗽",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "舌苔白腻质粉红",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "不思饮水",
+          "role": "症状",
+          "membership_degree": 0.6
+        },
+        {
+          "entity_name": "左胁内痛",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "感冒传里",
+          "role": "疾病",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "与饮并留胁间",
+          "role": "证候",
+          "membership_degree": 1.0
+        }
+      ],
+      "description": "患者崔X因感冒传里，与饮并留胁间，表现为形寒、喘逆、咳嗽、胁痛等症状"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "感冒_与饮并留胁间_治疗方",
+          "role": "处方",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "感冒传里",
+          "role": "疾病",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "与饮并留胁间",
+          "role": "证候",
+          "membership_degree": 1.0
+        }
+      ],
+      "description": "针对感冒传里与饮并留胁间的证候，采用温运化饮的治法"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.8,
+      "participants": [
+        {
+          "entity_name": "感冒_与饮并留胁间_加减方",
+          "role": "处方",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "感冒_与饮并留胁间_治疗方",
+          "role": "处方",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "感冒传里",
+          "role": "疾病",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "与饮并留胁间",
+          "role": "证候",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "根据病情变化，对原方进行加减调整"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "感冒_气滞停饮_治疗方",
+          "role": "处方",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "感冒传里",
+          "role": "疾病",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "与饮并留胁间",
+          "role": "证候",
+          "membership_degree": 1.0
+        }
+      ],
+      "description": "针对气滞停饮的证候，采用温和化饮的治法"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "感冒_气血两亏_治疗方",
+          "role": "处方",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "感冒传里",
+          "role": "疾病",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "与饮并留胁间",
+          "role": "证候",
+          "membership_degree": 1.0
+        }
+      ],
+      "description": "针对气血两亏的证候，采用调理气血的治法"
+    }
+  ]
+}

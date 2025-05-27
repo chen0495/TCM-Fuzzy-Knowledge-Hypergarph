@@ -1,0 +1,85 @@
+{
+  "entities": [
+    {
+      "entity_name": "例一",
+      "entity_type": "患者信息",
+      "description": "重症肌无力眼肌型患者"
+    },
+    {
+      "entity_name": "重症肌无力眼肌型",
+      "entity_type": "疾病",
+      "description": "一种神经肌肉疾病，表现为眼肌无力"
+    },
+    {
+      "entity_name": "脾气虚弱",
+      "entity_type": "证候",
+      "description": "脾虚导致肌肉无力"
+    },
+    {
+      "entity_name": "肝郁肾虚",
+      "entity_type": "证候",
+      "description": "肝气郁结和肾虚导致的症状"
+    },
+    {
+      "entity_name": "重症肌无力眼肌型_脾气虚弱肝郁肾虚_治疗方",
+      "entity_type": "处方",
+      "description": "补中益气汤为主方，加补肾舒肝之品"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.95,
+      "participants": [
+        {
+          "entity_name": "例一",
+          "role": "患者",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "重症肌无力眼肌型",
+          "role": "疾病",
+          "membership_degree": 0.95
+        },
+        {
+          "entity_name": "脾气虚弱",
+          "role": "证候",
+          "membership_degree": 0.85
+        },
+        {
+          "entity_name": "肝郁肾虚",
+          "role": "证候",
+          "membership_degree": 0.85
+        }
+      ],
+      "description": "患者诊断为重症肌无力眼肌型，证属脾气虚弱，肝郁肾虚"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "重症肌无力眼肌型_脾气虚弱肝郁肾虚_治疗方",
+          "role": "处方",
+          "membership_degree": 0.95
+        },
+        {
+          "entity_name": "重症肌无力眼肌型",
+          "role": "疾病",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "脾气虚弱",
+          "role": "证候",
+          "membership_degree": 0.85
+        },
+        {
+          "entity_name": "肝郁肾虚",
+          "role": "证候",
+          "membership_degree": 0.85
+        }
+      ],
+      "description": "使用补中益气汤为主方，加补肾舒肝之品治疗重症肌无力眼肌型，证属脾气虚弱，肝郁肾虚"
+    }
+  ]
+}

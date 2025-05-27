@@ -1,0 +1,107 @@
+{
+  "entities": [
+    {
+      "entity_name": "房XX",
+      "entity_type": "患者信息",
+      "description": "男，39岁，病历号：2566，初诊日期：1963年7月"
+    },
+    {
+      "entity_name": "腹泻",
+      "entity_type": "症状",
+      "description": "二年来经常腹泻，便前腹部坠痛，大便稀，每日3～5次，甚者日达十数次"
+    },
+    {
+      "entity_name": "食纳欠佳",
+      "entity_type": "症状",
+      "description": "食纳欠佳"
+    },
+    {
+      "entity_name": "消瘦",
+      "entity_type": "症状",
+      "description": "明显消瘦，体重减轻20市斤"
+    },
+    {
+      "entity_name": "脾胃虚弱，湿热内蕴，肠胃不和",
+      "entity_type": "证候",
+      "description": "脾胃虚弱，湿热内蕴，肠胃不和"
+    },
+    {
+      "entity_name": "人肠毛滴虫性肠炎",
+      "entity_type": "疾病",
+      "description": "大便常规检查：红细胞40—50个／高倍视野，人肠毛滴虫满视野"
+    },
+    {
+      "entity_name": "泄泻_脾胃虚弱，湿热内蕴，肠胃不和_治疗方",
+      "entity_type": "处方",
+      "description": "酒军、秦皮、香附、赤白芍、六一散(包)各9克白头翁、马齿苋、银花各15克五倍子4．5克紫蔻、木香、生姜、乌梅各3克另以鸦胆子20粒(去皮)装胶囊，分早晚二次，随汤药同时分吞。治法：清热利湿，调和肠胃，导滞杀虫"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.95,
+      "participants": [
+        {
+          "entity_name": "房XX",
+          "role": "患者",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "腹泻",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "食纳欠佳",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "消瘦",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "脾胃虚弱，湿热内蕴，肠胃不和",
+          "role": "证候",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "患者房XX出现腹泻、食纳欠佳、消瘦等症状，辨证为脾胃虚弱，湿热内蕴，肠胃不和"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "脾胃虚弱，湿热内蕴，肠胃不和",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "泄泻_脾胃虚弱，湿热内蕴，肠胃不和_治疗方",
+          "role": "处方",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "针对脾胃虚弱，湿热内蕴，肠胃不和的证候，采用清热利湿，调和肠胃，导滞杀虫的治法"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "泄泻_脾胃虚弱，湿热内蕴，肠胃不和_治疗方",
+          "role": "处方",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "人肠毛滴虫性肠炎",
+          "role": "疾病",
+          "membership_degree": 0.7
+        }
+      ],
+      "description": "处方中加用鸦胆子，取其有解毒杀虫之效，以治疗人肠毛滴虫性肠炎"
+    }
+  ]
+}

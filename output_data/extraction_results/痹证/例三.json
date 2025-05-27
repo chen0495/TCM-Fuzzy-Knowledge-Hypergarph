@@ -1,0 +1,152 @@
+{
+  "entities": [
+    {
+      "entity_name": "刘XX",
+      "entity_type": "患者信息",
+      "description": "男，51岁，患风湿性关节炎二十余年"
+    },
+    {
+      "entity_name": "右膝关节肿痛",
+      "entity_type": "症状",
+      "description": "右膝关节肿痛尤甚，行走需人扶持"
+    },
+    {
+      "entity_name": "腰疼痛",
+      "entity_type": "症状",
+      "description": "腰亦疼痛"
+    },
+    {
+      "entity_name": "形寒特甚",
+      "entity_type": "症状",
+      "description": "形寒特甚"
+    },
+    {
+      "entity_name": "口不渴",
+      "entity_type": "症状",
+      "description": "口不渴"
+    },
+    {
+      "entity_name": "大便易溏",
+      "entity_type": "症状",
+      "description": "大便易溏"
+    },
+    {
+      "entity_name": "纳少不香",
+      "entity_type": "症状",
+      "description": "纳少不香"
+    },
+    {
+      "entity_name": "容易感冒",
+      "entity_type": "症状",
+      "description": "容易感冒"
+    },
+    {
+      "entity_name": "舌苔白润",
+      "entity_type": "症状",
+      "description": "舌苔白润"
+    },
+    {
+      "entity_name": "脉沉细弱",
+      "entity_type": "症状",
+      "description": "脉沉细弱"
+    },
+    {
+      "entity_name": "风寒湿邪侵犯太阳，损及少阴阳气",
+      "entity_type": "证候",
+      "description": "风寒湿邪侵犯太阳，往往损及少阴阳气"
+    },
+    {
+      "entity_name": "湿盛伤脾阳",
+      "entity_type": "证候",
+      "description": "太阴恶湿，湿盛易伤脾阳"
+    },
+    {
+      "entity_name": "风湿性关节炎",
+      "entity_type": "疾病",
+      "description": "患风湿性关节炎已二十余年"
+    },
+    {
+      "entity_name": "痹证_风寒湿邪侵犯太阳，损及少阴阳气_治疗方",
+      "entity_type": "处方",
+      "description": "桂枝10克，白芍30克，炙甘草10克，生姜3片，大枣5枚，熟附子10克，白术24克，生黄芪24克，防风10克，当归15克，桑寄生30克，杜仲15克，续断15克，制乳没各15克。治法：解表温里，缓急止痛，养血荣筋，活血通络"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.95,
+      "participants": [
+        {
+          "entity_name": "刘XX",
+          "role": "患者",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "右膝关节肿痛",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "腰疼痛",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "风寒湿邪侵犯太阳，损及少阴阳气",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "湿盛伤脾阳",
+          "role": "证候",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "患者刘XX的症状表现为右膝关节肿痛、腰疼痛等，证候为风寒湿邪侵犯太阳，损及少阴阳气和湿盛伤脾阳"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "风寒湿邪侵犯太阳，损及少阴阳气",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "湿盛伤脾阳",
+          "role": "证候",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "痹证_风寒湿邪侵犯太阳，损及少阴阳气_治疗方",
+          "role": "处方",
+          "membership_degree": 0.95
+        }
+      ],
+      "description": "针对风寒湿邪侵犯太阳，损及少阴阳气和湿盛伤脾阳的证候，采用解表温里，缓急止痛，养血荣筋，活血通络的治法"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "痹证_风寒湿邪侵犯太阳，损及少阴阳气_治疗方",
+          "role": "处方",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "右膝关节肿痛",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "腰疼痛",
+          "role": "症状",
+          "membership_degree": 0.6
+        }
+      ],
+      "description": "处方中加入了桑寄生、杜仲、续断、制乳没等药物以针对右膝关节肿痛和腰疼痛的症状"
+    }
+  ]
+}

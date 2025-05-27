@@ -1,0 +1,132 @@
+{
+  "entities": [
+    {
+      "entity_name": "杨X",
+      "entity_type": "患者信息",
+      "description": "男，29岁，五月"
+    },
+    {
+      "entity_name": "咳嗽",
+      "entity_type": "疾病",
+      "description": "阴虚火升，火刑金灼，咳而咽燥"
+    },
+    {
+      "entity_name": "咽燥",
+      "entity_type": "症状",
+      "description": "咳而咽燥"
+    },
+    {
+      "entity_name": "两胁震痛",
+      "entity_type": "症状",
+      "description": "两胁震痛"
+    },
+    {
+      "entity_name": "午后虚潮之热",
+      "entity_type": "症状",
+      "description": "午后有虚潮之热"
+    },
+    {
+      "entity_name": "脉象弦数",
+      "entity_type": "症状",
+      "description": "脉象弦数"
+    },
+    {
+      "entity_name": "舌红而干",
+      "entity_type": "症状",
+      "description": "舌红而干"
+    },
+    {
+      "entity_name": "肝阴不足，木火偏亢",
+      "entity_type": "证候",
+      "description": "肝阴不足，木火偏亢，上刑干肺"
+    },
+    {
+      "entity_name": "阴虚火升",
+      "entity_type": "证候",
+      "description": "阴虚火升，火刑金灼"
+    },
+    {
+      "entity_name": "咳嗽_肝阴不足，木火偏亢_治疗方",
+      "entity_type": "处方",
+      "description": "清炙桑白皮6克，地骨皮9克，黛蛤散12克（包），煅赭石12克，天花粉6克，川郁金4.5克，橘红络各4.5克，粉丹皮4.5克，蜜炙白薇9克，川贝9克，冬瓜仁12克"
+    },
+    {
+      "entity_name": "咳嗽_肝阴不足，木火偏亢_治疗方_二诊",
+      "entity_type": "处方",
+      "description": "白杏仁9克，地骨皮9克，蜜炙枇把叶12克，炙白薇9克，清炙桑白皮6克，代赭石15克，蛤壳12克（杵），炙紫苑6克，川贝6克，炒橘红4.5克，川郁金4.5克，泡射干2.4克"
+    },
+    {
+      "entity_name": "咳嗽_肝阴不足，木火偏亢_治疗方_三诊",
+      "entity_type": "处方",
+      "description": "南沙参9克，麦冬9克，甜杏广9克（杵），代赭石12克，蛤壳15克（杵），炙紫苑6克，川郁金4.5克，炒橘红4.5克，冬瓜仁12克，蜜炙冬花9克，川贝6克，杜仲12克"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "杨X",
+          "role": "患者",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "咳嗽",
+          "role": "疾病",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "肝阴不足，木火偏亢",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "阴虚火升",
+          "role": "证候",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "患者脉见弦数，咳而咽燥，两胁震痛，为肝阴不足，木火偏亢，上刑干肺"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "咳嗽_肝阴不足，木火偏亢_治疗方",
+          "role": "处方",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "肝阴不足，木火偏亢",
+          "role": "证候",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "洽以养阴润肺、镇肝降火，使火气降、肺气得以清肃，其咳自平"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.8,
+      "participants": [
+        {
+          "entity_name": "咳嗽_肝阴不足，木火偏亢_治疗方",
+          "role": "处方",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "咳嗽_肝阴不足，木火偏亢_治疗方_二诊",
+          "role": "处方",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "咳嗽_肝阴不足，木火偏亢_治疗方_三诊",
+          "role": "处方",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "根据病情变化调整处方"
+    }
+  ]
+}

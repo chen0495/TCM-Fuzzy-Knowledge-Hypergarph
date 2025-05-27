@@ -1,0 +1,204 @@
+{
+  "entities": [
+    {
+      "entity_name": "刘X",
+      "entity_type": "患者信息",
+      "description": "女，33岁"
+    },
+    {
+      "entity_name": "形冷",
+      "entity_type": "症状",
+      "description": "形冷颇甚"
+    },
+    {
+      "entity_name": "腹胀",
+      "entity_type": "症状",
+      "description": "腹胀而鼓"
+    },
+    {
+      "entity_name": "大便燥秘",
+      "entity_type": "症状",
+      "description": "大便燥秘"
+    },
+    {
+      "entity_name": "小溲少",
+      "entity_type": "症状",
+      "description": "小溲少"
+    },
+    {
+      "entity_name": "脉滑而数",
+      "entity_type": "症状",
+      "description": "脉滑而数"
+    },
+    {
+      "entity_name": "三焦蓄水",
+      "entity_type": "证候",
+      "description": "三焦蓄水"
+    },
+    {
+      "entity_name": "大肠结闭",
+      "entity_type": "证候",
+      "description": "大肠结闭"
+    },
+    {
+      "entity_name": "便秘",
+      "entity_type": "疾病",
+      "description": "便秘"
+    },
+    {
+      "entity_name": "便秘_三焦蓄水大肠结闭_治疗方",
+      "entity_type": "处方",
+      "description": "鲜芦根30克，清宁片3克(开水泡兑)，杏仁泥9克，旋复花9克(包煎)，生赭石9克，清半夏9克，嫩桑枝24克，广陈皮4.5克，肥知母9克，大腹绒4.5克，川朴花4.5克，莱菔子12克，元明粉2.1克(冲入)，苏合香丸一粒(和入)。治法：导滞利水"
+    },
+    {
+      "entity_name": "食纳仍少",
+      "entity_type": "症状",
+      "description": "食纳仍少"
+    },
+    {
+      "entity_name": "四肢困顿",
+      "entity_type": "症状",
+      "description": "四肢困顿"
+    },
+    {
+      "entity_name": "脉弦数",
+      "entity_type": "症状",
+      "description": "脉弦数，右关大"
+    },
+    {
+      "entity_name": "便秘_三焦蓄水大肠结闭_加减方",
+      "entity_type": "处方",
+      "description": "原方加川椒目1.5克，佛手片4.5克，茵陈6克，川郁金(生白矾水浸)9克，忍冬藤12克，去元明粉、莱菔子"
+    },
+    {
+      "entity_name": "精神颇健",
+      "entity_type": "症状",
+      "description": "精神颇健"
+    },
+    {
+      "entity_name": "谷化亦佳",
+      "entity_type": "症状",
+      "description": "谷化亦佳"
+    },
+    {
+      "entity_name": "脉六位均滑",
+      "entity_type": "症状",
+      "description": "脉六位均滑"
+    },
+    {
+      "entity_name": "便秘_湿邪_肃清方",
+      "entity_type": "处方",
+      "description": "炒秫米(包煎)9克，猪苓9克，桑上寄生24克，炒薏米(包煎)9克，广木香(煨)2.1克，滑石块(生)12克，福泽泻9克，旋复花(包煎)9克，川牛膝12克，生知柏各9克，合欢花9克，稀签草9克。治法：肃清湿邪"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "刘X",
+          "role": "患者",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "形冷",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "腹胀",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "大便燥秘",
+          "role": "症状",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "小溲少",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "脉滑而数",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "三焦蓄水",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "大肠结闭",
+          "role": "证候",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "患者刘X表现为形冷、腹胀、大便燥秘、小溲少、脉滑而数，辨证为三焦蓄水、大肠结闭"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "三焦蓄水",
+          "role": "证候",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "大肠结闭",
+          "role": "证候",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "便秘_三焦蓄水大肠结闭_治疗方",
+          "role": "处方",
+          "membership_degree": 1.0
+        }
+      ],
+      "description": "针对三焦蓄水、大肠结闭的证候，采用导滞利水的治法，处方为便秘_三焦蓄水大肠结闭_治疗方"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.8,
+      "participants": [
+        {
+          "entity_name": "食纳仍少",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "四肢困顿",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "脉弦数",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "便秘_三焦蓄水大肠结闭_加减方",
+          "role": "处方",
+          "membership_degree": 1.0
+        }
+      ],
+      "description": "根据复诊症状食纳仍少、四肢困顿、脉弦数，对原方进行加减，去元明粉、莱菔子，加川椒目、佛手片、茵陈、川郁金、忍冬藤"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "便秘_湿邪_肃清方",
+          "role": "处方",
+          "membership_degree": 1.0
+        }
+      ],
+      "description": "在症甫向愈之际，采用肃清湿邪的治法，处方为便秘_湿邪_肃清方"
+    }
+  ]
+}

@@ -1,0 +1,147 @@
+{
+  "entities": [
+    {
+      "entity_name": "怀X",
+      "entity_type": "患者信息",
+      "description": "30余岁男性患者"
+    },
+    {
+      "entity_name": "痢疾",
+      "entity_type": "疾病",
+      "description": "患者主要疾病"
+    },
+    {
+      "entity_name": "赤白痢",
+      "entity_type": "症状",
+      "description": "初次所下之痢，赤白参半"
+    },
+    {
+      "entity_name": "纯下赤痢",
+      "entity_type": "症状",
+      "description": "继则纯下赤痢"
+    },
+    {
+      "entity_name": "腥臭血水夹杂脂膜",
+      "entity_type": "症状",
+      "description": "继则变为腥臭，血水夹杂脂膜，或如烂炙"
+    },
+    {
+      "entity_name": "腹中切痛",
+      "entity_type": "症状",
+      "description": "时时腹中切痛"
+    },
+    {
+      "entity_name": "心中烦躁",
+      "entity_type": "症状",
+      "description": "心中烦躁"
+    },
+    {
+      "entity_name": "不能饮食",
+      "entity_type": "症状",
+      "description": "不能饮食"
+    },
+    {
+      "entity_name": "脉弦而微数",
+      "entity_type": "症状",
+      "description": "脉弦而微数，一呼吸约五至重按有力"
+    },
+    {
+      "entity_name": "内热下移肠中",
+      "entity_type": "证候",
+      "description": "内热下移肠中，酿为痢疾"
+    },
+    {
+      "entity_name": "肠中脂膜溃疡",
+      "entity_type": "证候",
+      "description": "肠中脂膜为痢所侵，变为溃疡性而下注"
+    },
+    {
+      "entity_name": "瘀热生毒",
+      "entity_type": "证候",
+      "description": "瘀热生毒、肠中溃烂"
+    },
+    {
+      "entity_name": "解毒生化丹",
+      "entity_type": "处方",
+      "description": "金银花30克，生白芍18克，粉甘草9克，旱三七9克(细末)，鸦胆子60粒(去皮，拣成实者)。共药五味，先将三七、鸦胆子，用白糖水各送服一半，即将余三味煎汤服。当日煎渣再服，亦先服所余三七及鸦胆子。治法：清热解毒，化瘀生肌"
+    },
+    {
+      "entity_name": "通变白头翁汤",
+      "entity_type": "处方",
+      "description": "方药组成未明确提及，但用于继投治疗"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.95,
+      "participants": [
+        {
+          "entity_name": "怀X",
+          "role": "患者",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "痢疾",
+          "role": "疾病",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "内热下移肠中",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "肠中脂膜溃疡",
+          "role": "证候",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "患者怀X患有痢疾，证属内热下移肠中，肠中脂膜溃疡"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "解毒生化丹",
+          "role": "处方",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "痢疾",
+          "role": "疾病",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "内热下移肠中",
+          "role": "证候",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "使用解毒生化丹治疗痢疾，证属内热下移肠中"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "通变白头翁汤",
+          "role": "处方",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "解毒生化丹",
+          "role": "处方",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "痢疾",
+          "role": "疾病",
+          "membership_degree": 1.0
+        }
+      ],
+      "description": "继投通变白头翁汤以进一步治疗痢疾"
+    }
+  ]
+}

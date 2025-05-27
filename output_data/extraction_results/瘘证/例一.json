@@ -1,0 +1,139 @@
+{
+  "entities": [
+    {
+      "entity_name": "封X",
+      "entity_type": "患者信息",
+      "description": "女性，温病后，阴液已伤，虚火灼金，肺热叶焦"
+    },
+    {
+      "entity_name": "痿躄",
+      "entity_type": "症状",
+      "description": "两足不能任地"
+    },
+    {
+      "entity_name": "咳呛不爽",
+      "entity_type": "症状",
+      "description": "咳呛不爽"
+    },
+    {
+      "entity_name": "谷食减少",
+      "entity_type": "症状",
+      "description": "谷食减少"
+    },
+    {
+      "entity_name": "咽喉干燥",
+      "entity_type": "症状",
+      "description": "咽喉干燥"
+    },
+    {
+      "entity_name": "脉濡滑而数",
+      "entity_type": "症状",
+      "description": "脉濡滑而数"
+    },
+    {
+      "entity_name": "舌质红，苔黄",
+      "entity_type": "症状",
+      "description": "舌质红，苔黄"
+    },
+    {
+      "entity_name": "阴液已伤，虚火灼金，肺热叶焦",
+      "entity_type": "证候",
+      "description": "阴液已伤，虚火灼金，肺热叶焦"
+    },
+    {
+      "entity_name": "瘘证",
+      "entity_type": "疾病",
+      "description": "痿躄，两足不能任地"
+    },
+    {
+      "entity_name": "瘘证_阴液已伤，虚火灼金，肺热叶焦_治疗方",
+      "entity_type": "处方",
+      "description": "南沙参9克，川石斛9克，天花粉9克，生甘草1.5克，川贝母9克，肥知母4.5克，瓜萎皮9克，甜光杏9克，络石藤9克，怀牛膝6克，嫩桑枝9克，冬瓜子9克，活芦根1尺(去节)"
+    },
+    {
+      "entity_name": "瘘证_阴液已伤，虚火灼金，肺热叶焦_治疗方_二诊",
+      "entity_type": "处方",
+      "description": "大麦冬6克，北沙参9克，抱茯神9克，淮山药9克，细生地12克，肥知母4.5克，川贝母6克，天花粉9克，络石藤6克，怀牛膝6克，嫩桑枝9克"
+    },
+    {
+      "entity_name": "瘘证_阴液已伤，虚火灼金，肺热叶焦_治疗方_三诊",
+      "entity_type": "处方",
+      "description": "北沙参9克，大麦冬6克，茯神9克，怀山药9克，川石斛9克，小生地9克，肥知母4.5克，怀牛膝6克，络石藤9克，茺蔚子9克，嫩桑枝9克，猪脊髓两条(酒洗，入煎)，虎潜丸9克，清晨淡盐汤送服"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.95,
+      "participants": [
+        {
+          "entity_name": "封X",
+          "role": "患者",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "痿躄",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "阴液已伤，虚火灼金，肺热叶焦",
+          "role": "证候",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "患者封X因温病后阴液已伤，虚火灼金，肺热叶焦，导致痿躄"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "阴液已伤，虚火灼金，肺热叶焦",
+          "role": "证候",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "瘘证_阴液已伤，虚火灼金，肺热叶焦_治疗方",
+          "role": "处方",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "针对阴液已伤，虚火灼金，肺热叶焦的证候，采用养肺阴、清阳明的治法"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "瘘证_阴液已伤，虚火灼金，肺热叶焦_治疗方",
+          "role": "处方",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "瘘证_阴液已伤，虚火灼金，肺热叶焦_治疗方_二诊",
+          "role": "处方",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "二诊时根据病情变化，调整处方，加入益精养血之品"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "瘘证_阴液已伤，虚火灼金，肺热叶焦_治疗方_二诊",
+          "role": "处方",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "瘘证_阴液已伤，虚火灼金，肺热叶焦_治疗方_三诊",
+          "role": "处方",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "三诊时继续调整处方，加入益精养血之品，如猪脊髓和虎潜丸"
+    }
+  ]
+}

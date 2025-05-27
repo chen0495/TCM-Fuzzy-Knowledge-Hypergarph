@@ -1,0 +1,177 @@
+{
+  "entities": [
+    {
+      "entity_name": "祝ｘｘ",
+      "entity_type": "患者信息",
+      "description": "男性，58岁，十多年来每夜盗汗"
+    },
+    {
+      "entity_name": "盗汗",
+      "entity_type": "症状",
+      "description": "十多年来每夜盗汗"
+    },
+    {
+      "entity_name": "面赤",
+      "entity_type": "症状",
+      "description": "面赤"
+    },
+    {
+      "entity_name": "唇绛",
+      "entity_type": "症状",
+      "description": "唇绛"
+    },
+    {
+      "entity_name": "脉数",
+      "entity_type": "症状",
+      "description": "脉数"
+    },
+    {
+      "entity_name": "相火易动",
+      "entity_type": "症状",
+      "description": "相火易动"
+    },
+    {
+      "entity_name": "阳常举",
+      "entity_type": "症状",
+      "description": "阳常举"
+    },
+    {
+      "entity_name": "咳嗽痰多",
+      "entity_type": "症状",
+      "description": "咳嗽痰多"
+    },
+    {
+      "entity_name": "阅读流泪",
+      "entity_type": "症状",
+      "description": "阅读流泪"
+    },
+    {
+      "entity_name": "面仍红",
+      "entity_type": "症状",
+      "description": "面仍红"
+    },
+    {
+      "entity_name": "过度疲劳",
+      "entity_type": "症状",
+      "description": "过度疲劳"
+    },
+    {
+      "entity_name": "阴虚火旺",
+      "entity_type": "证候",
+      "description": "证属阴虚火旺"
+    },
+    {
+      "entity_name": "盗汗_阴虚火旺_治疗方",
+      "entity_type": "处方",
+      "description": "当归9克熟地30克生地15克黄柏9克黄芩9克黄连1．5克元参9克7剂。治法：滋肾养阴，清热降火"
+    },
+    {
+      "entity_name": "盗汗_阴虚火旺_治疗方_加减",
+      "entity_type": "处方",
+      "description": "当归9克熟地30克生地15克白芍9克黄芩9克黄芪9克黄连1．5克牡蛎15克望江南9克黄柏9克七剂。治法：滋肾养阴，清热降火，益气养阴"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.95,
+      "participants": [
+        {
+          "entity_name": "祝ｘｘ",
+          "role": "患者",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "盗汗",
+          "role": "症状",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "面赤",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "唇绛",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "脉数",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "相火易动",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "阳常举",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "阴虚火旺",
+          "role": "证候",
+          "membership_degree": 1.0
+        }
+      ],
+      "description": "患者祝ｘｘ，证属阴虚火旺，表现为盗汗、面赤、唇绛等症状"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "阴虚火旺",
+          "role": "证候",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "盗汗_阴虚火旺_治疗方",
+          "role": "处方",
+          "membership_degree": 1.0
+        }
+      ],
+      "description": "针对阴虚火旺证候，采用滋肾养阴、清热降火的治法，处方为当归六黄汤加减"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "盗汗_阴虚火旺_治疗方",
+          "role": "原处方",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "盗汗_阴虚火旺_治疗方_加减",
+          "role": "加减处方",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "咳嗽痰多",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "阅读流泪",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "面仍红",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "过度疲劳",
+          "role": "症状",
+          "membership_degree": 0.6
+        }
+      ],
+      "description": "根据患者症状变化，原处方加生芪、元参以助益气养阴之功，后进一步调整处方"
+    }
+  ]
+}

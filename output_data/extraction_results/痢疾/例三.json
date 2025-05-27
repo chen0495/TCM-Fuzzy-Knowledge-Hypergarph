@@ -1,0 +1,243 @@
+{
+  "entities": [
+    {
+      "entity_name": "魏X",
+      "entity_type": "患者信息",
+      "description": "患者姓名"
+    },
+    {
+      "entity_name": "暑温",
+      "entity_type": "疾病",
+      "description": "初始疾病"
+    },
+    {
+      "entity_name": "赤痢",
+      "entity_type": "疾病",
+      "description": "继发疾病"
+    },
+    {
+      "entity_name": "点滴坠痛",
+      "entity_type": "症状",
+      "description": "症状描述"
+    },
+    {
+      "entity_name": "日五、六十行",
+      "entity_type": "症状",
+      "description": "症状频率"
+    },
+    {
+      "entity_name": "中气败坏",
+      "entity_type": "证候",
+      "description": "证候描述"
+    },
+    {
+      "entity_name": "食不得下",
+      "entity_type": "症状",
+      "description": "症状描述"
+    },
+    {
+      "entity_name": "频频干呕",
+      "entity_type": "症状",
+      "description": "症状描述"
+    },
+    {
+      "entity_name": "舌绛津涸",
+      "entity_type": "症状",
+      "description": "舌象描述"
+    },
+    {
+      "entity_name": "入暮仍感热潮",
+      "entity_type": "症状",
+      "description": "症状描述"
+    },
+    {
+      "entity_name": "精神颇觉恍惚",
+      "entity_type": "症状",
+      "description": "症状描述"
+    },
+    {
+      "entity_name": "奄奄一息",
+      "entity_type": "症状",
+      "description": "整体状态"
+    },
+    {
+      "entity_name": "脉沉细而数",
+      "entity_type": "症状",
+      "description": "脉象描述"
+    },
+    {
+      "entity_name": "内伏之邪甚炽",
+      "entity_type": "证候",
+      "description": "证候描述"
+    },
+    {
+      "entity_name": "外之余邪未净",
+      "entity_type": "证候",
+      "description": "证候描述"
+    },
+    {
+      "entity_name": "赤痢_内伏之邪甚炽_治疗方",
+      "entity_type": "处方",
+      "description": "白头翁9克,青蒿梗4.5克,薄荷梗1.5克,黄连4.5克,苦参4.5克,厚朴6克,广木香3克,炒地榆9克,白芍18克,甘草3克"
+    },
+    {
+      "entity_name": "赤痢_内伏之邪甚炽_治疗方_加减1",
+      "entity_type": "处方",
+      "description": "原方去青蒿,薄荷,白头翁加为12克,并加马齿苋12克"
+    },
+    {
+      "entity_name": "赤痢_内伏之邪甚炽_治疗方_加减2",
+      "entity_type": "处方",
+      "description": "前方加知母9克,瓜蒌相9克"
+    },
+    {
+      "entity_name": "赤痢_内伏之邪甚炽_治疗方_加减3",
+      "entity_type": "处方",
+      "description": "前方去苦参,白芍改为12克,加归身12克,生苡仁18克"
+    },
+    {
+      "entity_name": "赤痢_内伏之邪甚炽_治疗方_加减4",
+      "entity_type": "处方",
+      "description": "前方去马齿苋,减芩连用量之半"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.95,
+      "participants": [
+        {
+          "entity_name": "魏X",
+          "role": "患者",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "赤痢",
+          "role": "疾病",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "内伏之邪甚炽",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "外之余邪未净",
+          "role": "证候",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "患者魏X患赤痢，证属内伏之邪甚炽，外之余邪未净"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "魏X",
+          "role": "患者",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "赤痢_内伏之邪甚炽_治疗方",
+          "role": "处方",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "内伏之邪甚炽",
+          "role": "证候",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "针对内伏之邪甚炽的证候，给予赤痢_内伏之邪甚炽_治疗方"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "魏X",
+          "role": "患者",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "赤痢_内伏之邪甚炽_治疗方",
+          "role": "原方",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "赤痢_内伏之邪甚炽_治疗方_加减1",
+          "role": "加减方",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "根据病情变化，原方去青蒿,薄荷,白头翁加为12克,并加马齿苋12克"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "魏X",
+          "role": "患者",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "赤痢_内伏之邪甚炽_治疗方_加减1",
+          "role": "原方",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "赤痢_内伏之邪甚炽_治疗方_加减2",
+          "role": "加减方",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "根据病情变化，前方加知母,瓜蒌相各9克"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "魏X",
+          "role": "患者",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "赤痢_内伏之邪甚炽_治疗方_加减2",
+          "role": "原方",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "赤痢_内伏之邪甚炽_治疗方_加减3",
+          "role": "加减方",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "根据病情变化，前方去苦参,白芍改为12克,加归身12克,生苡仁18克"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "魏X",
+          "role": "患者",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "赤痢_内伏之邪甚炽_治疗方_加减3",
+          "role": "原方",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "赤痢_内伏之邪甚炽_治疗方_加减4",
+          "role": "加减方",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "根据病情变化，前方去马齿苋,减芩连用量之半"
+    }
+  ]
+}

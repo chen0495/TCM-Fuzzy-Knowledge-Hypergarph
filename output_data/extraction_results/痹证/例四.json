@@ -1,0 +1,162 @@
+{
+  "entities": [
+    {
+      "entity_name": "王XX",
+      "entity_type": "患者信息",
+      "description": "女，35岁，初诊日期1977年9月20日"
+    },
+    {
+      "entity_name": "面色苍白",
+      "entity_type": "症状",
+      "description": "患者面色苍白"
+    },
+    {
+      "entity_name": "形体虚胖",
+      "entity_type": "症状",
+      "description": "患者形体虚胖"
+    },
+    {
+      "entity_name": "精神萎靡",
+      "entity_type": "症状",
+      "description": "患者精神萎靡"
+    },
+    {
+      "entity_name": "右骶骨部及右大腿上部疼痛",
+      "entity_type": "症状",
+      "description": "患者右骶骨部及右大腿上部疼痛"
+    },
+    {
+      "entity_name": "肢体关节疼痛重着",
+      "entity_type": "症状",
+      "description": "患者肢体关节疼痛重着"
+    },
+    {
+      "entity_name": "活动不便",
+      "entity_type": "症状",
+      "description": "患者活动不便"
+    },
+    {
+      "entity_name": "肌肤常有麻木感觉",
+      "entity_type": "症状",
+      "description": "患者肌肤常有麻木感觉"
+    },
+    {
+      "entity_name": "口淡不渴",
+      "entity_type": "症状",
+      "description": "患者口淡不渴"
+    },
+    {
+      "entity_name": "月经不规则",
+      "entity_type": "症状",
+      "description": "患者月经不规则，往往超期"
+    },
+    {
+      "entity_name": "白带多",
+      "entity_type": "症状",
+      "description": "患者白带多"
+    },
+    {
+      "entity_name": "舌苔白腻",
+      "entity_type": "症状",
+      "description": "患者舌苔白腻"
+    },
+    {
+      "entity_name": "脉濡弱",
+      "entity_type": "症状",
+      "description": "患者脉濡弱"
+    },
+    {
+      "entity_name": "风湿性关节炎",
+      "entity_type": "疾病",
+      "description": "西医诊断为风湿性关节炎"
+    },
+    {
+      "entity_name": "湿邪留滞，阻闭气血，经络不利",
+      "entity_type": "证候",
+      "description": "辨证为湿邪留滞，阻闭气血，经络不利"
+    },
+    {
+      "entity_name": "薏苡仁汤加减",
+      "entity_type": "处方",
+      "description": "薏苡仁30克，川芎7克，当归10克，桂枝?克，独活7克，党参20克，黄芪20克，川乌7克，苍术10克，木瓜10克，秦艽10克，水煎服，每日1剂，配服小活络丹"
+    },
+    {
+      "entity_name": "痹证",
+      "entity_type": "疾病",
+      "description": "中医诊断为痹证"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.95,
+      "participants": [
+        {
+          "entity_name": "王XX",
+          "role": "患者",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "湿邪留滞，阻闭气血，经络不利",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "肢体关节疼痛重着",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "舌苔白腻",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "脉濡弱",
+          "role": "症状",
+          "membership_degree": 0.7
+        }
+      ],
+      "description": "根据患者症状和舌脉，辨证为湿邪留滞，阻闭气血，经络不利"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "湿邪留滞，阻闭气血，经络不利",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "薏苡仁汤加减",
+          "role": "处方",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "祛湿通络，祛风散寒",
+          "role": "治法",
+          "membership_degree": 0.7
+        }
+      ],
+      "description": "针对湿邪留滞，阻闭气血，经络不利的证候，采用祛湿通络，祛风散寒的治法，处方为薏苡仁汤加减"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "薏苡仁汤加减",
+          "role": "处方",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "小活络丹",
+          "role": "处方",
+          "membership_degree": 0.7
+        }
+      ],
+      "description": "在薏苡仁汤加减的基础上，配服小活络丹，并酌情加减"
+    }
+  ]
+}

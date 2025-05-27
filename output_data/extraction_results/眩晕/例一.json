@@ -1,0 +1,176 @@
+{
+  "entities": [
+    {
+      "entity_name": "潘XX",
+      "entity_type": "患者信息",
+      "description": "女，体本虚弱，多年来襟怀不适"
+    },
+    {
+      "entity_name": "头目眩晕",
+      "entity_type": "症状",
+      "description": "肝木上升而头目眩晕"
+    },
+    {
+      "entity_name": "呕吐不休",
+      "entity_type": "症状",
+      "description": "肝木侮土而呕吐不休"
+    },
+    {
+      "entity_name": "右脉弦劲",
+      "entity_type": "症状",
+      "description": "右脉弦劲"
+    },
+    {
+      "entity_name": "饮食不思",
+      "entity_type": "症状",
+      "description": "饮食不思"
+    },
+    {
+      "entity_name": "二便不利",
+      "entity_type": "症状",
+      "description": "二便不利"
+    },
+    {
+      "entity_name": "舌绛苔薄",
+      "entity_type": "症状",
+      "description": "舌绛苔薄"
+    },
+    {
+      "entity_name": "肝木上升",
+      "entity_type": "证候",
+      "description": "肝木上升"
+    },
+    {
+      "entity_name": "肝木侮土",
+      "entity_type": "证候",
+      "description": "肝木侮土"
+    },
+    {
+      "entity_name": "眩晕",
+      "entity_type": "疾病",
+      "description": "病名: 眩晕"
+    },
+    {
+      "entity_name": "眩晕_肝木上升_治疗方",
+      "entity_type": "处方",
+      "description": "桑叶9克杭菊花9克粉丹皮9克黑栀子9克大白芍9克细生地24克姜川连2．1克法夏6克姜竹茹12克黄郁金9克羚羊镑1．2克另煎兑苦丁茶9克，治法：凉肝安胃"
+    },
+    {
+      "entity_name": "眩晕_肝木侮土_治疗方",
+      "entity_type": "处方",
+      "description": "桑叶9克菊花9克丹皮9克栀子炭9克夏枯草9克苦丁茶9克细生地18克大白芍9克法夏6克姜竹茹12克干苇根15克左金丸4．5克(分二次送服)，治法：凉肝安胃"
+    },
+    {
+      "entity_name": "三生饮",
+      "entity_type": "处方",
+      "description": "三生饮中均为辛烈有剧毒，并能令人麻醉"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "潘XX",
+          "role": "患者",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "头目眩晕",
+          "role": "症状",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "呕吐不休",
+          "role": "症状",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "肝木上升",
+          "role": "证候",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "肝木侮土",
+          "role": "证候",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "患者潘XX因肝木上升而头目眩晕，肝木侮土而呕吐不休"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "眩晕_肝木上升_治疗方",
+          "role": "处方",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "肝木上升",
+          "role": "证候",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "针对肝木上升证候，采用凉肝安胃的治法"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "眩晕_肝木侮土_治疗方",
+          "role": "处方",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "肝木侮土",
+          "role": "证候",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "针对肝木侮土证候，采用凉肝安胃的治法"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.8,
+      "participants": [
+        {
+          "entity_name": "眩晕_肝木上升_治疗方",
+          "role": "原处方",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "眩晕_肝木侮土_治疗方",
+          "role": "加减后处方",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "呕吐不休",
+          "role": "症状",
+          "membership_degree": 0.7
+        }
+      ],
+      "description": "根据呕吐症状的变化，去羚羊加安胃品以止呕吐"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.75,
+      "participants": [
+        {
+          "entity_name": "三生饮",
+          "role": "处方",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "寒痰厥逆",
+          "role": "证候",
+          "membership_degree": 0.6
+        }
+      ],
+      "description": "针对寒痰厥逆证候，采用三生饮治疗"
+    }
+  ]
+}

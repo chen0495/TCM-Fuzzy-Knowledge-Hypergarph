@@ -1,0 +1,241 @@
+{
+  "entities": [
+    {
+      "entity_name": "秦XX",
+      "entity_type": "患者信息",
+      "description": "男性，1943年农历10月初旬发病"
+    },
+    {
+      "entity_name": "四肢麻木",
+      "entity_type": "症状",
+      "description": "突然四肢麻木"
+    },
+    {
+      "entity_name": "颜面蠕动抽搐",
+      "entity_type": "症状",
+      "description": "颜面蠕动抽搐"
+    },
+    {
+      "entity_name": "神态呆异",
+      "entity_type": "症状",
+      "description": "神态呆异"
+    },
+    {
+      "entity_name": "不省人事",
+      "entity_type": "症状",
+      "description": "不省人事"
+    },
+    {
+      "entity_name": "口噤不开",
+      "entity_type": "症状",
+      "description": "口噤不开"
+    },
+    {
+      "entity_name": "疳痱不语",
+      "entity_type": "症状",
+      "description": "疳痱不语"
+    },
+    {
+      "entity_name": "右半身萎废不用",
+      "entity_type": "症状",
+      "description": "右半身萎废不用"
+    },
+    {
+      "entity_name": "痰鸣嗅吼",
+      "entity_type": "症状",
+      "description": "痰鸣嗅吼，声如曳锯"
+    },
+    {
+      "entity_name": "遗尿不禁",
+      "entity_type": "症状",
+      "description": "遗尿不禁"
+    },
+    {
+      "entity_name": "昼夜烦而不安",
+      "entity_type": "症状",
+      "description": "昼夜烦而不安"
+    },
+    {
+      "entity_name": "脉情滑数",
+      "entity_type": "症状",
+      "description": "脉情滑数，至数无绪，重按搏指有力"
+    },
+    {
+      "entity_name": "身热如炭",
+      "entity_type": "症状",
+      "description": "身热如炭"
+    },
+    {
+      "entity_name": "面赤如朱",
+      "entity_type": "症状",
+      "description": "面赤如朱"
+    },
+    {
+      "entity_name": "心胸灼手",
+      "entity_type": "症状",
+      "description": "心胸按之灼手"
+    },
+    {
+      "entity_name": "类中",
+      "entity_type": "疾病",
+      "description": "类中风"
+    },
+    {
+      "entity_name": "阳厥",
+      "entity_type": "证候",
+      "description": "阳厥大证"
+    },
+    {
+      "entity_name": "中风_阳厥_治疗方",
+      "entity_type": "处方",
+      "description": "蝎尾末1．5克羚角粉1．5克万氏牛黄丸两粒先送。另以化痰清热宣郁如竹沥、贝母、半夏、橘红、郁金清肝熄风，如芍药、丹皮、珍珠母，而以茯苓、茯神为助，大剂浓煎，缓缓灌下。"
+    },
+    {
+      "entity_name": "中风_阳厥_治疗方_复诊1",
+      "entity_type": "处方",
+      "description": "万氏牛黄丸、叶氏神犀丹各一粒，研末先送，余于前方去郁金、珍珠母，加海藻、昆布咸润降滑，开痰散结。龙齿、贝齿清肝而安魂魄。远志以开心气之郁，怀牛膝导引厥逆之气下行，使升者可降，而降者不复再升。"
+    },
+    {
+      "entity_name": "中风_阳厥_治疗方_复诊2",
+      "entity_type": "处方",
+      "description": "撤去神犀，加琥珀末，伽南末各0．?5克，以安神宣郁，方守前法。"
+    },
+    {
+      "entity_name": "中风_阳厥_治疗方_复诊3",
+      "entity_type": "处方",
+      "description": "于前方去万氏牛黄丸，加生地炭、蒸锁阳、桑麻丸(包)。"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "秦XX",
+          "role": "患者",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "四肢麻木",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "颜面蠕动抽搐",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "不省人事",
+          "role": "症状",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "类中",
+          "role": "疾病",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "阳厥",
+          "role": "证候",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "患者秦XX出现四肢麻木、颜面蠕动抽搐、不省人事等症状，辨证为类中风兼阳厥大证。"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "秦XX",
+          "role": "患者",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "类中",
+          "role": "疾病",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "阳厥",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "中风_阳厥_治疗方",
+          "role": "处方",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "针对患者秦XX的类中风兼阳厥大证，采用蝎尾末、羚角粉、万氏牛黄丸等药物治疗。"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.8,
+      "participants": [
+        {
+          "entity_name": "秦XX",
+          "role": "患者",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "中风_阳厥_治疗方",
+          "role": "原处方",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "中风_阳厥_治疗方_复诊1",
+          "role": "新处方",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "复诊时根据病情变化，去郁金、珍珠母，加海藻、昆布、龙齿、贝齿、远志、怀牛膝等药物。"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.8,
+      "participants": [
+        {
+          "entity_name": "秦XX",
+          "role": "患者",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "中风_阳厥_治疗方_复诊1",
+          "role": "原处方",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "中风_阳厥_治疗方_复诊2",
+          "role": "新处方",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "再次复诊时撤去神犀，加琥珀末、伽南末以安神宣郁。"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.8,
+      "participants": [
+        {
+          "entity_name": "秦XX",
+          "role": "患者",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "中风_阳厥_治疗方_复诊2",
+          "role": "原处方",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "中风_阳厥_治疗方_复诊3",
+          "role": "新处方",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "最后复诊时去万氏牛黄丸，加生地炭、蒸锁阳、桑麻丸以柔养血液，疏利气机。"
+    }
+  ]
+}

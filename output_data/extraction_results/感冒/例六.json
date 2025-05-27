@@ -1,0 +1,112 @@
+{
+  "entities": [
+    {
+      "entity_name": "例六男",
+      "entity_type": "患者信息",
+      "description": "67岁，经常感冒，一、二月接连不断"
+    },
+    {
+      "entity_name": "鼻塞咳痰",
+      "entity_type": "症状",
+      "description": "感冒症状之一"
+    },
+    {
+      "entity_name": "头面多汗",
+      "entity_type": "症状",
+      "description": "感冒症状之一"
+    },
+    {
+      "entity_name": "疲劳",
+      "entity_type": "症状",
+      "description": "感冒症状之一"
+    },
+    {
+      "entity_name": "玉屏风散",
+      "entity_type": "处方",
+      "description": "药物组成：黄芪、防风、白术；治法：益气以祛邪"
+    },
+    {
+      "entity_name": "感冒_虚人经常感冒_治疗方",
+      "entity_type": "处方",
+      "description": "药物组成：桂枝汤加黄芪；治法：调和营卫，固表"
+    },
+    {
+      "entity_name": "感冒",
+      "entity_type": "疾病",
+      "description": "常见病之一，因风邪病毒侵袭而致"
+    },
+    {
+      "entity_name": "虚人经常感冒",
+      "entity_type": "证候",
+      "description": "经常感冒，证状仅见鼻塞咳痰，头面多汗，稍感疲劳"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "例六男",
+          "role": "患者",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "鼻塞咳痰",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "头面多汗",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "疲劳",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "虚人经常感冒",
+          "role": "证候",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "患者经常感冒，证状仅见鼻塞咳痰，头面多汗，稍感疲劳，辨证为虚人经常感冒"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "虚人经常感冒",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "感冒_虚人经常感冒_治疗方",
+          "role": "处方",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "虚人经常感冒，治以调和营卫，固表，用桂枝汤加黄芪"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.8,
+      "participants": [
+        {
+          "entity_name": "玉屏风散",
+          "role": "处方",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "感冒_虚人经常感冒_治疗方",
+          "role": "处方",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "患者曾服玉屏风散无效，后改用桂枝汤加黄芪，效果显著"
+    }
+  ]
+}

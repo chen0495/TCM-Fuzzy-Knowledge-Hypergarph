@@ -1,0 +1,23 @@
+{
+  "entities": [
+    {
+      "entity_name": "血痹",
+      "entity_type": "疾病",
+      "description": "病名"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "血痹",
+          "role": "疾病",
+          "membership_degree": 1.0
+        }
+      ],
+      "description": "病名辨证"
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "entities": [
+    {
+      "entity_name": "俞",
+      "entity_type": "患者信息",
+      "description": "男，60岁，10月就诊"
+    },
+    {
+      "entity_name": "咳嗽气逆",
+      "entity_type": "症状",
+      "description": "咳嗽伴有气逆"
+    },
+    {
+      "entity_name": "痰味带咸",
+      "entity_type": "症状",
+      "description": "痰的味道带咸"
+    },
+    {
+      "entity_name": "形寒畏冷",
+      "entity_type": "症状",
+      "description": "身体寒冷，怕冷"
+    },
+    {
+      "entity_name": "脉象滑而无力",
+      "entity_type": "症状",
+      "description": "脉象滑但无力"
+    },
+    {
+      "entity_name": "舌苔薄腻",
+      "entity_type": "症状",
+      "description": "舌苔薄而腻"
+    },
+    {
+      "entity_name": "脾肾阳虚",
+      "entity_type": "证候",
+      "description": "脾阳和肾阳均虚"
+    },
+    {
+      "entity_name": "痰饮上泛",
+      "entity_type": "证候",
+      "description": "痰饮上泛"
+    },
+    {
+      "entity_name": "痰饮",
+      "entity_type": "疾病",
+      "description": "痰饮病"
+    },
+    {
+      "entity_name": "痰饮_脾肾阳虚_治疗方",
+      "entity_type": "处方",
+      "description": "炮姜3克拌捣炒五味子2.1克细辛2.4克姜夏6克茯苓12克炙橘红4.5克金沸梗9克（包）煅代赭石15克煅灵磁石15克炒杜仲12克沉香末1.8克（分冲）炙紫苑9克红枣3枚。治法：温中理脾化湿，温肾行水，镇逆纳气"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.95,
+      "participants": [
+        {
+          "entity_name": "俞",
+          "role": "患者",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "脾肾阳虚",
+          "role": "证候",
+          "membership_degree": 0.95
+        },
+        {
+          "entity_name": "痰饮上泛",
+          "role": "证候",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "患者俞证属脾肾阳虚，痰饮上泛"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "痰饮_脾肾阳虚_治疗方",
+          "role": "处方",
+          "membership_degree": 0.95
+        },
+        {
+          "entity_name": "脾肾阳虚",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "痰饮上泛",
+          "role": "证候",
+          "membership_degree": 0.85
+        }
+      ],
+      "description": "针对脾肾阳虚和痰饮上泛的证候，采用温中理脾化湿，温肾行水，镇逆纳气的治法"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "痰饮_脾肾阳虚_治疗方",
+          "role": "处方",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "咳嗽气逆",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "痰味带咸",
+          "role": "症状",
+          "membership_degree": 0.75
+        }
+      ],
+      "description": "处方中加入了镇逆纳气的药物如沉香、煅代赭石、煅灵磁石以缓解咳嗽气逆和痰味带咸的症状"
+    }
+  ]
+}

@@ -1,0 +1,187 @@
+{
+  "entities": [
+    {
+      "entity_name": "赵X",
+      "entity_type": "患者信息",
+      "description": "男性患者"
+    },
+    {
+      "entity_name": "衄血",
+      "entity_type": "疾病",
+      "description": "鼻、齿龈、耳、舌以及皮肤不因外伤而出血的病证"
+    },
+    {
+      "entity_name": "败血症",
+      "entity_type": "疾病",
+      "description": "西医诊断的败血症"
+    },
+    {
+      "entity_name": "大便黑",
+      "entity_type": "症状",
+      "description": "大便颜色发黑"
+    },
+    {
+      "entity_name": "小溲赤",
+      "entity_type": "症状",
+      "description": "小便颜色发红"
+    },
+    {
+      "entity_name": "鼻衄",
+      "entity_type": "症状",
+      "description": "鼻子出血"
+    },
+    {
+      "entity_name": "牙龈溢血",
+      "entity_type": "症状",
+      "description": "牙龈出血"
+    },
+    {
+      "entity_name": "肉渐脱",
+      "entity_type": "症状",
+      "description": "肌肉逐渐消瘦"
+    },
+    {
+      "entity_name": "肤色天白",
+      "entity_type": "症状",
+      "description": "皮肤苍白"
+    },
+    {
+      "entity_name": "四末及爪甲少荣色",
+      "entity_type": "症状",
+      "description": "四肢末端和指甲颜色苍白"
+    },
+    {
+      "entity_name": "舌绛",
+      "entity_type": "症状",
+      "description": "舌质深红"
+    },
+    {
+      "entity_name": "边缘猩红",
+      "entity_type": "症状",
+      "description": "舌边缘颜色猩红"
+    },
+    {
+      "entity_name": "苔白腻",
+      "entity_type": "症状",
+      "description": "舌苔白而腻"
+    },
+    {
+      "entity_name": "唇白不焦而无华",
+      "entity_type": "症状",
+      "description": "嘴唇苍白无光泽"
+    },
+    {
+      "entity_name": "纳少",
+      "entity_type": "症状",
+      "description": "食欲减退"
+    },
+    {
+      "entity_name": "口干不欲饮",
+      "entity_type": "症状",
+      "description": "口干但不想喝水"
+    },
+    {
+      "entity_name": "日晡微热而潮汗",
+      "entity_type": "症状",
+      "description": "傍晚微热并有潮汗"
+    },
+    {
+      "entity_name": "脉弦滑数",
+      "entity_type": "症状",
+      "description": "脉象弦滑数"
+    },
+    {
+      "entity_name": "两关大",
+      "entity_type": "症状",
+      "description": "两关脉大"
+    },
+    {
+      "entity_name": "脾肾阴虚，虚火上炎",
+      "entity_type": "证候",
+      "description": "脾肾阴虚，虚火上炎"
+    },
+    {
+      "entity_name": "衄血_脾肾阴虚，虚火上炎_治疗方",
+      "entity_type": "处方",
+      "description": "鳖血青蒿12克，血余炭9克，血琥珀(先煎)6克，生牡蛎(先煎)15克，赤小豆(布包煎)30克，焦谷稻芽各12克，旋复花(布包煎)9克，珍珠母(研先煎)30克，蒲黄炭9克，鲜藕30克，鲜茅根30克，鲜石斛(先煎)30克，焦栀子9克，生赭石9克，川柏9克，银花炭12克，生滑石块15克，川牛膝9克，川郁金9克，灵磁石(生研先煎)9克，乌犀角尖0.9克(另煎兑入)，犀黄丸6克(冲服)，黄土汤煎药，早晚各一次温服"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.95,
+      "participants": [
+        {
+          "entity_name": "赵X",
+          "role": "患者",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "衄血",
+          "role": "疾病",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "脾肾阴虚，虚火上炎",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "鼻衄",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "牙龈溢血",
+          "role": "症状",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "患者赵X诊断为衄血，证属脾肾阴虚，虚火上炎"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "赵X",
+          "role": "患者",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "衄血_脾肾阴虚，虚火上炎_治疗方",
+          "role": "处方",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "脾肾阴虚，虚火上炎",
+          "role": "证候",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "针对脾肾阴虚，虚火上炎的证候，采用清滋潜阳，扶健脾土，渗湿化燥，宣疏行气、助胃止血的标本兼顾法"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "赵X",
+          "role": "患者",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "衄血_脾肾阴虚，虚火上炎_治疗方",
+          "role": "处方",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "脾肾阴虚，虚火上炎",
+          "role": "证候",
+          "membership_degree": 0.7
+        }
+      ],
+      "description": "根据病情变化，调整处方以标本兼顾"
+    }
+  ]
+}

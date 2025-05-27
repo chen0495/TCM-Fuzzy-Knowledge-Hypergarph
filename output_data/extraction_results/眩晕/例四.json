@@ -1,0 +1,137 @@
+{
+  "entities": [
+    {
+      "entity_name": "杨X",
+      "entity_type": "患者信息",
+      "description": "女，44岁"
+    },
+    {
+      "entity_name": "血压高亢",
+      "entity_type": "症状",
+      "description": "血压达230／135毫米汞柱"
+    },
+    {
+      "entity_name": "胸闷泛恶",
+      "entity_type": "症状",
+      "description": "胸闷泛恶"
+    },
+    {
+      "entity_name": "头晕痛殊甚",
+      "entity_type": "症状",
+      "description": "头晕痛殊甚"
+    },
+    {
+      "entity_name": "脉弦滑",
+      "entity_type": "症状",
+      "description": "脉弦滑"
+    },
+    {
+      "entity_name": "苔薄腻",
+      "entity_type": "症状",
+      "description": "苔薄腻"
+    },
+    {
+      "entity_name": "风火相煽",
+      "entity_type": "证候",
+      "description": "风火相煽，上窜于巅"
+    },
+    {
+      "entity_name": "胃失和降",
+      "entity_type": "证候",
+      "description": "胃失和降"
+    },
+    {
+      "entity_name": "眩晕",
+      "entity_type": "疾病",
+      "description": "病名: 眩晕"
+    },
+    {
+      "entity_name": "眩晕_风火相煽_治疗方",
+      "entity_type": "处方",
+      "description": "玳瑁片6克(先煎)姜半夏9克生石决明15克(先煎)菊花6克竹茹6克薄荷炭3克(后下)炙僵蚕9克姜黄连2．4克钩藤9克(后下)牛黄清心丸1粒(化服)"
+    },
+    {
+      "entity_name": "眩晕_痰浊_治疗方",
+      "entity_type": "处方",
+      "description": "北沙参9克竹茹6克竹沥半夏9克陈皮6克白蒺藜9克北秫米9克橹豆衣9克炒枳壳4．5克菊花6克生石决明15克(先煎)钩藤9克(后下)生苡米9克朱茯苓9克"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "杨X",
+          "role": "患者",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "血压高亢",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "胸闷泛恶",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "头晕痛殊甚",
+          "role": "症状",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "风火相煽",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "胃失和降",
+          "role": "证候",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "患者杨X，44岁，血压高亢，胸闷泛恶，头晕痛殊甚，脉弦滑，苔薄腻，证属风火相煽，胃失和降。"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "风火相煽",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "眩晕_风火相煽_治疗方",
+          "role": "处方",
+          "membership_degree": 1.0
+        }
+      ],
+      "description": "针对风火相煽的证候，给予平肝潜阳，和胃降逆的处方。"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.8,
+      "participants": [
+        {
+          "entity_name": "眩晕_风火相煽_治疗方",
+          "role": "原处方",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "眩晕_痰浊_治疗方",
+          "role": "新处方",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "痰浊",
+          "role": "新证候",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "二诊时，患者出现痰浊证候，原处方随证加减，改为化痰浊，和胃平肝的处方。"
+    }
+  ]
+}

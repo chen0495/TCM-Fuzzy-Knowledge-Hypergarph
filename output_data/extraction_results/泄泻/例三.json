@@ -1,0 +1,87 @@
+{
+  "entities": [
+    {
+      "entity_name": "患者信息",
+      "entity_type": "患者信息",
+      "description": "男，41岁，1961年10月以来每日腹泻"
+    },
+    {
+      "entity_name": "泄泻",
+      "entity_type": "疾病",
+      "description": "每日腹泻，有时失禁遗裤，初为水泻，一天20多次，近变为鹜溏，一天四至七次不等"
+    },
+    {
+      "entity_name": "脾阳不运而湿不化",
+      "entity_type": "证候",
+      "description": "脾阳不运而湿不化，直趋大肠为泻，泻久伤阴，阴虚生热，且现水不涵木现象"
+    },
+    {
+      "entity_name": "泄泻_脾阳不运而湿不化_治疗方",
+      "entity_type": "处方",
+      "description": "党参、黄芪、山药、诃子，炮姜、炙草、红枣、葛根、升麻。治法：温养中焦为主，稍佐升清"
+    },
+    {
+      "entity_name": "附子理中合赤石脂禹余粮汤",
+      "entity_type": "处方",
+      "description": "附子理中合赤石脂禹余粮汤复方"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.95,
+      "participants": [
+        {
+          "entity_name": "患者信息",
+          "role": "患者",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "泄泻",
+          "role": "疾病",
+          "membership_degree": 0.95
+        },
+        {
+          "entity_name": "脾阳不运而湿不化",
+          "role": "证候",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "患者泄泻证属脾阳不运而湿不化"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "泄泻_脾阳不运而湿不化_治疗方",
+          "role": "处方",
+          "membership_degree": 0.85
+        },
+        {
+          "entity_name": "脾阳不运而湿不化",
+          "role": "证候",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "治以温养中焦为主，稍佐升清"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "泄泻_脾阳不运而湿不化_治疗方",
+          "role": "原方",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "附子理中合赤石脂禹余粮汤",
+          "role": "新方",
+          "membership_degree": 0.85
+        }
+      ],
+      "description": "原方去升、葛，加破故纸，后接用附子理中合赤石脂禹余粮汤复方"
+    }
+  ]
+}

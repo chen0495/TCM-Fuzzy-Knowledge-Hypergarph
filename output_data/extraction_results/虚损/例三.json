@@ -1,0 +1,182 @@
+{
+  "entities": [
+    {
+      "entity_name": "柳Xx",
+      "entity_type": "患者信息",
+      "description": "男，43岁，5月18日初诊"
+    },
+    {
+      "entity_name": "便血",
+      "entity_type": "症状",
+      "description": "患者曾经便血，竟至昏厥"
+    },
+    {
+      "entity_name": "胃脘下端时常作痛",
+      "entity_type": "症状",
+      "description": "胃脘下端时常作痛"
+    },
+    {
+      "entity_name": "反酸",
+      "entity_type": "症状",
+      "description": "反酸"
+    },
+    {
+      "entity_name": "消化不良",
+      "entity_type": "症状",
+      "description": "消化不良"
+    },
+    {
+      "entity_name": "腹中时常气鼓",
+      "entity_type": "症状",
+      "description": "腹中时常气鼓"
+    },
+    {
+      "entity_name": "睡眠欠佳",
+      "entity_type": "症状",
+      "description": "睡眠欠佳"
+    },
+    {
+      "entity_name": "足胫微痛",
+      "entity_type": "症状",
+      "description": "足胫微痛"
+    },
+    {
+      "entity_name": "面色发红",
+      "entity_type": "症状",
+      "description": "面色发红"
+    },
+    {
+      "entity_name": "脉象浮大",
+      "entity_type": "症状",
+      "description": "脉象浮大"
+    },
+    {
+      "entity_name": "舌质红，微有白苔",
+      "entity_type": "症状",
+      "description": "舌质红，微有白苔"
+    },
+    {
+      "entity_name": "胃阴不足",
+      "entity_type": "证候",
+      "description": "此由失血而导致胃阴不足"
+    },
+    {
+      "entity_name": "虚损",
+      "entity_type": "疾病",
+      "description": "病名: 虚损"
+    },
+    {
+      "entity_name": "虚损_胃阴不足_治疗方",
+      "entity_type": "处方",
+      "description": "乌贼骨9克尖贝6克阿胶珠9克白芨9克沙参9克淮山药9克石斛9克玉竹9克牡蛎9克生谷芽12克鸡内金6克青木香9克甘草3克"
+    },
+    {
+      "entity_name": "虚损_胃阴不足_治疗方_二诊",
+      "entity_type": "处方",
+      "description": "乌贼骨9克尖贝6克阿胶珠9克白芨9克瓦楞子9克牡蛎9克沙参9克淮山药12克石斛9克玉竹9克生地9克麦冬9克鸡内金6克茯神9克甘草3克"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "柳Xx",
+          "role": "患者",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "便血",
+          "role": "症状",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "胃脘下端时常作痛",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "反酸",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "消化不良",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "腹中时常气鼓",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "睡眠欠佳",
+          "role": "症状",
+          "membership_degree": 0.6
+        },
+        {
+          "entity_name": "足胫微痛",
+          "role": "症状",
+          "membership_degree": 0.5
+        },
+        {
+          "entity_name": "面色发红",
+          "role": "症状",
+          "membership_degree": 0.6
+        },
+        {
+          "entity_name": "脉象浮大",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "舌质红，微有白苔",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "胃阴不足",
+          "role": "证候",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "患者因失血导致胃阴不足，表现为多种症状"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "胃阴不足",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "虚损_胃阴不足_治疗方",
+          "role": "处方",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "治法当以补益胃阴为主，使用虚损_胃阴不足_治疗方"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.8,
+      "participants": [
+        {
+          "entity_name": "虚损_胃阴不足_治疗方",
+          "role": "原处方",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "虚损_胃阴不足_治疗方_二诊",
+          "role": "调整后处方",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "二诊时在原方基础上进行调整，增加生地、麦冬、茯神，调整淮山药剂量"
+    }
+  ]
+}

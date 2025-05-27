@@ -1,0 +1,107 @@
+{
+  "entities": [
+    {
+      "entity_name": "高",
+      "entity_type": "患者信息",
+      "description": "女性患者，平素有习惯性便秘"
+    },
+    {
+      "entity_name": "便秘",
+      "entity_type": "疾病",
+      "description": "大便秘结不通，排便时间延长，或大便艰涩不畅为主的证候"
+    },
+    {
+      "entity_name": "面色不华",
+      "entity_type": "症状",
+      "description": "患者面色不佳"
+    },
+    {
+      "entity_name": "脉软",
+      "entity_type": "症状",
+      "description": "患者脉象软弱"
+    },
+    {
+      "entity_name": "冷积便秘",
+      "entity_type": "证候",
+      "description": "证属冷积便秘，因阴寒凝结所致"
+    },
+    {
+      "entity_name": "便秘_冷积便秘_治疗方",
+      "entity_type": "处方",
+      "description": "全当归、杭白芍、生麦芽各12克，生白术、薤白头、生鸡金各9克，广木香6克，半硫丸9克(分三次吞)，炙草3克。治法：振奋肠机能"
+    },
+    {
+      "entity_name": "千金温脾饮",
+      "entity_type": "处方",
+      "description": "党参、熟大黄、元明粉(分冲)各9克，干姜、炙草各3克，熟附块(先煎)6克，当归12克。治法：温阳通下攻逐冷积"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "高",
+          "role": "患者",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "便秘",
+          "role": "疾病",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "面色不华",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "脉软",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "冷积便秘",
+          "role": "证候",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "患者高患有便秘，证属冷积便秘，表现为面色不华、脉软"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "冷积便秘",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "便秘_冷积便秘_治疗方",
+          "role": "处方",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "针对冷积便秘，初用健脾温通之剂"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "冷积便秘",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "千金温脾饮",
+          "role": "处方",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "初治无效后，改用千金温脾饮温阳通下攻逐冷积"
+    }
+  ]
+}

@@ -1,0 +1,187 @@
+{
+  "entities": [
+    {
+      "entity_name": "林XX",
+      "entity_type": "患者信息",
+      "description": "男，34岁，1976年就诊"
+    },
+    {
+      "entity_name": "面色潮红",
+      "entity_type": "症状",
+      "description": "患者面色潮红"
+    },
+    {
+      "entity_name": "发热恶寒",
+      "entity_type": "症状",
+      "description": "体温38℃，发热恶寒"
+    },
+    {
+      "entity_name": "口渴",
+      "entity_type": "症状",
+      "description": "患者口渴"
+    },
+    {
+      "entity_name": "右侧膝关节红肿",
+      "entity_type": "症状",
+      "description": "右侧膝关节红肿，行动困难已六天"
+    },
+    {
+      "entity_name": "心烦不眠",
+      "entity_type": "症状",
+      "description": "患者心烦不眠"
+    },
+    {
+      "entity_name": "大便秘结",
+      "entity_type": "症状",
+      "description": "患者大便秘结"
+    },
+    {
+      "entity_name": "小便短赤",
+      "entity_type": "症状",
+      "description": "患者小便短赤"
+    },
+    {
+      "entity_name": "舌质红，苔黄而干",
+      "entity_type": "症状",
+      "description": "舌质红，苔黄而干"
+    },
+    {
+      "entity_name": "脉弦数",
+      "entity_type": "症状",
+      "description": "脉弦数"
+    },
+    {
+      "entity_name": "急性风湿性关节炎",
+      "entity_type": "疾病",
+      "description": "诊为急性风湿性关节炎"
+    },
+    {
+      "entity_name": "湿热内蕴，邪从热化",
+      "entity_type": "证候",
+      "description": "辨证：湿热内蕴，邪从热化"
+    },
+    {
+      "entity_name": "宣痹汤加减",
+      "entity_type": "处方",
+      "description": "防己10克，蚕砂16克，赤小豆20克，滑石20克，连翘10克，山栀10克，黄芩10克，生石膏30克，桑枝20克，防风6克，知母10克，水煎服，日服一剂，连服4剂"
+    },
+    {
+      "entity_name": "蠲痹汤加减",
+      "entity_type": "处方",
+      "description": "秦艽10克，独活6克，忍冬藤20克，当归10克，桑枝20克，鸡血藤16克，川芎10克，牛膝14克，萆薛10克，薏仁30克，水煎服，每日1剂"
+    },
+    {
+      "entity_name": "小活络丹",
+      "entity_type": "处方",
+      "description": "配合小活络丹"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.95,
+      "participants": [
+        {
+          "entity_name": "林XX",
+          "role": "患者",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "湿热内蕴，邪从热化",
+          "role": "证候",
+          "membership_degree": 0.95
+        },
+        {
+          "entity_name": "面色潮红",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "发热恶寒",
+          "role": "症状",
+          "membership_degree": 0.85
+        },
+        {
+          "entity_name": "口渴",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "右侧膝关节红肿",
+          "role": "症状",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "心烦不眠",
+          "role": "症状",
+          "membership_degree": 0.75
+        },
+        {
+          "entity_name": "大便秘结",
+          "role": "症状",
+          "membership_degree": 0.75
+        },
+        {
+          "entity_name": "小便短赤",
+          "role": "症状",
+          "membership_degree": 0.75
+        },
+        {
+          "entity_name": "舌质红，苔黄而干",
+          "role": "症状",
+          "membership_degree": 0.85
+        },
+        {
+          "entity_name": "脉弦数",
+          "role": "症状",
+          "membership_degree": 0.85
+        }
+      ],
+      "description": "患者林XX的症状和体征辨证为湿热内蕴，邪从热化"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "湿热内蕴，邪从热化",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "宣痹汤加减",
+          "role": "处方",
+          "membership_degree": 0.95
+        },
+        {
+          "entity_name": "清热泻火，佐以疏风祛湿",
+          "role": "治法",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "针对湿热内蕴，邪从热化的证候，采用清热泻火，佐以疏风祛湿的治法，处方为宣痹汤加减"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "蠲痹汤加减",
+          "role": "处方",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "小活络丹",
+          "role": "处方",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "热退痛减",
+          "role": "症状",
+          "membership_degree": 0.85
+        }
+      ],
+      "description": "热退痛减后，续服蠲痹汤加减和小活络丹以加强活血通络之功"
+    }
+  ]
+}

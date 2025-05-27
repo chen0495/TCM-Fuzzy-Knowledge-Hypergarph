@@ -1,0 +1,212 @@
+{
+  "entities": [
+    {
+      "entity_name": "徐X",
+      "entity_type": "患者信息",
+      "description": "女，产后二月余"
+    },
+    {
+      "entity_name": "遍体浮肿",
+      "entity_type": "症状",
+      "description": "全身浮肿"
+    },
+    {
+      "entity_name": "颈脉动时咳",
+      "entity_type": "症状",
+      "description": "咳嗽时颈部脉搏跳动"
+    },
+    {
+      "entity_name": "难于平卧",
+      "entity_type": "症状",
+      "description": "难以平躺"
+    },
+    {
+      "entity_name": "口干欲饮",
+      "entity_type": "症状",
+      "description": "口干想喝水"
+    },
+    {
+      "entity_name": "大腹肿满",
+      "entity_type": "症状",
+      "description": "腹部肿胀"
+    },
+    {
+      "entity_name": "小溲短赤",
+      "entity_type": "症状",
+      "description": "小便短少且颜色深"
+    },
+    {
+      "entity_name": "舌光红无苔",
+      "entity_type": "症状",
+      "description": "舌头红而无苔"
+    },
+    {
+      "entity_name": "脉虚弦而数",
+      "entity_type": "症状",
+      "description": "脉搏虚弱、弦紧且快"
+    },
+    {
+      "entity_name": "荣阴大亏",
+      "entity_type": "证候",
+      "description": "营血和阴液严重不足"
+    },
+    {
+      "entity_name": "肝失涵养",
+      "entity_type": "证候",
+      "description": "肝脏失去滋养"
+    },
+    {
+      "entity_name": "木克中土",
+      "entity_type": "证候",
+      "description": "肝木克制脾土"
+    },
+    {
+      "entity_name": "脾不健运",
+      "entity_type": "证候",
+      "description": "脾脏运化功能失常"
+    },
+    {
+      "entity_name": "阳水湿热",
+      "entity_type": "证候",
+      "description": "阳水湿热积聚"
+    },
+    {
+      "entity_name": "水肿",
+      "entity_type": "疾病",
+      "description": "全身浮肿"
+    },
+    {
+      "entity_name": "水肿_荣阴大亏_治疗方",
+      "entity_type": "处方",
+      "description": "南北沙参各9克，连皮苓12克，生白术6克，清炙草1.5克，怀山药9克，川石斛9克，陈广皮3克，桑白皮6克，川贝母9克，甜光杏9克，大腹皮6克，汉防己9克，冬瓜子皮各9克，生苡仁15克，另用冬瓜汁温饮代茶。治法：养肺阴以柔肝木，运中土而利水湿"
+    },
+    {
+      "entity_name": "水肿_荣阴大亏_治疗方_二诊",
+      "entity_type": "处方",
+      "description": "南北沙参各9克，连皮苓12克，生白术6克，清炙草1.5克，川石斛9克，肥知母4.5克，川贝母6克，桑白皮6克，大腹皮6克，汉防己6克，炙白苏子4.5克，甜光杏9克，冬瓜子皮各9克，鸡金炭6克。治法：养金制木，崇土利水"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.95,
+      "participants": [
+        {
+          "entity_name": "徐X",
+          "role": "患者",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "遍体浮肿",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "荣阴大亏",
+          "role": "证候",
+          "membership_degree": 0.85
+        },
+        {
+          "entity_name": "肝失涵养",
+          "role": "证候",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "木克中土",
+          "role": "证候",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "脾不健运",
+          "role": "证候",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "阳水湿热",
+          "role": "证候",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "患者产后二月余，遍体浮肿，证属荣阴大亏，肝失涵养，木克中土，脾不健运，阳水湿热"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "水肿_荣阴大亏_治疗方",
+          "role": "处方",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "荣阴大亏",
+          "role": "证候",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "肝失涵养",
+          "role": "证候",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "木克中土",
+          "role": "证候",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "脾不健运",
+          "role": "证候",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "阳水湿热",
+          "role": "证候",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "治法：养肺阴以柔肝木，运中土而利水湿"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "水肿_荣阴大亏_治疗方_二诊",
+          "role": "处方",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "水肿_荣阴大亏_治疗方",
+          "role": "处方",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "荣阴大亏",
+          "role": "证候",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "肝失涵养",
+          "role": "证候",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "木克中土",
+          "role": "证候",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "脾不健运",
+          "role": "证候",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "阳水湿热",
+          "role": "证候",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "二诊处方在前方基础上加减，治法：养金制木，崇土利水"
+    }
+  ]
+}

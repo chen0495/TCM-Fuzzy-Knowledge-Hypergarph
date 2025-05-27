@@ -1,0 +1,199 @@
+{
+  "entities": [
+    {
+      "entity_name": "黄ｘｘ",
+      "entity_type": "患者信息",
+      "description": "男，19岁"
+    },
+    {
+      "entity_name": "痎疟",
+      "entity_type": "疾病",
+      "description": "曾患痎疟"
+    },
+    {
+      "entity_name": "左胁下疼痛",
+      "entity_type": "症状",
+      "description": "左胁下疼痛有痞块，日渐增大如拳，轻按漉漉有声"
+    },
+    {
+      "entity_name": "小溲黄",
+      "entity_type": "症状",
+      "description": "小溲黄"
+    },
+    {
+      "entity_name": "茎痛",
+      "entity_type": "症状",
+      "description": "近且茎痛"
+    },
+    {
+      "entity_name": "左关弦结",
+      "entity_type": "症状",
+      "description": "左关弦结"
+    },
+    {
+      "entity_name": "右较软弱",
+      "entity_type": "症状",
+      "description": "右较软弱"
+    },
+    {
+      "entity_name": "舌苔灰自",
+      "entity_type": "症状",
+      "description": "舌苔灰自"
+    },
+    {
+      "entity_name": "寒湿凝紧，气血留滞于胸胁",
+      "entity_type": "证候",
+      "description": "此由寒湿凝紧，气血留滞于胸胁"
+    },
+    {
+      "entity_name": "疟母",
+      "entity_type": "疾病",
+      "description": "如因疟疾而起，其邪结为症瘕，名曰“疟母”"
+    },
+    {
+      "entity_name": "疟疾_寒湿凝紧，气血留滞于胸胁_治疗方",
+      "entity_type": "处方",
+      "description": "制鳖甲15克云茯苓10克酒白芍10克金铃子(醋炒）10克生牡蛎10克制香附7克山楂炭7克延胡索(醋炒）7克醋青皮5克广木香3克北柴胡3克油安桂1克甘草梢2克"
+    },
+    {
+      "entity_name": "疟疾_寒湿凝紧，气血留滞于胸胁_复诊方",
+      "entity_type": "处方",
+      "description": "原方去牡蛎、楂炭，加酒炒黄芩、左金丸(分吞服）"
+    },
+    {
+      "entity_name": "疟疾_寒湿凝紧，气血留滞于胸胁_三诊方",
+      "entity_type": "处方",
+      "description": "按复诊方改金铃子7克，去黄芩、甘草梢，加当归身10克、山萸肉5克"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "黄ｘｘ",
+          "role": "患者",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "左胁下疼痛",
+          "role": "症状",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "小溲黄",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "茎痛",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "左关弦结",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "右较软弱",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "舌苔灰自",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "寒湿凝紧，气血留滞于胸胁",
+          "role": "证候",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "患者黄ｘｘ的症状和体征辨证为寒湿凝紧，气血留滞于胸胁"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "寒湿凝紧，气血留滞于胸胁",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "疟疾_寒湿凝紧，气血留滞于胸胁_治疗方",
+          "role": "处方",
+          "membership_degree": 1.0
+        }
+      ],
+      "description": "针对寒湿凝紧，气血留滞于胸胁的证候，采用消积化痞，疏肝软脾的治法"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.8,
+      "participants": [
+        {
+          "entity_name": "疟疾_寒湿凝紧，气血留滞于胸胁_治疗方",
+          "role": "原处方",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "疟疾_寒湿凝紧，气血留滞于胸胁_复诊方",
+          "role": "新处方",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "小溲黄",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "茎痛",
+          "role": "症状",
+          "membership_degree": 0.7
+        }
+      ],
+      "description": "根据复诊时小溲黄、茎痛等症状，原方去牡蛎、楂炭，加酒炒黄芩、左金丸"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.8,
+      "participants": [
+        {
+          "entity_name": "疟疾_寒湿凝紧，气血留滞于胸胁_复诊方",
+          "role": "原处方",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "疟疾_寒湿凝紧，气血留滞于胸胁_三诊方",
+          "role": "新处方",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "硬块软缩",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "胁痛可任轻按",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "小浚时茎痛亦减轻",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "腹内枳气转动不宁",
+          "role": "症状",
+          "membership_degree": 0.7
+        }
+      ],
+      "description": "根据三诊时硬块软缩、胁痛减轻等症状，复诊方改金铃子7克，去黄芩、甘草梢，加当归身10克、山萸肉5克"
+    }
+  ]
+}

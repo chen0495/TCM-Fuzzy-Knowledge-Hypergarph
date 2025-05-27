@@ -1,0 +1,182 @@
+{
+  "entities": [
+    {
+      "entity_name": "高XX",
+      "entity_type": "患者信息",
+      "description": "男，51岁，病例号72872"
+    },
+    {
+      "entity_name": "泄泻",
+      "entity_type": "疾病",
+      "description": "排便次数增多，粪便清稀，甚而如水样"
+    },
+    {
+      "entity_name": "伪膜性肠炎",
+      "entity_type": "疾病",
+      "description": "因大量使用广谱抗菌素所引起的肠道菌群失调而致泄泻"
+    },
+    {
+      "entity_name": "精神萎靡",
+      "entity_type": "症状",
+      "description": "患者精神状态不佳"
+    },
+    {
+      "entity_name": "嗜睡",
+      "entity_type": "症状",
+      "description": "患者睡眠时间增多"
+    },
+    {
+      "entity_name": "四肢逆冷",
+      "entity_type": "症状",
+      "description": "四肢冰冷"
+    },
+    {
+      "entity_name": "大便黄绿色胆汁样稀水",
+      "entity_type": "症状",
+      "description": "大便呈黄绿色，稀水样"
+    },
+    {
+      "entity_name": "不欲进食",
+      "entity_type": "症状",
+      "description": "食欲不振"
+    },
+    {
+      "entity_name": "恶心",
+      "entity_type": "症状",
+      "description": "胃部不适，有呕吐感"
+    },
+    {
+      "entity_name": "两足浮肿",
+      "entity_type": "症状",
+      "description": "双脚肿胀"
+    },
+    {
+      "entity_name": "舌卷囊缩",
+      "entity_type": "症状",
+      "description": "舌头卷曲，阴囊收缩"
+    },
+    {
+      "entity_name": "舌质淡，无苔",
+      "entity_type": "症状",
+      "description": "舌头颜色淡，无舌苔"
+    },
+    {
+      "entity_name": "脉微欲绝",
+      "entity_type": "症状",
+      "description": "脉搏微弱，几乎感觉不到"
+    },
+    {
+      "entity_name": "脾肾虚衰，阳虚欲脱",
+      "entity_type": "证候",
+      "description": "脾肾功能衰弱，阳气虚弱，有脱失的危险"
+    },
+    {
+      "entity_name": "伪膜性肠炎_脾肾虚衰，阳虚欲脱_治疗方",
+      "entity_type": "处方",
+      "description": "党参9克，茯苓15克，炒白术9克，肉豆蔻6克，吴茱萸6克，官桂4.5克，附片3克，炮姜3克，煨葛根4.5克。治法：温补脾肾，回阳固脱"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.95,
+      "participants": [
+        {
+          "entity_name": "高XX",
+          "role": "患者",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "精神萎靡",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "嗜睡",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "四肢逆冷",
+          "role": "症状",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "大便黄绿色胆汁样稀水",
+          "role": "症状",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "不欲进食",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "恶心",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "两足浮肿",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "舌卷囊缩",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "舌质淡，无苔",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "脉微欲绝",
+          "role": "症状",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "脾肾虚衰，阳虚欲脱",
+          "role": "证候",
+          "membership_degree": 1.0
+        }
+      ],
+      "description": "根据患者症状，辨证为脾肾虚衰，阳虚欲脱"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.95,
+      "participants": [
+        {
+          "entity_name": "脾肾虚衰，阳虚欲脱",
+          "role": "证候",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "伪膜性肠炎_脾肾虚衰，阳虚欲脱_治疗方",
+          "role": "处方",
+          "membership_degree": 1.0
+        }
+      ],
+      "description": "针对脾肾虚衰，阳虚欲脱的证候，采用温补脾肾，回阳固脱的治法"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "伪膜性肠炎_脾肾虚衰，阳虚欲脱_治疗方",
+          "role": "处方",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "脾肾虚衰，阳虚欲脱",
+          "role": "证候",
+          "membership_degree": 1.0
+        }
+      ],
+      "description": "根据病情变化，调整处方以温补脾肾，回阳固脱"
+    }
+  ]
+}

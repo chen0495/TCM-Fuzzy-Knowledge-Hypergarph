@@ -1,0 +1,132 @@
+{
+  "entities": [
+    {
+      "entity_name": "蔡XX",
+      "entity_type": "患者信息",
+      "description": "女，30岁，1961年因关节疼痛全身发热住院治疗"
+    },
+    {
+      "entity_name": "关节疼痛",
+      "entity_type": "症状",
+      "description": "四肢关节疼痛剧烈，手足不能举动，甚至不能触摸"
+    },
+    {
+      "entity_name": "全身发热",
+      "entity_type": "症状",
+      "description": "肌肤灼热，体温38℃上下"
+    },
+    {
+      "entity_name": "烦渴引饮",
+      "entity_type": "症状",
+      "description": "口渴多饮"
+    },
+    {
+      "entity_name": "大便秘结",
+      "entity_type": "症状",
+      "description": "大便干结难解"
+    },
+    {
+      "entity_name": "盗汗颇多",
+      "entity_type": "症状",
+      "description": "夜间出汗多"
+    },
+    {
+      "entity_name": "脉弦大数",
+      "entity_type": "症状",
+      "description": "脉象弦大而数"
+    },
+    {
+      "entity_name": "舌质绛，苔黄腻少津",
+      "entity_type": "症状",
+      "description": "舌质绛红，苔黄腻且干燥"
+    },
+    {
+      "entity_name": "阴血虚极，阴伤热炽，热甚灼筋，筋脉失养",
+      "entity_type": "证候",
+      "description": "阴血极度虚弱，阴伤导致热盛，热盛灼伤筋脉，筋脉失养"
+    },
+    {
+      "entity_name": "热痹",
+      "entity_type": "疾病",
+      "description": "因湿热痹阻经络或风寒湿邪侵袭经络，郁而化热所致"
+    },
+    {
+      "entity_name": "当归六黄汤加减",
+      "entity_type": "处方",
+      "description": "黄芪24克，生地15克，当归9克，黄连4.5克，黄芩6克，黄柏6克，花粉9克，桑枝15克，秦艽9克。治法：滋阴清热，固表止汗"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.95,
+      "participants": [
+        {
+          "entity_name": "蔡XX",
+          "role": "患者",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "关节疼痛",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "全身发热",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "阴血虚极，阴伤热炽，热甚灼筋，筋脉失养",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "热痹",
+          "role": "疾病",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "患者蔡XX因关节疼痛、全身发热等症状，辨证为阴血虚极，阴伤热炽，热甚灼筋，筋脉失养，诊断为热痹"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "阴血虚极，阴伤热炽，热甚灼筋，筋脉失养",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "当归六黄汤加减",
+          "role": "处方",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "针对阴血虚极，阴伤热炽，热甚灼筋，筋脉失养的证候，采用当归六黄汤加减进行治疗"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "当归六黄汤加减",
+          "role": "处方",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "关节疼痛",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "全身发热",
+          "role": "症状",
+          "membership_degree": 0.7
+        }
+      ],
+      "description": "处方当归六黄汤加减根据关节疼痛和全身发热的症状进行随证加减"
+    }
+  ]
+}

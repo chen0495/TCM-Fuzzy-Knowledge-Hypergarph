@@ -22,4 +22,3 @@ build/
 *.egg-info/
 
 # Other
-output_data/ 

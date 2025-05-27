@@ -1,0 +1,176 @@
+{
+  "entities": [
+    {
+      "entity_name": "患者信息",
+      "entity_type": "患者信息",
+      "description": "女性，27岁，初诊日期：1959年4月5日"
+    },
+    {
+      "entity_name": "无脉症",
+      "entity_type": "疾病",
+      "description": "西医诊断无脉症，又称大动脉炎，为主动脉及其分枝的慢性进行性、闭塞性炎症"
+    },
+    {
+      "entity_name": "头痛",
+      "entity_type": "症状",
+      "description": "患者经常头痛"
+    },
+    {
+      "entity_name": "失眠",
+      "entity_type": "症状",
+      "description": "患者经常失眠"
+    },
+    {
+      "entity_name": "手冷无力",
+      "entity_type": "症状",
+      "description": "患者手冷无力，甚而不能活动"
+    },
+    {
+      "entity_name": "脉象左伏右沉细",
+      "entity_type": "症状",
+      "description": "诊其脉象左伏右沉细"
+    },
+    {
+      "entity_name": "舌质暗红，苔薄腻",
+      "entity_type": "症状",
+      "description": "舌质暗红，苔薄腻"
+    },
+    {
+      "entity_name": "口渴",
+      "entity_type": "症状",
+      "description": "患者口渴"
+    },
+    {
+      "entity_name": "烦躁",
+      "entity_type": "症状",
+      "description": "患者烦躁"
+    },
+    {
+      "entity_name": "血虚不能上荣于脑，虚风上扰",
+      "entity_type": "证候",
+      "description": "血虚不能上荣于脑，加之虚风上扰，故见头痛、失眠"
+    },
+    {
+      "entity_name": "血脉瘀阻，气血运行不畅",
+      "entity_type": "证候",
+      "description": "血脉瘀阻，气血运行不畅故手冷无力，甚而不能活动"
+    },
+    {
+      "entity_name": "无脉症_血虚不能上荣于脑，虚风上扰_治疗方",
+      "entity_type": "处方",
+      "description": "干生地12克甘菊花6克青葙子9克夏枯草9克酒白芍6克粉丹皮3克北沙参6克钩藤9克川芎3克当归4．5克川牛膝4．5克，治法：平肝熄风，凉血降逆"
+    },
+    {
+      "entity_name": "无脉症_血脉瘀阻，气血运行不畅_治疗方",
+      "entity_type": "处方",
+      "description": "全当归30克川芎30克酒白芍30克苏木12克牛膝9克红花12克丹皮30克钩藤3Q克海藻30克昆布30克香附30克麝香0．6克，治法：活血逐瘀，软坚通络"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "患者信息",
+          "role": "患者",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "头痛",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "失眠",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "血虚不能上荣于脑，虚风上扰",
+          "role": "证候",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "患者头痛、失眠，证属血虚不能上荣于脑，虚风上扰"
+    },
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "患者信息",
+          "role": "患者",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "手冷无力",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "血脉瘀阻，气血运行不畅",
+          "role": "证候",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "患者手冷无力，证属血脉瘀阻，气血运行不畅"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "无脉症_血虚不能上荣于脑，虚风上扰_治疗方",
+          "role": "处方",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "血虚不能上荣于脑，虚风上扰",
+          "role": "证候",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "针对血虚不能上荣于脑，虚风上扰的证候，采用平肝熄风，凉血降逆的治法"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "无脉症_血脉瘀阻，气血运行不畅_治疗方",
+          "role": "处方",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "血脉瘀阻，气血运行不畅",
+          "role": "证候",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "针对血脉瘀阻，气血运行不畅的证候，采用活血逐瘀，软坚通络的治法"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.8,
+      "participants": [
+        {
+          "entity_name": "无脉症_血虚不能上荣于脑，虚风上扰_治疗方",
+          "role": "处方",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "烦躁",
+          "role": "症状",
+          "membership_degree": 0.6
+        },
+        {
+          "entity_name": "手冷未除",
+          "role": "症状",
+          "membership_degree": 0.6
+        }
+      ],
+      "description": "根据患者烦躁稍减，手冷未除的症状，调整处方"
+    }
+  ]
+}

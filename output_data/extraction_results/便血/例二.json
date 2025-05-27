@@ -1,0 +1,162 @@
+{
+  "entities": [
+    {
+      "entity_name": "王XX",
+      "entity_type": "患者信息",
+      "description": "男，21岁，未婚"
+    },
+    {
+      "entity_name": "面色苍白",
+      "entity_type": "症状",
+      "description": "患者面色苍白"
+    },
+    {
+      "entity_name": "唇甲无华",
+      "entity_type": "症状",
+      "description": "患者唇甲无华"
+    },
+    {
+      "entity_name": "神疲肢倦",
+      "entity_type": "症状",
+      "description": "患者神疲肢倦"
+    },
+    {
+      "entity_name": "萎靡不振",
+      "entity_type": "症状",
+      "description": "患者萎靡不振"
+    },
+    {
+      "entity_name": "饮食不思",
+      "entity_type": "症状",
+      "description": "患者饮食不思"
+    },
+    {
+      "entity_name": "心悸",
+      "entity_type": "症状",
+      "description": "患者心悸"
+    },
+    {
+      "entity_name": "失眠",
+      "entity_type": "症状",
+      "description": "患者失眠"
+    },
+    {
+      "entity_name": "眩晕",
+      "entity_type": "症状",
+      "description": "患者眩晕"
+    },
+    {
+      "entity_name": "夜晚口干",
+      "entity_type": "症状",
+      "description": "患者夜晚口干"
+    },
+    {
+      "entity_name": "胃脘微痛",
+      "entity_type": "症状",
+      "description": "患者胃脘不甚痛，或只感有时微痛"
+    },
+    {
+      "entity_name": "大便黯黑如柏油",
+      "entity_type": "症状",
+      "description": "患者大便黯黑如柏油"
+    },
+    {
+      "entity_name": "舌质淡",
+      "entity_type": "症状",
+      "description": "患者舌质淡"
+    },
+    {
+      "entity_name": "苔白燥",
+      "entity_type": "症状",
+      "description": "患者苔白燥"
+    },
+    {
+      "entity_name": "脉弦大而无力",
+      "entity_type": "症状",
+      "description": "患者脉弦大而无力"
+    },
+    {
+      "entity_name": "气血虚失统摄",
+      "entity_type": "证候",
+      "description": "气血虚失统摄之征"
+    },
+    {
+      "entity_name": "邪少虚多",
+      "entity_type": "证候",
+      "description": "邪少虚多之候"
+    },
+    {
+      "entity_name": "便血",
+      "entity_type": "疾病",
+      "description": "患者便血"
+    },
+    {
+      "entity_name": "参芪四物汤加减",
+      "entity_type": "处方",
+      "description": "潞党参24克，北绵芪15克，生熟地各12克，杭白芍9克，当归身9克，侧柏叶15克，粉丹皮6克，阿胶9克(冲服)，地榆炭9克，酸枣仁9克，炙甘草4.5克"
+    },
+    {
+      "entity_name": "黄土汤加减",
+      "entity_type": "处方",
+      "description": "生地15克，杭芍9克，黑地榆9克，潞党参15克，炮姜炭3克，阿胶9克(冲)，伏龙肝12克(荷叶包煎)，炙草3克"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "王XX",
+          "role": "患者",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "气血虚失统摄",
+          "role": "证候",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "邪少虚多",
+          "role": "证候",
+          "membership_degree": 0.7
+        }
+      ],
+      "description": "患者气血虚失统摄，邪少虚多"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "气血虚失统摄",
+          "role": "证候",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "参芪四物汤加减",
+          "role": "处方",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "气血虚失统摄证用参芪四物汤加减治疗"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.8,
+      "participants": [
+        {
+          "entity_name": "黄土汤加减",
+          "role": "处方",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "气血虚失统摄",
+          "role": "证候",
+          "membership_degree": 0.7
+        }
+      ],
+      "description": "根据病情变化，改用黄土汤加减治疗"
+    }
+  ]
+}

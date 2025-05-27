@@ -1,0 +1,227 @@
+{
+  "entities": [
+    {
+      "entity_name": "徐××",
+      "entity_type": "患者信息",
+      "description": "女，34岁"
+    },
+    {
+      "entity_name": "壮热汗出",
+      "entity_type": "症状",
+      "description": "每当天明即壮热汗出"
+    },
+    {
+      "entity_name": "烦躁不安",
+      "entity_type": "症状",
+      "description": "烦躁不安"
+    },
+    {
+      "entity_name": "气粗",
+      "entity_type": "症状",
+      "description": "气粗"
+    },
+    {
+      "entity_name": "渴喜冷饮",
+      "entity_type": "症状",
+      "description": "渴喜冷饮"
+    },
+    {
+      "entity_name": "精神萎靡",
+      "entity_type": "症状",
+      "description": "午后渐退，烧退后精神萎靡"
+    },
+    {
+      "entity_name": "肌肤灼热",
+      "entity_type": "症状",
+      "description": "发烧时肌肤灼热"
+    },
+    {
+      "entity_name": "面赤唇红",
+      "entity_type": "症状",
+      "description": "面赤唇红"
+    },
+    {
+      "entity_name": "脉洪数",
+      "entity_type": "症状",
+      "description": "脉洪数"
+    },
+    {
+      "entity_name": "两尺微弱",
+      "entity_type": "症状",
+      "description": "两尺微弱"
+    },
+    {
+      "entity_name": "舌质红绛",
+      "entity_type": "症状",
+      "description": "舌质红绛"
+    },
+    {
+      "entity_name": "苔薄黄少津",
+      "entity_type": "症状",
+      "description": "苔薄黄少津"
+    },
+    {
+      "entity_name": "瘅疟",
+      "entity_type": "疾病",
+      "description": "据其脉证是为“瘅疟”"
+    },
+    {
+      "entity_name": "津气已伤",
+      "entity_type": "证候",
+      "description": "患者素有伏热，津气已伤"
+    },
+    {
+      "entity_name": "热炽津伤",
+      "entity_type": "证候",
+      "description": "热炽津伤"
+    },
+    {
+      "entity_name": "疟疾_津气已伤_治疗方",
+      "entity_type": "处方",
+      "description": "生石膏15克麦冬9克沙参15克生地15克鲜蔗汁一杯连翘9克天花粉9克五味子3克鲜京竹叶20片，治法：甘寒生津，救阴清热"
+    },
+    {
+      "entity_name": "归芍六味汤",
+      "entity_type": "处方",
+      "description": "生地15克淮山药15克山茱萸6克茯苓9克粉丹皮9克泽泻9克当归15克杭芍15克，治法：养血益阴"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.95,
+      "participants": [
+        {
+          "entity_name": "徐××",
+          "role": "患者",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "壮热汗出",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "烦躁不安",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "气粗",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "渴喜冷饮",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "精神萎靡",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "肌肤灼热",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "面赤唇红",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "脉洪数",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "两尺微弱",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "舌质红绛",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "苔薄黄少津",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "瘅疟",
+          "role": "疾病",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "津气已伤",
+          "role": "证候",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "热炽津伤",
+          "role": "证候",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "患者症状表现为壮热汗出、烦躁不安、气粗、渴喜冷饮等，证属瘅疟，津气已伤，热炽津伤"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "疟疾_津气已伤_治疗方",
+          "role": "处方",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "瘅疟",
+          "role": "疾病",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "津气已伤",
+          "role": "证候",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "热炽津伤",
+          "role": "证候",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "治宜甘寒生津，救阴清热，方用疟疾_津气已伤_治疗方"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "归芍六味汤",
+          "role": "处方",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "疟疾_津气已伤_治疗方",
+          "role": "处方",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "瘅疟",
+          "role": "疾病",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "津气已伤",
+          "role": "证候",
+          "membership_degree": 0.7
+        }
+      ],
+      "description": "服三剂后烧退汗止，渴饮全解，二便正常，脉息和缓，舌红润，以归芍六味汤益血养阴以善其后"
+    }
+  ]
+}

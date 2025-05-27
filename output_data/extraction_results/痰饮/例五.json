@@ -1,0 +1,127 @@
+{
+  "entities": [
+    {
+      "entity_name": "王xx",
+      "entity_type": "患者信息",
+      "description": "男性，45岁"
+    },
+    {
+      "entity_name": "外感风寒",
+      "entity_type": "症状",
+      "description": "外感风寒"
+    },
+    {
+      "entity_name": "咳嗽胸痛",
+      "entity_type": "症状",
+      "description": "咳嗽胸痛"
+    },
+    {
+      "entity_name": "喘息不能平卧",
+      "entity_type": "症状",
+      "description": "喘息不能平卧"
+    },
+    {
+      "entity_name": "舌苔薄腻",
+      "entity_type": "症状",
+      "description": "舌苔薄腻"
+    },
+    {
+      "entity_name": "脉滑实",
+      "entity_type": "症状",
+      "description": "脉滑实"
+    },
+    {
+      "entity_name": "渗出性胸膜炎",
+      "entity_type": "疾病",
+      "description": "X线胸部透视为“渗出性胸膜炎”"
+    },
+    {
+      "entity_name": "悬饮",
+      "entity_type": "证候",
+      "description": "饮邪积于胸胁之间，证属悬饮"
+    },
+    {
+      "entity_name": "渗出性胸膜炎_悬饮_治疗方",
+      "entity_type": "处方",
+      "description": "叶苏梗10克，甜葶苈1.5克，炙紫苑5克，苏子10克，桔梗5克，杏仁9克，竹茹10克，陈皮6克，制半夏10克，茯苓12克，吴萸1.5克，瓜萎仁10克，蛤壳30克，天将壳10克，广郁金10克，控涎丹2克（包）。治法：疏风宣肺，攻逐水饮"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.95,
+      "participants": [
+        {
+          "entity_name": "王xx",
+          "role": "患者",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "外感风寒",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "咳嗽胸痛",
+          "role": "症状",
+          "membership_degree": 0.85
+        },
+        {
+          "entity_name": "喘息不能平卧",
+          "role": "症状",
+          "membership_degree": 0.85
+        },
+        {
+          "entity_name": "舌苔薄腻",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "脉滑实",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "悬饮",
+          "role": "证候",
+          "membership_degree": 0.95
+        }
+      ],
+      "description": "患者王xx因外感风寒，引动痰饮，肺气不宣，表现为咳嗽胸痛，喘息不能平卧，舌苔薄腻，脉滑实，证属悬饮"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "悬饮",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "渗出性胸膜炎_悬饮_治疗方",
+          "role": "处方",
+          "membership_degree": 0.95
+        }
+      ],
+      "description": "针对悬饮证候，采用疏风宣肺，攻逐水饮的治法，处方为渗出性胸膜炎_悬饮_治疗方"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "渗出性胸膜炎_悬饮_治疗方",
+          "role": "处方",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "控涎丹",
+          "role": "处方成分",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "处方中加用控涎丹以增强祛痰逐饮之功"
+    }
+  ]
+}

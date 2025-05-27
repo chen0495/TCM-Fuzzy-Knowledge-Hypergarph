@@ -1,0 +1,132 @@
+{
+  "entities": [
+    {
+      "entity_name": "吴XX",
+      "entity_type": "患者信息",
+      "description": "男性，31岁"
+    },
+    {
+      "entity_name": "脐周围作痛",
+      "entity_type": "症状",
+      "description": "扪之坚硬拒按，呈阵发性"
+    },
+    {
+      "entity_name": "有物从脐下向上攻冲",
+      "entity_type": "症状",
+      "description": "发作欲死，移时自止"
+    },
+    {
+      "entity_name": "上下肢关节游走痛",
+      "entity_type": "症状",
+      "description": "有时发作"
+    },
+    {
+      "entity_name": "脉沉弦而滑",
+      "entity_type": "症状",
+      "description": "诊脉结果"
+    },
+    {
+      "entity_name": "舌苔白滑",
+      "entity_type": "症状",
+      "description": "舌诊结果"
+    },
+    {
+      "entity_name": "寒湿水气著于肝肾二经",
+      "entity_type": "证候",
+      "description": "膀胱气化失司，至水寒之气上冲所致"
+    },
+    {
+      "entity_name": "奔豚气",
+      "entity_type": "疾病",
+      "description": "自觉气从少腹上冲胸膈的一种证候"
+    },
+    {
+      "entity_name": "奔豚气_寒湿水气著于肝肾二经_治疗方",
+      "entity_type": "处方",
+      "description": "桂枝10克、茯苓30克、吴萸10克、炒白芍15克、炙甘草10克、白术10克、炒枳实10克、陈皮10克、法半夏10克、薏苡仁25克、生姜3片、大枣5枚；治法：镇逆降气，温中散寒"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.95,
+      "participants": [
+        {
+          "entity_name": "吴XX",
+          "role": "患者",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "脐周围作痛",
+          "role": "症状",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "有物从脐下向上攻冲",
+          "role": "症状",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "上下肢关节游走痛",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "脉沉弦而滑",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "舌苔白滑",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "寒湿水气著于肝肾二经",
+          "role": "证候",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "奔豚气",
+          "role": "疾病",
+          "membership_degree": 1.0
+        }
+      ],
+      "description": "根据症状和舌脉，辨证为寒湿水气著于肝肾二经，导致奔豚气"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "寒湿水气著于肝肾二经",
+          "role": "证候",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "奔豚气_寒湿水气著于肝肾二经_治疗方",
+          "role": "处方",
+          "membership_degree": 1.0
+        }
+      ],
+      "description": "针对寒湿水气著于肝肾二经的证候，采用镇逆降气，温中散寒的治法"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "奔豚气_寒湿水气著于肝肾二经_治疗方",
+          "role": "处方",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "食思不振",
+          "role": "症状",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "因食思不振，加陈皮、神曲"
+    }
+  ]
+}

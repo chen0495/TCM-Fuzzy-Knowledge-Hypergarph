@@ -1,0 +1,197 @@
+{
+  "entities": [
+    {
+      "entity_name": "严X",
+      "entity_type": "患者信息",
+      "description": "男，56岁，初诊日期：1975年11月6日"
+    },
+    {
+      "entity_name": "头晕",
+      "entity_type": "症状",
+      "description": "先患头晕"
+    },
+    {
+      "entity_name": "突然昏仆",
+      "entity_type": "症状",
+      "description": "突然昏仆，不省人事"
+    },
+    {
+      "entity_name": "牙关紧闭",
+      "entity_type": "症状",
+      "description": "牙关紧闭"
+    },
+    {
+      "entity_name": "面白唇暗",
+      "entity_type": "症状",
+      "description": "面白唇暗"
+    },
+    {
+      "entity_name": "口角流涎",
+      "entity_type": "症状",
+      "description": "口角流涎"
+    },
+    {
+      "entity_name": "左半身瘫痪",
+      "entity_type": "症状",
+      "description": "左半身瘫痪"
+    },
+    {
+      "entity_name": "四肢不温",
+      "entity_type": "症状",
+      "description": "四肢不温"
+    },
+    {
+      "entity_name": "口眼歪斜",
+      "entity_type": "症状",
+      "description": "口眼歪斜"
+    },
+    {
+      "entity_name": "半昏迷状态",
+      "entity_type": "症状",
+      "description": "仍呈半昏迷状态"
+    },
+    {
+      "entity_name": "瞳孔大小不等",
+      "entity_type": "症状",
+      "description": "两侧瞳孔大小不等"
+    },
+    {
+      "entity_name": "对光反射减弱",
+      "entity_type": "症状",
+      "description": "对光反射减弱"
+    },
+    {
+      "entity_name": "脑出血(内囊出血)",
+      "entity_type": "疾病",
+      "description": "诊断为脑出血(内囊出血)"
+    },
+    {
+      "entity_name": "阳虚阴盛，闭塞清窍",
+      "entity_type": "证候",
+      "description": "阳虚阴盛，闭塞清窍之候"
+    },
+    {
+      "entity_name": "稀莶至阳汤",
+      "entity_type": "处方",
+      "description": "九制稀莶草30克黄芪9克天南星6克白附子6克川附片9克川芎3克红花6克细辛1．5克防风6克牛膝6克僵蚕3克苏木6克"
+    },
+    {
+      "entity_name": "苏合香丸",
+      "entity_type": "处方",
+      "description": "细辛3克煎汤化开苏合香丸3克灌服"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "严X",
+          "role": "患者",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "阳虚阴盛，闭塞清窍",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "突然昏仆",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "牙关紧闭",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "面白唇暗",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "口角流涎",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "左半身瘫痪",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "四肢不温",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "口眼歪斜",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "半昏迷状态",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "瞳孔大小不等",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "对光反射减弱",
+          "role": "症状",
+          "membership_degree": 0.7
+        }
+      ],
+      "description": "患者严X表现为阳虚阴盛，闭塞清窍之候"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "严X",
+          "role": "患者",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "阳虚阴盛，闭塞清窍",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "稀莶至阳汤",
+          "role": "处方",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "患者严X证属阳虚阴盛，闭塞清窍，治以稀莶至阳汤"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.8,
+      "participants": [
+        {
+          "entity_name": "严X",
+          "role": "患者",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "苏合香丸",
+          "role": "处方",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "稀莶至阳汤",
+          "role": "处方",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "患者严X先用苏合香丸开窍，后用稀莶至阳汤治疗"
+    }
+  ]
+}

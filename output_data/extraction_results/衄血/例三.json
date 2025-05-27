@@ -1,0 +1,182 @@
+{
+  "entities": [
+    {
+      "entity_name": "张XX",
+      "entity_type": "患者信息",
+      "description": "男，47岁，住院号52046，初诊日期1973年11月"
+    },
+    {
+      "entity_name": "头晕目眩",
+      "entity_type": "症状",
+      "description": "患者主诉头晕目眩"
+    },
+    {
+      "entity_name": "面色晦暗",
+      "entity_type": "症状",
+      "description": "患者面色晦暗"
+    },
+    {
+      "entity_name": "唇甲苍白而黯",
+      "entity_type": "症状",
+      "description": "患者唇甲苍白而黯"
+    },
+    {
+      "entity_name": "心悸怔忡",
+      "entity_type": "症状",
+      "description": "患者心悸怔忡"
+    },
+    {
+      "entity_name": "失眠少寐",
+      "entity_type": "症状",
+      "description": "患者失眠少寐"
+    },
+    {
+      "entity_name": "性欲消失",
+      "entity_type": "症状",
+      "description": "患者性欲消失"
+    },
+    {
+      "entity_name": "四肢浮肿",
+      "entity_type": "症状",
+      "description": "患者四肢浮肿"
+    },
+    {
+      "entity_name": "汗出畏寒",
+      "entity_type": "症状",
+      "description": "患者汗出畏寒"
+    },
+    {
+      "entity_name": "气短懒言",
+      "entity_type": "症状",
+      "description": "患者气短懒言"
+    },
+    {
+      "entity_name": "腰痠腿软",
+      "entity_type": "症状",
+      "description": "患者腰痠腿软"
+    },
+    {
+      "entity_name": "两胁疼痛",
+      "entity_type": "症状",
+      "description": "患者两胁疼痛"
+    },
+    {
+      "entity_name": "胸闷纳呆",
+      "entity_type": "症状",
+      "description": "患者胸闷纳呆"
+    },
+    {
+      "entity_name": "腹痛腹泻",
+      "entity_type": "症状",
+      "description": "患者腹痛腹泻"
+    },
+    {
+      "entity_name": "脉缓细而滑",
+      "entity_type": "症状",
+      "description": "患者脉缓细而滑"
+    },
+    {
+      "entity_name": "苔厚白而腻",
+      "entity_type": "症状",
+      "description": "患者苔厚白而腻"
+    },
+    {
+      "entity_name": "五脏俱病，关键在寒湿困脾",
+      "entity_type": "证候",
+      "description": "辨证为五脏俱病，关键在寒湿困脾"
+    },
+    {
+      "entity_name": "再生障碍性贫血",
+      "entity_type": "疾病",
+      "description": "确诊为再生障碍性贫血"
+    },
+    {
+      "entity_name": "冠心病",
+      "entity_type": "疾病",
+      "description": "兼有冠心病"
+    },
+    {
+      "entity_name": "继发性房颤",
+      "entity_type": "疾病",
+      "description": "兼有继发性房颤"
+    },
+    {
+      "entity_name": "衄血_寒湿困脾_治疗方",
+      "entity_type": "处方",
+      "description": "佩兰叶9克，苏藿梗各5克，苍术10克，厚朴花5克，砂仁壳5克，白豆蔻5克，陈皮炭10克，代代花5克，茯苓皮10克，绿萼梅6克，焦薏仁12克，白通草5克，建神曲10克。治法：苦温燥湿，醒脾开胃"
+    },
+    {
+      "entity_name": "益气健脾_祛湿开胃_治疗方",
+      "entity_type": "处方",
+      "description": "党参15克，生黄芪15克，白术10克，云茯苓9克，陈皮炭9克，炒枳壳9克，厚朴花6克，佩兰叶9克，砂仁壳5克，焦三仙18克，当归10克。治法：益气健脾，祛湿开胃"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.95,
+      "participants": [
+        {
+          "entity_name": "张XX",
+          "role": "患者",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "五脏俱病，关键在寒湿困脾",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "头晕目眩",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "面色晦暗",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "唇甲苍白而黯",
+          "role": "症状",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "患者张XX辨证为五脏俱病，关键在寒湿困脾"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "五脏俱病，关键在寒湿困脾",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "衄血_寒湿困脾_治疗方",
+          "role": "处方",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "针对证候五脏俱病，关键在寒湿困脾，采用苦温燥湿，醒脾开胃的治法"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "衄血_寒湿困脾_治疗方",
+          "role": "处方",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "益气健脾_祛湿开胃_治疗方",
+          "role": "处方",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "根据病情变化，处方随证加减，从苦温燥湿转为益气健脾"
+    }
+  ]
+}

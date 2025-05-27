@@ -1,0 +1,132 @@
+{
+  "entities": [
+    {
+      "entity_name": "田××",
+      "entity_type": "患者信息",
+      "description": "男性，35岁，初诊日期：1964年3月10日"
+    },
+    {
+      "entity_name": "盗汗",
+      "entity_type": "疾病",
+      "description": "入睡则汗出，醒后即止，多属虚劳之证，尤以阴虚者多见"
+    },
+    {
+      "entity_name": "春温",
+      "entity_type": "疾病",
+      "description": "春温卧床已半月，病情已转入痊愈阶段"
+    },
+    {
+      "entity_name": "睡中大汗如浴",
+      "entity_type": "症状",
+      "description": "每夜仍在39℃左右，睡中大汗如浴，衣被全湿"
+    },
+    {
+      "entity_name": "头目昏眩",
+      "entity_type": "症状",
+      "description": "醒后头目昏眩，困倦不支"
+    },
+    {
+      "entity_name": "脉数大无力",
+      "entity_type": "症状",
+      "description": "脉数大无力"
+    },
+    {
+      "entity_name": "舌色红而干燥",
+      "entity_type": "症状",
+      "description": "舌色红而干燥"
+    },
+    {
+      "entity_name": "口渴思饮",
+      "entity_type": "症状",
+      "description": "口渴思饮"
+    },
+    {
+      "entity_name": "阴虚",
+      "entity_type": "证候",
+      "description": "多属虚劳之证，尤以阴虚者多见"
+    },
+    {
+      "entity_name": "盗汗_阴虚_治疗方",
+      "entity_type": "处方",
+      "description": "当归身9克，生地黄12克，熟地黄12克，炒川连6克，炒黄芩6克，炒黄柏6克，炙黄芪15克，天花粉9克，麦门冬9克，麻黄根6克，五味子3克，生龙骨9克，生牡蛎9克"
+    },
+    {
+      "entity_name": "导功散",
+      "entity_type": "处方",
+      "description": "导功散加炙芪、山药、石斛、谷芽、糯稻根等"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "田××",
+          "role": "患者",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "盗汗",
+          "role": "疾病",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "阴虚",
+          "role": "证候",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "睡中大汗如浴",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "头目昏眩",
+          "role": "症状",
+          "membership_degree": 0.6
+        }
+      ],
+      "description": "患者田××患有盗汗，证属阴虚，表现为睡中大汗如浴、头目昏眩等症状"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "盗汗_阴虚_治疗方",
+          "role": "处方",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "盗汗",
+          "role": "疾病",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "阴虚",
+          "role": "证候",
+          "membership_degree": 0.7
+        }
+      ],
+      "description": "针对盗汗和阴虚证候，使用当归六黄汤加减进行治疗"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.8,
+      "participants": [
+        {
+          "entity_name": "导功散",
+          "role": "处方",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "盗汗",
+          "role": "疾病",
+          "membership_degree": 0.6
+        }
+      ],
+      "description": "热退汗止后，继用导功散加炙芪、山药、石斛、谷芽、糯稻根等进行调理"
+    }
+  ]
+}

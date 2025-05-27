@@ -1,0 +1,147 @@
+{
+  "entities": [
+    {
+      "entity_name": "杜XX",
+      "entity_type": "患者信息",
+      "description": "女，28岁"
+    },
+    {
+      "entity_name": "尿如乳汁",
+      "entity_type": "症状",
+      "description": "小便如乳汁"
+    },
+    {
+      "entity_name": "腰酸腿软",
+      "entity_type": "症状",
+      "description": "腰部酸痛，腿部无力"
+    },
+    {
+      "entity_name": "头昏目眩",
+      "entity_type": "症状",
+      "description": "头晕眼花"
+    },
+    {
+      "entity_name": "形容憔悴",
+      "entity_type": "症状",
+      "description": "外貌消瘦，精神不振"
+    },
+    {
+      "entity_name": "气短音低",
+      "entity_type": "症状",
+      "description": "呼吸短促，声音低沉"
+    },
+    {
+      "entity_name": "脉沉细迟",
+      "entity_type": "症状",
+      "description": "脉象沉细而迟"
+    },
+    {
+      "entity_name": "舌苔白厚而滑",
+      "entity_type": "症状",
+      "description": "舌苔白色厚而滑"
+    },
+    {
+      "entity_name": "湿盛阳弱，脾肾俱虚",
+      "entity_type": "证候",
+      "description": "湿气盛而阳气弱，脾肾两虚"
+    },
+    {
+      "entity_name": "五淋",
+      "entity_type": "疾病",
+      "description": "中医病名，包括膏淋等"
+    },
+    {
+      "entity_name": "五淋_湿盛阳弱，脾肾俱虚_治疗方",
+      "entity_type": "处方",
+      "description": "炙黄芪、党参、白术，萆薜、杜仲，菟丝子各15克干姜，益智仁、炙甘草、贯仲、升麻各10克白芷12克茯苓25克，治法：温补脾肾，散寒利湿"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.95,
+      "participants": [
+        {
+          "entity_name": "杜XX",
+          "role": "患者",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "尿如乳汁",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "腰酸腿软",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "头昏目眩",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "形容憔悴",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "气短音低",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "脉沉细迟",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "舌苔白厚而滑",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "湿盛阳弱，脾肾俱虚",
+          "role": "证候",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "根据症状辨证为湿盛阳弱，脾肾俱虚"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "湿盛阳弱，脾肾俱虚",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "五淋_湿盛阳弱，脾肾俱虚_治疗方",
+          "role": "处方",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "根据证候制定温补脾肾，散寒利湿的治疗方案"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "五淋_湿盛阳弱，脾肾俱虚_治疗方",
+          "role": "处方",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "湿盛阳弱，脾肾俱虚",
+          "role": "证候",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "根据证候变化调整处方"
+    }
+  ]
+}

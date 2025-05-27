@@ -1,0 +1,82 @@
+{
+  "entities": [
+    {
+      "entity_name": "例二",
+      "entity_type": "患者信息",
+      "description": "患者信息，未提供具体姓名、年龄和初诊日期"
+    },
+    {
+      "entity_name": "内伤发热（低热）",
+      "entity_type": "疾病",
+      "description": "疾病名称，表现为低热"
+    },
+    {
+      "entity_name": "阴虚肝旺",
+      "entity_type": "证候",
+      "description": "证候名称，表现为阴虚肝旺"
+    },
+    {
+      "entity_name": "内伤发热（低热）_阴虚肝旺_治疗方",
+      "entity_type": "处方",
+      "description": "以滋阴调肝为主，妙用肉桂引火归原"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "例二",
+          "role": "患者",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "内伤发热（低热）",
+          "role": "疾病",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "阴虚肝旺",
+          "role": "证候",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "患者例二患有内伤发热（低热），证属阴虚肝旺"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "阴虚肝旺",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "内伤发热（低热）_阴虚肝旺_治疗方",
+          "role": "处方",
+          "membership_degree": 0.85
+        }
+      ],
+      "description": "针对阴虚肝旺证候，采用滋阴调肝为主的治疗方法"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.8,
+      "participants": [
+        {
+          "entity_name": "内伤发热（低热）_阴虚肝旺_治疗方",
+          "role": "处方",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "阴虚肝旺",
+          "role": "证候",
+          "membership_degree": 0.85
+        }
+      ],
+      "description": "处方中妙用肉桂引火归原，以平息久虚低热"
+    }
+  ]
+}

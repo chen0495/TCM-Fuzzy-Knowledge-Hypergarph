@@ -1,0 +1,142 @@
+{
+  "entities": [
+    {
+      "entity_name": "邓X",
+      "entity_type": "患者信息",
+      "description": "女，48岁，已婚，入院日期1963年6月15日"
+    },
+    {
+      "entity_name": "浮肿",
+      "entity_type": "症状",
+      "description": "下肢逐渐浮肿"
+    },
+    {
+      "entity_name": "气短",
+      "entity_type": "症状",
+      "description": "咳嗽气短"
+    },
+    {
+      "entity_name": "心下痞满",
+      "entity_type": "症状",
+      "description": "心下痞满"
+    },
+    {
+      "entity_name": "咳吐白痰",
+      "entity_type": "症状",
+      "description": "咳吐白痰"
+    },
+    {
+      "entity_name": "尿少",
+      "entity_type": "症状",
+      "description": "尿少"
+    },
+    {
+      "entity_name": "唇色紫",
+      "entity_type": "症状",
+      "description": "唇色紫"
+    },
+    {
+      "entity_name": "慢性肺心病",
+      "entity_type": "疾病",
+      "description": "西医诊为慢性肺心病"
+    },
+    {
+      "entity_name": "心肾阳虚，水饮内停，痰湿阻遏，肺气壅塞",
+      "entity_type": "证候",
+      "description": "辨证：心肾阳虚，水饮内停，痰湿阻遏，肺气壅塞"
+    },
+    {
+      "entity_name": "越婢合真武汤加减",
+      "entity_type": "处方",
+      "description": "生石膏12克，麻黄3克，甘草9克，云苓12克，白术9克，杭芍9克，附子6克，生姜9克，大枣5枚，车前子15克，白茅根30克，杏仁9克。治法：清宣肺金，降气化痰，温阳利湿"
+    },
+    {
+      "entity_name": "厚朴麻黄汤加减",
+      "entity_type": "处方",
+      "description": "厚朴6克，麻黄3克，半夏9克，杏仁9克，甘草9克，沙参18克，小麦30克，茯苓9克，细辛3克，五味子6克，生姜4.5克。治法：宽胸理气清肺"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.95,
+      "participants": [
+        {
+          "entity_name": "邓X",
+          "role": "患者",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "浮肿",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "气短",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "心下痞满",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "咳吐白痰",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "尿少",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "唇色紫",
+          "role": "症状",
+          "membership_degree": 0.6
+        },
+        {
+          "entity_name": "心肾阳虚，水饮内停，痰湿阻遏，肺气壅塞",
+          "role": "证候",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "患者邓X的症状与证候心肾阳虚，水饮内停，痰湿阻遏，肺气壅塞相符"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "心肾阳虚，水饮内停，痰湿阻遏，肺气壅塞",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "越婢合真武汤加减",
+          "role": "处方",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "针对证候心肾阳虚，水饮内停，痰湿阻遏，肺气壅塞，采用越婢合真武汤加减进行治疗"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "越婢合真武汤加减",
+          "role": "原处方",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "厚朴麻黄汤加减",
+          "role": "新处方",
+          "membership_degree": 0.7
+        }
+      ],
+      "description": "根据病情变化，从越婢合真武汤加减转为厚朴麻黄汤加减"
+    }
+  ]
+}

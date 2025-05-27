@@ -1,0 +1,152 @@
+{
+  "entities": [
+    {
+      "entity_name": "沈X",
+      "entity_type": "患者信息",
+      "description": "女，56岁，初诊日期：1965年7月18日"
+    },
+    {
+      "entity_name": "不寐",
+      "entity_type": "疾病",
+      "description": "失眠经久不瘥，已逾五载"
+    },
+    {
+      "entity_name": "轰热上升",
+      "entity_type": "症状",
+      "description": "患者自觉身体发热"
+    },
+    {
+      "entity_name": "两目干涩",
+      "entity_type": "症状",
+      "description": "眼睛干涩不适"
+    },
+    {
+      "entity_name": "心悸不宁",
+      "entity_type": "症状",
+      "description": "心跳不规律，心神不安"
+    },
+    {
+      "entity_name": "脉虚弦",
+      "entity_type": "症状",
+      "description": "脉象虚弱而弦紧"
+    },
+    {
+      "entity_name": "虚烦心悸",
+      "entity_type": "症状",
+      "description": "心烦意乱，心跳不宁"
+    },
+    {
+      "entity_name": "遇事惊慌",
+      "entity_type": "症状",
+      "description": "遇到事情容易惊慌"
+    },
+    {
+      "entity_name": "阳跷为病",
+      "entity_type": "证候",
+      "description": "阳跷脉功能失调"
+    },
+    {
+      "entity_name": "胆失清宁",
+      "entity_type": "证候",
+      "description": "胆气不宁"
+    },
+    {
+      "entity_name": "营阴亏损",
+      "entity_type": "证候",
+      "description": "营血和阴液不足"
+    },
+    {
+      "entity_name": "肾阴不足",
+      "entity_type": "证候",
+      "description": "肾脏阴液不足"
+    },
+    {
+      "entity_name": "肝阳偏亢",
+      "entity_type": "证候",
+      "description": "肝脏阳气过盛"
+    },
+    {
+      "entity_name": "肝气郁结",
+      "entity_type": "证候",
+      "description": "肝脏气机郁滞"
+    },
+    {
+      "entity_name": "半夏秫米_黄连阿胶_温胆汤合方",
+      "entity_type": "处方",
+      "description": "仙半夏6克(杵)北秫米12克(包)大生地12克杭白芍6克珍珠母30克(先煎)灵磁石24克(先煎)小川连1．5克藕粉炒阿胶9克朱茯苓12克炒竹茹6克小枳实3克橘皮4。5克柏子仁12克，治法：交通阴阳，清心养血，宁胆怯"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.95,
+      "participants": [
+        {
+          "entity_name": "沈X",
+          "role": "患者",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "不寐",
+          "role": "疾病",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "阳跷为病",
+          "role": "证候",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "胆失清宁",
+          "role": "证候",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "患者失眠经久不瘥，证属阳跷为病，胆失清宁"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "沈X",
+          "role": "患者",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "半夏秫米_黄连阿胶_温胆汤合方",
+          "role": "处方",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "不寐",
+          "role": "疾病",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "用半夏秫米、黄连阿胶合温胆汤三方出入治疗失眠"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "半夏秫米_黄连阿胶_温胆汤合方",
+          "role": "处方",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "两目干涩",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "心悸不宁",
+          "role": "症状",
+          "membership_degree": 0.7
+        }
+      ],
+      "description": "根据两目干涩、心悸不宁等症状调整处方"
+    }
+  ]
+}

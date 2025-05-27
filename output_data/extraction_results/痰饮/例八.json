@@ -1,0 +1,199 @@
+{
+  "entities": [
+    {
+      "entity_name": "张xx",
+      "entity_type": "患者信息",
+      "description": "男，54岁，病历号：107392"
+    },
+    {
+      "entity_name": "咳喘",
+      "entity_type": "症状",
+      "description": "已五年，近两周来咳嗽气短不能平卧"
+    },
+    {
+      "entity_name": "痰多粘稠",
+      "entity_type": "症状",
+      "description": "痰多且粘稠"
+    },
+    {
+      "entity_name": "肢肿尿少",
+      "entity_type": "症状",
+      "description": "四肢水肿，尿量减少"
+    },
+    {
+      "entity_name": "心下痞满",
+      "entity_type": "症状",
+      "description": "心窝部痞满不适"
+    },
+    {
+      "entity_name": "腹胀不适",
+      "entity_type": "症状",
+      "description": "腹部胀满不适"
+    },
+    {
+      "entity_name": "唇紫",
+      "entity_type": "症状",
+      "description": "嘴唇发紫"
+    },
+    {
+      "entity_name": "苔自腻",
+      "entity_type": "症状",
+      "description": "舌苔白腻"
+    },
+    {
+      "entity_name": "脉弦滑而数",
+      "entity_type": "症状",
+      "description": "脉象弦滑而数"
+    },
+    {
+      "entity_name": "心肾阳虚，痰湿阻滞",
+      "entity_type": "证候",
+      "description": "心肾阳虚，痰湿阻滞"
+    },
+    {
+      "entity_name": "慢性气管炎",
+      "entity_type": "疾病",
+      "description": "慢性气管炎"
+    },
+    {
+      "entity_name": "阻塞性肺气肿",
+      "entity_type": "疾病",
+      "description": "阻塞性肺气肿"
+    },
+    {
+      "entity_name": "慢性肺原性心脏病",
+      "entity_type": "疾病",
+      "description": "慢性肺原性心脏病"
+    },
+    {
+      "entity_name": "心力衰竭皿度",
+      "entity_type": "疾病",
+      "description": "心力衰竭Ⅲ度"
+    },
+    {
+      "entity_name": "消水圣愈汤",
+      "entity_type": "处方",
+      "description": "桂枝9克，甘草9克，麻黄4.5克，黑附片9克，知母9克，防己12克，生姜9克，杏仁9克，大枣（擘）6枚。治法：温阳利水，蠲饮化湿"
+    },
+    {
+      "entity_name": "益气养心，清肺化痰之剂",
+      "entity_type": "处方",
+      "description": "党参15克，麦冬12克，五味子6克，杏仁9克，甘草9克，生石膏9克，麻黄15克，小麦30克，远志a克，茯苓12克。治法：益气养心，清肺化痰"
+    },
+    {
+      "entity_name": "消水圣愈汤加味",
+      "entity_type": "处方",
+      "description": "消水圣愈汤加茯苔30克，车前子（包）30克。治法：温阳利水，蠲饮化湿"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.95,
+      "participants": [
+        {
+          "entity_name": "张xx",
+          "role": "患者",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "咳喘",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "痰多粘稠",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "肢肿尿少",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "心下痞满",
+          "role": "症状",
+          "membership_degree": 0.6
+        },
+        {
+          "entity_name": "腹胀不适",
+          "role": "症状",
+          "membership_degree": 0.6
+        },
+        {
+          "entity_name": "唇紫",
+          "role": "症状",
+          "membership_degree": 0.5
+        },
+        {
+          "entity_name": "苔自腻",
+          "role": "症状",
+          "membership_degree": 0.5
+        },
+        {
+          "entity_name": "脉弦滑而数",
+          "role": "症状",
+          "membership_degree": 0.5
+        },
+        {
+          "entity_name": "心肾阳虚，痰湿阻滞",
+          "role": "证候",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "根据患者症状和体征，辨证为心肾阳虚，痰湿阻滞"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "心肾阳虚，痰湿阻滞",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "消水圣愈汤",
+          "role": "处方",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "针对心肾阳虚，痰湿阻滞的证候，采用消水圣愈汤进行治疗"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "消水圣愈汤",
+          "role": "处方",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "消水圣愈汤加味",
+          "role": "处方",
+          "membership_degree": 0.7
+        }
+      ],
+      "description": "在消水圣愈汤基础上加茯苔和车前子以增强利水效果"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.8,
+      "participants": [
+        {
+          "entity_name": "心肾阳虚，痰湿阻滞",
+          "role": "证候",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "益气养心，清肺化痰之剂",
+          "role": "处方",
+          "membership_degree": 0.6
+        }
+      ],
+      "description": "在病情缓解后，改用益气养心，清肺化痰之剂进行调理"
+    }
+  ]
+}

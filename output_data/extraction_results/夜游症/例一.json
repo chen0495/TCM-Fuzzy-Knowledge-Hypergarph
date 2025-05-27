@@ -1,0 +1,92 @@
+{
+  "entities": [
+    {
+      "entity_name": "姜××",
+      "entity_type": "患者信息",
+      "description": "男，42岁，病经四载"
+    },
+    {
+      "entity_name": "夜游症",
+      "entity_type": "疾病",
+      "description": "每夜外游，家人务必锁门"
+    },
+    {
+      "entity_name": "夜寐惊叫吵闹",
+      "entity_type": "症状",
+      "description": "近倾夜寐惊叫吵闹"
+    },
+    {
+      "entity_name": "肝火挟痰，蒙闭清窍",
+      "entity_type": "证候",
+      "description": "辨证：肝火挟痰，蒙闭清窍"
+    },
+    {
+      "entity_name": "夜游症_肝火挟痰，蒙闭清窍_治疗方",
+      "entity_type": "处方",
+      "description": "霍香9克，龙胆草2克，陈胆星9克，远志6克，僵蚕9克，制半夏9克，陈皮6克，竹茹9克，茯苓12克，代储石30克，桔梗5克，生紫菀5克，干菖蒲5克，另服白金丸90克每晚3克，礞石滚痰丸45克每晨1.5克"
+    },
+    {
+      "entity_name": "温胆汤加杞菊、真珠母、壮蛎、白芍、桑椹子",
+      "entity_type": "处方",
+      "description": "温胆汤加杞菊、真珠母、壮蛎、白芍、桑椹子等调治"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.95,
+      "participants": [
+        {
+          "entity_name": "姜××",
+          "role": "患者",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "夜寐惊叫吵闹",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "肝火挟痰，蒙闭清窍",
+          "role": "证候",
+          "membership_degree": 0.95
+        }
+      ],
+      "description": "患者姜××因夜寐惊叫吵闹，辨证为肝火挟痰，蒙闭清窍"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "肝火挟痰，蒙闭清窍",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "夜游症_肝火挟痰，蒙闭清窍_治疗方",
+          "role": "处方",
+          "membership_degree": 0.85
+        }
+      ],
+      "description": "针对肝火挟痰，蒙闭清窍的证候，采用豁痰、平肝、通窍的治法，处方为夜游症_肝火挟痰，蒙闭清窍_治疗方"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "夜游症_肝火挟痰，蒙闭清窍_治疗方",
+          "role": "原处方",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "温胆汤加杞菊、真珠母、壮蛎、白芍、桑椹子",
+          "role": "调整后处方",
+          "membership_degree": 0.75
+        }
+      ],
+      "description": "原处方加减连服三个月后，续服温胆汤加杞菊、真珠母、壮蛎、白芍、桑椹子等调治"
+    }
+  ]
+}

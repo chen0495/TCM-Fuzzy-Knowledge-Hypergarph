@@ -1,0 +1,179 @@
+{
+  "entities": [
+    {
+      "entity_name": "张××",
+      "entity_type": "患者信息",
+      "description": "女，51岁，初诊日期：1963年3月6日"
+    },
+    {
+      "entity_name": "盗汗",
+      "entity_type": "疾病",
+      "description": "阖目则汗出"
+    },
+    {
+      "entity_name": "胃中苦冷",
+      "entity_type": "症状",
+      "description": "胃中苦冷"
+    },
+    {
+      "entity_name": "时唾清涎",
+      "entity_type": "症状",
+      "description": "时唾清涎"
+    },
+    {
+      "entity_name": "头晕",
+      "entity_type": "症状",
+      "description": "头晕"
+    },
+    {
+      "entity_name": "心悸",
+      "entity_type": "症状",
+      "description": "心悸"
+    },
+    {
+      "entity_name": "口干",
+      "entity_type": "症状",
+      "description": "口干"
+    },
+    {
+      "entity_name": "虚烦难眠",
+      "entity_type": "症状",
+      "description": "虚烦难眠"
+    },
+    {
+      "entity_name": "小溲热赤不畅",
+      "entity_type": "症状",
+      "description": "小溲热赤不畅"
+    },
+    {
+      "entity_name": "大便不通",
+      "entity_type": "症状",
+      "description": "大便昨起未通"
+    },
+    {
+      "entity_name": "舌绛无苔",
+      "entity_type": "症状",
+      "description": "舌绛无苔"
+    },
+    {
+      "entity_name": "脉虚弦小数",
+      "entity_type": "症状",
+      "description": "脉虚弦小数"
+    },
+    {
+      "entity_name": "龙雷之火不安其位",
+      "entity_type": "证候",
+      "description": "虚火浮越，真火衰微"
+    },
+    {
+      "entity_name": "脾胃失职",
+      "entity_type": "证候",
+      "description": "脾胃失职"
+    },
+    {
+      "entity_name": "盗汗_龙雷之火不安其位_治疗方",
+      "entity_type": "处方",
+      "description": "白术(上炒）、淮山药(炒令黄）、扁豆(炒黑）、山楂炭各9克半夏、姜炭各6克左金丸6克(送服）"
+    },
+    {
+      "entity_name": "盗汗_脾胃失职_治疗方",
+      "entity_type": "处方",
+      "description": "前方去山楂炭、姜炭，加麦门冬(炒令黄）12克、熟地炭9克"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "张××",
+          "role": "患者",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "盗汗",
+          "role": "疾病",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "龙雷之火不安其位",
+          "role": "证候",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "脾胃失职",
+          "role": "证候",
+          "membership_degree": 0.7
+        }
+      ],
+      "description": "患者盗汗，辨证为龙雷之火不安其位和脾胃失职"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "张××",
+          "role": "患者",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "盗汗_龙雷之火不安其位_治疗方",
+          "role": "处方",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "龙雷之火不安其位",
+          "role": "证候",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "针对龙雷之火不安其位，采用白术、淮山药等药物治疗"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.8,
+      "participants": [
+        {
+          "entity_name": "张××",
+          "role": "患者",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "盗汗_脾胃失职_治疗方",
+          "role": "处方",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "脾胃失职",
+          "role": "证候",
+          "membership_degree": 0.7
+        }
+      ],
+      "description": "针对脾胃失职，采用麦门冬、熟地炭等药物治疗"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.75,
+      "participants": [
+        {
+          "entity_name": "张××",
+          "role": "患者",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "盗汗_龙雷之火不安其位_治疗方",
+          "role": "原处方",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "盗汗_脾胃失职_治疗方",
+          "role": "新处方",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "根据病情变化，去山楂炭、姜炭，加麦门冬、熟地炭"
+    }
+  ]
+}

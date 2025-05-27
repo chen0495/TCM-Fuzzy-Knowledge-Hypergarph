@@ -1,0 +1,212 @@
+{
+  "entities": [
+    {
+      "entity_name": "石XX",
+      "entity_type": "患者信息",
+      "description": "男，24岁，因食欲减退、恶心呕吐等症状住院"
+    },
+    {
+      "entity_name": "食欲减退",
+      "entity_type": "症状",
+      "description": "患者食欲减退"
+    },
+    {
+      "entity_name": "恶心呕吐",
+      "entity_type": "症状",
+      "description": "患者恶心呕吐"
+    },
+    {
+      "entity_name": "饮食厌油腻",
+      "entity_type": "症状",
+      "description": "患者饮食厌油腻"
+    },
+    {
+      "entity_name": "小便黄赤",
+      "entity_type": "症状",
+      "description": "患者小便黄赤"
+    },
+    {
+      "entity_name": "眼巩膜皮肤黄染",
+      "entity_type": "症状",
+      "description": "患者眼巩膜皮肤黄染"
+    },
+    {
+      "entity_name": "右胁作痛",
+      "entity_type": "症状",
+      "description": "患者右胁作痛"
+    },
+    {
+      "entity_name": "腹胀低热",
+      "entity_type": "症状",
+      "description": "患者腹胀低热"
+    },
+    {
+      "entity_name": "头晕失眠",
+      "entity_type": "症状",
+      "description": "患者头晕失眠"
+    },
+    {
+      "entity_name": "四肢乏力",
+      "entity_type": "症状",
+      "description": "患者四肢乏力"
+    },
+    {
+      "entity_name": "口渴欲饮",
+      "entity_type": "症状",
+      "description": "患者口渴欲饮"
+    },
+    {
+      "entity_name": "舌质嫩红",
+      "entity_type": "症状",
+      "description": "患者舌质嫩红"
+    },
+    {
+      "entity_name": "薄白苔",
+      "entity_type": "症状",
+      "description": "患者苔薄白"
+    },
+    {
+      "entity_name": "右脉虚",
+      "entity_type": "症状",
+      "description": "患者右脉虚"
+    },
+    {
+      "entity_name": "躁动无力",
+      "entity_type": "症状",
+      "description": "患者躁动无力"
+    },
+    {
+      "entity_name": "左脉带弦",
+      "entity_type": "症状",
+      "description": "患者左脉带弦"
+    },
+    {
+      "entity_name": "脾虚肝郁",
+      "entity_type": "证候",
+      "description": "脾虚肝郁"
+    },
+    {
+      "entity_name": "肝阴亏损",
+      "entity_type": "证候",
+      "description": "肝阴亏损"
+    },
+    {
+      "entity_name": "病毒性肝炎",
+      "entity_type": "疾病",
+      "description": "病毒性肝炎"
+    },
+    {
+      "entity_name": "黄疸_脾虚肝郁_肝阴亏损_治疗方",
+      "entity_type": "处方",
+      "description": "四君子汤合四乌贼骨——芦茹丸加味：茜根12克，海螵蛸9克，当归须9克，炙甘草9克，白芍12克，橘络2.5克，云苓12克，白术12克，党参12克，葱须一撮，清水煎服，日服1剂，连服11剂。治法：健脾舒肝，养阴活血"
+    },
+    {
+      "entity_name": "黄疸_脾虚肝郁_肝阴亏损_治疗方_二诊",
+      "entity_type": "处方",
+      "description": "党参12克，白术12克，云苓18克，炙甘草6克，白芍12克，首乌12克，肉苁蓉9克，茜根12克，糯稻根15克，浮小麦15克，橘络1.5克，清水煎服，连服17剂"
+    },
+    {
+      "entity_name": "黄疸_肝郁脾滞_胃肠湿热_治疗方",
+      "entity_type": "处方",
+      "description": "茜根24克，橘络3克，赤小豆30克，海螵蛸12克，内金9克，春砂仁9克，(后下)大腹皮9克，土茵陈30克，泽泻12克，葱须一撮，清水煎服。每天1剂，共服26天。治法：通络活血，化湿清热"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.95,
+      "participants": [
+        {
+          "entity_name": "石XX",
+          "role": "患者",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "脾虚肝郁",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "肝阴亏损",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "右胁作痛",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "腹胀低热",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "头晕失眠",
+          "role": "症状",
+          "membership_degree": 0.7
+        }
+      ],
+      "description": "患者石XX辨证为脾虚肝郁，肝阴亏损"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "石XX",
+          "role": "患者",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "黄疸_脾虚肝郁_肝阴亏损_治疗方",
+          "role": "处方",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "健脾舒肝",
+          "role": "治法",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "养阴活血",
+          "role": "治法",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "患者石XX采用健脾舒肝，养阴活血的治法，处方为四君子汤合四乌贼骨——芦茹丸加味"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "石XX",
+          "role": "患者",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "黄疸_脾虚肝郁_肝阴亏损_治疗方_二诊",
+          "role": "处方",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "黄疸_肝郁脾滞_胃肠湿热_治疗方",
+          "role": "处方",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "通络活血",
+          "role": "治法",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "化湿清热",
+          "role": "治法",
+          "membership_degree": 0.7
+        }
+      ],
+      "description": "患者石XX根据病情变化，随证加减处方，采用通络活血，化湿清热的治法"
+    }
+  ]
+}

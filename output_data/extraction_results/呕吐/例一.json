@@ -1,0 +1,137 @@
+{
+  "entities": [
+    {
+      "entity_name": "童XX",
+      "entity_type": "患者信息",
+      "description": "女，35岁"
+    },
+    {
+      "entity_name": "呕吐不止",
+      "entity_type": "症状",
+      "description": "候诊时呕吐不止"
+    },
+    {
+      "entity_name": "披发槌胸",
+      "entity_type": "症状",
+      "description": "披发槌胸"
+    },
+    {
+      "entity_name": "面赤",
+      "entity_type": "症状",
+      "description": "面赤"
+    },
+    {
+      "entity_name": "舌厚腻，白中带黄",
+      "entity_type": "症状",
+      "description": "舌厚腻，白中带黄"
+    },
+    {
+      "entity_name": "胸中难进，如火焚",
+      "entity_type": "症状",
+      "description": "诉胸中难进，如火焚"
+    },
+    {
+      "entity_name": "有气上冲",
+      "entity_type": "症状",
+      "description": "有气上冲"
+    },
+    {
+      "entity_name": "胃热",
+      "entity_type": "证候",
+      "description": "气冲上逆，呕吐不止，面赤苔厚，胸中如焚，乃胃热之徵"
+    },
+    {
+      "entity_name": "呕吐",
+      "entity_type": "疾病",
+      "description": "病名: 呕吐"
+    },
+    {
+      "entity_name": "呕吐_胃热_治疗方",
+      "entity_type": "处方",
+      "description": "柴胡9克竹沥30克茯苓9克珍珠母30克青皮6克川连2．4克苏子9克白芍9克钩藤9克瓜蒌皮9克桂枝3克，治法：舒气降逆，清胃止呕"
+    },
+    {
+      "entity_name": "呕吐_胃热_治疗方_复诊",
+      "entity_type": "处方",
+      "description": "柴胡9克白芍9克苏子9克桂枝6克广郁金9克陈皮6克茯苓9克瓜萎皮9克香附6克，治法：舒气降逆，清胃止呕，结合理气疏肝"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.95,
+      "participants": [
+        {
+          "entity_name": "童XX",
+          "role": "患者",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "呕吐不止",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "面赤",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "舌厚腻，白中带黄",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "胸中难进，如火焚",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "有气上冲",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "胃热",
+          "role": "证候",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "根据症状辨证为胃热"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "胃热",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "呕吐_胃热_治疗方",
+          "role": "处方",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "针对胃热证候，采用舒气降逆，清胃止呕的治法"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "呕吐_胃热_治疗方",
+          "role": "原处方",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "呕吐_胃热_治疗方_复诊",
+          "role": "调整后处方",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "复诊时根据病情变化调整处方，结合理气疏肝"
+    }
+  ]
+}

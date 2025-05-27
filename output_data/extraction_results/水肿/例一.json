@@ -1,0 +1,152 @@
+{
+  "entities": [
+    {
+      "entity_name": "胡XX",
+      "entity_type": "患者信息",
+      "description": "女性，平素嗜烟肝旺，且有痰红，产后患水肿"
+    },
+    {
+      "entity_name": "恶风无汗",
+      "entity_type": "症状",
+      "description": "患者恶风且无汗"
+    },
+    {
+      "entity_name": "头面独肿",
+      "entity_type": "症状",
+      "description": "患者头面部肿胀"
+    },
+    {
+      "entity_name": "四肢亦肿",
+      "entity_type": "症状",
+      "description": "患者四肢肿胀"
+    },
+    {
+      "entity_name": "腹微胀",
+      "entity_type": "症状",
+      "description": "患者腹部轻微胀满"
+    },
+    {
+      "entity_name": "尿少",
+      "entity_type": "症状",
+      "description": "患者尿量减少"
+    },
+    {
+      "entity_name": "脉浮濡",
+      "entity_type": "症状",
+      "description": "患者脉象浮濡"
+    },
+    {
+      "entity_name": "苔薄白滑",
+      "entity_type": "症状",
+      "description": "患者舌苔薄白滑"
+    },
+    {
+      "entity_name": "风水",
+      "entity_type": "证候",
+      "description": "风水肿，水渍膜腠，风袭皮毛"
+    },
+    {
+      "entity_name": "水肿",
+      "entity_type": "疾病",
+      "description": "患者患水肿病"
+    },
+    {
+      "entity_name": "水肿_风水_治疗方",
+      "entity_type": "处方",
+      "description": "净麻黄1.5克，光杏仁9克，新会皮4.5克，浙苓皮12克，生桑皮9克，冬瓜皮9克，生姜皮3克，葱须0.6克。治法：祛风行水"
+    },
+    {
+      "entity_name": "水肿_风水_治疗方_加减",
+      "entity_type": "处方",
+      "description": "生桑皮9克，浙苓皮9克，新会皮4.5克，大腹皮9克，莱菔子6克(炒)，苏噜子6克(杵)，冬瓜子12克，枳棋子12克。治法：祛风行水"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.95,
+      "participants": [
+        {
+          "entity_name": "胡XX",
+          "role": "患者",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "恶风无汗",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "头面独肿",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "四肢亦肿",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "腹微胀",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "尿少",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "脉浮濡",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "苔薄白滑",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "风水",
+          "role": "证候",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "患者胡XX的症状和脉象符合风水证候"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "风水",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "水肿_风水_治疗方",
+          "role": "处方",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "针对风水证候，采用祛风行水的治法，处方为五皮饮加麻、杏"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "水肿_风水_治疗方",
+          "role": "原处方",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "水肿_风水_治疗方_加减",
+          "role": "加减处方",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "在原处方基础上加减药物，调整治法"
+    }
+  ]
+}

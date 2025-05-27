@@ -1,0 +1,182 @@
+{
+  "entities": [
+    {
+      "entity_name": "例二男性患者",
+      "entity_type": "患者信息",
+      "description": "慢性粒细胞白血病患者，每天傍晚开始发热达40℃，下半夜自汗身凉，已有半年"
+    },
+    {
+      "entity_name": "内伤发热（高热）",
+      "entity_type": "疾病",
+      "description": "病名"
+    },
+    {
+      "entity_name": "慢性粒细胞白血病",
+      "entity_type": "疾病",
+      "description": "患者基础疾病"
+    },
+    {
+      "entity_name": "傍晚发热",
+      "entity_type": "症状",
+      "description": "每天傍晚开始发热达40℃"
+    },
+    {
+      "entity_name": "下半夜自汗身凉",
+      "entity_type": "症状",
+      "description": "下半夜自汗身凉"
+    },
+    {
+      "entity_name": "手心微热",
+      "entity_type": "症状",
+      "description": "平时手心微热"
+    },
+    {
+      "entity_name": "两足不温",
+      "entity_type": "症状",
+      "description": "两足不温"
+    },
+    {
+      "entity_name": "腰以下特别痠痛",
+      "entity_type": "症状",
+      "description": "腰以下特别痠痛"
+    },
+    {
+      "entity_name": "大便数天一次",
+      "entity_type": "症状",
+      "description": "大便数天一次"
+    },
+    {
+      "entity_name": "舌苔厚腻",
+      "entity_type": "症状",
+      "description": "舌苔厚腻"
+    },
+    {
+      "entity_name": "脉沉细无力",
+      "entity_type": "症状",
+      "description": "脉沉细无力"
+    },
+    {
+      "entity_name": "下焦阴阳并虚",
+      "entity_type": "证候",
+      "description": "下焦阴阳并虚"
+    },
+    {
+      "entity_name": "中气不振",
+      "entity_type": "证候",
+      "description": "中气不振"
+    },
+    {
+      "entity_name": "内伤发热（高热）_下焦阴阳并虚_中气不振_治疗方",
+      "entity_type": "处方",
+      "description": "黄芪、生熟地、归身、苁蓉、升麻、白术、泽泻等甘温除热"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.95,
+      "participants": [
+        {
+          "entity_name": "例二男性患者",
+          "role": "患者",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "傍晚发热",
+          "role": "症状",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "下半夜自汗身凉",
+          "role": "症状",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "手心微热",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "两足不温",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "腰以下特别痠痛",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "大便数天一次",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "舌苔厚腻",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "脉沉细无力",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "下焦阴阳并虚",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "中气不振",
+          "role": "证候",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "根据症状辨证为下焦阴阳并虚，中气不振"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.95,
+      "participants": [
+        {
+          "entity_name": "下焦阴阳并虚",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "中气不振",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "内伤发热（高热）_下焦阴阳并虚_中气不振_治疗方",
+          "role": "处方",
+          "membership_degree": 1.0
+        }
+      ],
+      "description": "针对下焦阴阳并虚和中气不振的证候，采用甘温除热的治法"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "内伤发热（高热）_下焦阴阳并虚_中气不振_治疗方",
+          "role": "处方",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "傍晚发热",
+          "role": "症状",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "下半夜自汗身凉",
+          "role": "症状",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "处方针对傍晚发热和下半夜自汗身凉的症状进行加减"
+    }
+  ]
+}

@@ -1,0 +1,172 @@
+{
+  "entities": [
+    {
+      "entity_name": "宋X",
+      "entity_type": "患者信息",
+      "description": "47岁，男"
+    },
+    {
+      "entity_name": "头痛",
+      "entity_type": "症状",
+      "description": "一年来头痛"
+    },
+    {
+      "entity_name": "眩晕",
+      "entity_type": "症状",
+      "description": "眩晕"
+    },
+    {
+      "entity_name": "口内干热",
+      "entity_type": "症状",
+      "description": "口内干热"
+    },
+    {
+      "entity_name": "齿鼻时衄",
+      "entity_type": "症状",
+      "description": "齿鼻时衄"
+    },
+    {
+      "entity_name": "面色红赤",
+      "entity_type": "症状",
+      "description": "面色红赤"
+    },
+    {
+      "entity_name": "舌质紫黯",
+      "entity_type": "症状",
+      "description": "舌质紫黯"
+    },
+    {
+      "entity_name": "舌苔黄褐厚腻",
+      "entity_type": "症状",
+      "description": "舌苔黄褐厚腻"
+    },
+    {
+      "entity_name": "脉沉弦而数",
+      "entity_type": "症状",
+      "description": "脉沉弦而数"
+    },
+    {
+      "entity_name": "便溏乏力",
+      "entity_type": "症状",
+      "description": "便溏乏力"
+    },
+    {
+      "entity_name": "脉沉细",
+      "entity_type": "症状",
+      "description": "脉沉细"
+    },
+    {
+      "entity_name": "肝热上冲，瘀血内滞",
+      "entity_type": "证候",
+      "description": "肝热上冲，瘀血内滞"
+    },
+    {
+      "entity_name": "真性红细胞增多症",
+      "entity_type": "疾病",
+      "description": "真性红细胞增多症"
+    },
+    {
+      "entity_name": "衄血_肝热上冲，瘀血内滞_治疗方",
+      "entity_type": "处方",
+      "description": "龙胆草15克黄芩15克泽泻15克川芎15克藕节30克白茅根30克鸡血藤30克山栀9克桃仁9克红花9克三棱18克莪术18克银柴胡12克银花20克丹皮5克芦荟2克青黛3克(冲)连服23剂。治法：清肝凉血，化瘀消滞"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.95,
+      "participants": [
+        {
+          "entity_name": "宋X",
+          "role": "患者",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "头痛",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "眩晕",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "口内干热",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "齿鼻时衄",
+          "role": "症状",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "面色红赤",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "舌质紫黯",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "舌苔黄褐厚腻",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "脉沉弦而数",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "肝热上冲，瘀血内滞",
+          "role": "证候",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "根据症状辨证为肝热上冲，瘀血内滞"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "肝热上冲，瘀血内滞",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "衄血_肝热上冲，瘀血内滞_治疗方",
+          "role": "处方",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "根据证候制定处方"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "衄血_肝热上冲，瘀血内滞_治疗方",
+          "role": "处方",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "便溏乏力",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "脉沉细",
+          "role": "症状",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "根据新出现的症状调整处方"
+    }
+  ]
+}

@@ -1,0 +1,278 @@
+{
+  "entities": [
+    {
+      "entity_name": "卢ｘｘ",
+      "entity_type": "患者信息",
+      "description": "男，59岁，住院号：58011，入院日期：1964年12月28日"
+    },
+    {
+      "entity_name": "发冷发烧",
+      "entity_type": "症状",
+      "description": "突然发冷发烧"
+    },
+    {
+      "entity_name": "头痛头昏",
+      "entity_type": "症状",
+      "description": "头痛头昏"
+    },
+    {
+      "entity_name": "恶寒战栗",
+      "entity_type": "症状",
+      "description": "恶寒战栗"
+    },
+    {
+      "entity_name": "体温38℃",
+      "entity_type": "症状",
+      "description": "体温38℃"
+    },
+    {
+      "entity_name": "口中干渴",
+      "entity_type": "症状",
+      "description": "口中干渴"
+    },
+    {
+      "entity_name": "每日饮水2～3暖瓶",
+      "entity_type": "症状",
+      "description": "每日饮水2～3暖瓶"
+    },
+    {
+      "entity_name": "腰隐作痛",
+      "entity_type": "症状",
+      "description": "腰隐作痛"
+    },
+    {
+      "entity_name": "小溲频数",
+      "entity_type": "症状",
+      "description": "每日十余行，每次300～500毫升"
+    },
+    {
+      "entity_name": "尿色微黄",
+      "entity_type": "症状",
+      "description": "尿色微黄"
+    },
+    {
+      "entity_name": "茎中微痛",
+      "entity_type": "症状",
+      "description": "茎中微痛"
+    },
+    {
+      "entity_name": "面色赤若浮肿",
+      "entity_type": "症状",
+      "description": "面色赤若浮肿"
+    },
+    {
+      "entity_name": "舌绛",
+      "entity_type": "症状",
+      "description": "舌绛"
+    },
+    {
+      "entity_name": "苔白厚而腻",
+      "entity_type": "症状",
+      "description": "苔白厚而腻"
+    },
+    {
+      "entity_name": "苔心有黄苔",
+      "entity_type": "症状",
+      "description": "苔心有黄苔"
+    },
+    {
+      "entity_name": "芪促善太息",
+      "entity_type": "症状",
+      "description": "芪促善太息"
+    },
+    {
+      "entity_name": "脉象实大",
+      "entity_type": "症状",
+      "description": "脉象实大"
+    },
+    {
+      "entity_name": "泌尿系感染",
+      "entity_type": "疾病",
+      "description": "泌尿系感染"
+    },
+    {
+      "entity_name": "糖尿病",
+      "entity_type": "疾病",
+      "description": "糖尿病"
+    },
+    {
+      "entity_name": "心火亢盛",
+      "entity_type": "证候",
+      "description": "心火亢盛"
+    },
+    {
+      "entity_name": "肾水亏耗",
+      "entity_type": "证候",
+      "description": "肾水亏耗"
+    },
+    {
+      "entity_name": "消渴_心火亢盛_肾水亏耗_治疗方",
+      "entity_type": "处方",
+      "description": "生石膏27克知母15克白人参6克甘草6克花粉9克山药12克川贝母9克4剂。治法：补肾水，泄心火，清肠胃"
+    },
+    {
+      "entity_name": "消渴_肾水亏耗_治疗方",
+      "entity_type": "处方",
+      "description": "生地9克熟地12克山药15克山萸肉9克丹皮6克茯苓6克泽泻6克寸冬9克五味子3克枸杞9克3剂。治法：补肾扶正"
+    },
+    {
+      "entity_name": "消渴_肾水亏耗_治疗方2",
+      "entity_type": "处方",
+      "description": "生地12克山药6克山萸6克茯苓6克丹皮6克泽泻6克寸冬6克知母6克元参6克黄芪15克花粉6克"
+    },
+    {
+      "entity_name": "杞菊地黄汤加减",
+      "entity_type": "处方",
+      "description": "生地12克山药6克山萸6克茯苓6克丹皮6克泽泻6克寸冬6克知母6克元参6克黄芪15克花粉6克"
+    },
+    {
+      "entity_name": "消渴_巩固疗效_治疗方",
+      "entity_type": "处方",
+      "description": "熟地12克生地12克山萸肉9克山药9克茯苓6克粉丹皮6克泽泻9克知母6克枸杞子6克花粉6克元参6克石菖蒲6克寸冬6克黄芪18克红人参6克共服24剂。治法：扶其正气，增其津液"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.95,
+      "participants": [
+        {
+          "entity_name": "卢ｘｘ",
+          "role": "患者",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "心火亢盛",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "肾水亏耗",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "口中干渴",
+          "role": "症状",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "小溲频数",
+          "role": "症状",
+          "membership_degree": 0.8
+        }
+      ],
+      "description": "患者因心火亢盛，肾水亏耗导致消渴"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "消渴_心火亢盛_肾水亏耗_治疗方",
+          "role": "处方",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "心火亢盛",
+          "role": "证候",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "肾水亏耗",
+          "role": "证候",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "使用生石膏、知母等药物补肾水，泄心火，清肠胃"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "消渴_肾水亏耗_治疗方",
+          "role": "处方",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "消渴_心火亢盛_肾水亏耗_治疗方",
+          "role": "处方",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "肾水亏耗",
+          "role": "证候",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "药后口渴心烦明显减轻，改以补肾扶正为主"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "消渴_肾水亏耗_治疗方2",
+          "role": "处方",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "消渴_肾水亏耗_治疗方",
+          "role": "处方",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "肾水亏耗",
+          "role": "证候",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "腰痛减轻，但心悸气短，全身无力，调整处方"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "杞菊地黄汤加减",
+          "role": "处方",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "消渴_肾水亏耗_治疗方2",
+          "role": "处方",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "肾水亏耗",
+          "role": "证候",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "面色红润，除心烦气短外，别无所苦，改用杞菊地黄汤加减"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "消渴_巩固疗效_治疗方",
+          "role": "处方",
+          "membership_degree": 1.0
+        },
+        {
+          "entity_name": "杞菊地黄汤加减",
+          "role": "处方",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "肾水亏耗",
+          "role": "证候",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "自觉症状基本消失，扶其正气，增其津液，以巩固疗效"
+    }
+  ]
+}

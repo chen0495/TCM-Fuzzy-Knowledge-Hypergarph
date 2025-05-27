@@ -1,0 +1,117 @@
+{
+  "entities": [
+    {
+      "entity_name": "例二某",
+      "entity_type": "患者信息",
+      "description": "男性患者，患有蓄血证"
+    },
+    {
+      "entity_name": "少腹胀痛",
+      "entity_type": "症状",
+      "description": "患者的主要症状之一"
+    },
+    {
+      "entity_name": "小便清长",
+      "entity_type": "症状",
+      "description": "患者的主要症状之一"
+    },
+    {
+      "entity_name": "目不识物",
+      "entity_type": "症状",
+      "description": "患者的主要症状之一"
+    },
+    {
+      "entity_name": "蓄血证",
+      "entity_type": "疾病",
+      "description": "患者的主要疾病"
+    },
+    {
+      "entity_name": "桃核承气汤",
+      "entity_type": "处方",
+      "description": "初始治疗处方，用于蓄血证"
+    },
+    {
+      "entity_name": "抵当汤",
+      "entity_type": "处方",
+      "description": "后续治疗处方，用于蓄血证，药物组成：蝱虫6克，水蛭4.5克，桃仁15克，川军15克"
+    },
+    {
+      "entity_name": "抵当丸",
+      "entity_type": "处方",
+      "description": "考虑使用的治疗处方，用于蓄血证"
+    }
+  ],
+  "relationships": [
+    {
+      "relationship_type": "辨证",
+      "confidence": 0.9,
+      "participants": [
+        {
+          "entity_name": "例二某",
+          "role": "患者",
+          "membership_degree": 0.8
+        },
+        {
+          "entity_name": "少腹胀痛",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "小便清长",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "目不识物",
+          "role": "症状",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "蓄血证",
+          "role": "疾病",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "患者症状与蓄血证相符"
+    },
+    {
+      "relationship_type": "论治",
+      "confidence": 0.85,
+      "participants": [
+        {
+          "entity_name": "蓄血证",
+          "role": "疾病",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "桃核承气汤",
+          "role": "处方",
+          "membership_degree": 0.7
+        },
+        {
+          "entity_name": "抵当汤",
+          "role": "处方",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "初始使用桃核承气汤治疗蓄血证，后改用抵当汤"
+    },
+    {
+      "relationship_type": "随证加减",
+      "confidence": 0.8,
+      "participants": [
+        {
+          "entity_name": "抵当汤",
+          "role": "处方",
+          "membership_degree": 0.9
+        },
+        {
+          "entity_name": "蓄血证",
+          "role": "疾病",
+          "membership_degree": 0.9
+        }
+      ],
+      "description": "根据病情调整抵当汤的药物剂量"
+    }
+  ]
+}
